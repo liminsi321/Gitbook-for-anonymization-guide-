@@ -1,0 +1,34 @@
+# What is personal data? {#personal_data}
+
+The term "Personal data" refers to any information that enables you to identify a living person. According to the GDPR,  a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.
+
+```{r 2_identifiers,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
+
+  knitr::include_graphics("figure/2_identifiers.png")
+
+```
+
+<div class="two-column-box">
+  <div class="column">
+**Direct identifiers**
+
+Any information sufficient on its own to identify an individual, such as a name, a phone number, a picture, security numbers, audio/sound, video,  photographs, etc.
+  </div>
+  <div class="divider"></div>
+  <div class="column">
+**Indirect identifiers**
+
+Any information that  can reveal an individual when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc. 
+  </div>
+</div>
+
+It is worth noting that some identifiers are particularly considered **strong indirect identifiers** because they can significantly increase the risk of identifying an individual when combined with other information. Examples of strong identifiers include a date of birth,  an IP address etc.
+
+For extensive overview of different types of identifiers, see Table 1. 
+
+**Table 1.** Overview of identifiers typically processed in research (Add reference)
+
+```{r type_identifiers,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
+  knitr::include_graphics("figure/type_identifiers.png") 
+```
+

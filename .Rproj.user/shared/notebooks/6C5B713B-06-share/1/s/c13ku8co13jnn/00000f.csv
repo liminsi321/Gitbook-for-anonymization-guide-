@@ -1,0 +1,8 @@
+"0","webexercises::webex_radio("
+"0","  options = c(""Earth"", ""Jupiter"", ""Mars"", ""Venus""),"
+"0","  correct = ""Jupiter"","
+"0","  incorrect_msg = ""Not quite, try again!"","
+"0","  correct_msg = ""Correct!"""
+"0",")"
+"2","Error: 'webex_radio' is not an exported object from 'namespace:webexercises'
+"

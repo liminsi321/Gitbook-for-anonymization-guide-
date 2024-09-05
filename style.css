@@ -1,0 +1,340 @@
+/*____Code Chunks____*/
+
+.sourceCode pre {
+  margin: 0 !important; /* makes space above and below symmetrical*/
+}
+
+.sourceCode {
+  margin-bottom: 0.85em; /* adds same amount of margin as a <p> would */
+}
+
+/*--- LOGO ---*/
+/* Make space for the logo on top left of book */
+.toc-logo {
+  width: 300px !important;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.toc-logo img {
+  max-width: 100%;
+  margin-bottom: 0px;
+}
+
+.summary > li:first-child {
+  height: auto !important; 
+}
+
+/* Logo image styling */
+.logo-img {
+  max-width: 100%; /* Make sure the logo fits within the sidebar */
+  height: auto; /* Maintain aspect ratio */
+  background-color: #fff; /* Optional: background color around the logo */
+  border-radius: 10%; /* Optional: make the logo circular */
+}
+
+
+/* Fonts */
+ .book.font-family-1 {
+  font-family: 'Open Sans', sans-serif;
+ }
+ h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  /*color: #2f5275;*/
+}
+.title {
+  font-family: 'Merriweather', serif;
+  font-size: 3em !important;
+  /*color: #5699cc;*/
+ }
+.subtitle {
+  font-family: 'Merriweather', serif;
+  /*color: #2c6793;*/
+}
+ 
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+
+
+
+/* -----------Sidebar div tips------------- */
+/* from r-pkgs.org*/
+div.fyi, div.warning, div.note,div.bubble {
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  min-height: 120px;
+}
+
+div.fyi {
+  background-image: url("../figure/logo.png");
+  background-color: white;
+  color: black;
+  #border: solid 2px #FFCD00;
+}
+div.warning {
+  background-image: url("../figure/warning.png");
+  background-color: #EDF6F9;
+  color: black;
+  #border: solid 2px #C00A35;
+
+}
+div.note {
+  background-image: url("../figure/note.png");
+  background-color: #EFF7F6;
+  color: black;
+  #border: solid 2px black;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*bubble box*/
+div.bubble,div.attention, div.software, div.tips {
+  border-radius: 20px; /* Rounded corners */
+  padding: 15px;
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 100px;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  min-height: 100px;
+}
+
+div.bubble {
+  background-image: url("../figure/bubble.png");
+  background-color: #ECE3F0;
+}
+
+div.attention {
+  background-image: url("../figure/attention.png");
+  background-color: #ECE3F0;
+}
+
+div.software {
+  background-image: url("../figure/software.png");
+  background-color: #ECE3F0;
+}
+
+div.tips {
+  background-image: url("../figure/tips.png");
+  background-color: #ECE3F0;
+}
+
+
+/* Container for the box with title */
+.box-with-title {
+  border: 2px outset #000; /* Border for the text box */
+  border-radius: 20px; /* Rounded corners */
+  border-image: linear-gradient(to right, #007BFF, #FD62AD) 1; /* Blue and pink gradient border */
+  padding: 10px;
+  margin: 5px auto 5px; /* Center the box with some margin at the top */
+  width: 95%; /* Width of the box */
+  background-color: #f9f9f9; /* Background color for the text box */
+  position: relative; /* Relative positioning to allow overlap of the title */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: shadow effect */
+  min-height: 150px;
+}
+
+/* Title styling */
+.box-title {
+  position: absolute; /* Absolute positioning for overlap */
+  top: -47px; /* Position it above the box */
+  left: 20px; /* Align it with the content padding */
+  padding: 5px 15px; /* Padding inside the title box */
+  border-radius: 5px; /* Rounded corners for the title box */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: shadow effect */
+  font-weight: bold;
+  background: linear-gradient(45deg, #007BFF, #FD62AD); /* Gradient background for the title */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding inside the title box */
+  border-radius: 10px; /* Rounded corners for the title box */
+  font-weight: bold;
+  z-index: 1; /* Ensure the title appears on top */
+  font-size: 1.5em;
+}
+
+/* Content styling */
+.box-content {
+  font-size: 1em; /* Adjust font size */
+  line-height: 1.5; /* Line height for readability */
+  color: #333; /* Text color */
+}
+
+
+
+
+
+
+.pink-box {
+  background-color: #ECE3F0; /*#F3B9DF,#F2C5E0 Light pink background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 15px;
+  margin: 15px 0;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow */
+}
+@media (max-width: 768px) {
+  .pink-box {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px; /* Less rounded on smaller screens */
+  }
+}
+
+/* -----------round box in chapter 2,3,5------------- */
+/* Custom box with rounded corners, gradient border, and light pink background */
+.custom-box {
+  border-radius: 20px;
+  padding: 2em;
+  border: 2.5px solid; /* Border size */
+  border-image: linear-gradient(to right, #007BFF, #FD62AD) 1; /* Blue and pink gradient border */
+  position: relative;
+  margin: 20px 0;
+  align-items: center; /* Align items center vertically */
+}
+
+/* Add the bubble icon at the start */
+
+/* CSS class for the bubble icon */
+.custom-box .bubble {
+  position: absolute; 
+  width: 5px;
+  height: 5px;
+  margin-right: 0.05px; /* Space between the icon and text */
+  vertical-align: left; /* Align icon with text */
+}
+
+
+
+/*---------------------------------------------------------*/
+/* Two-column layout with "vs" divider */
+.two-column-box {
+  display: flex; /* Use flexbox for the layout */
+  justify-content: space-between; /* Space between the columns */
+  border-radius: 20px; /* Rounded corners */
+  padding: 2px; /* Padding inside the box */
+  margin: 10px 0; /* Margin around the box */
+  position: relative; /* Position relative to place the "vs" */
+  min-height: 150px; /* Ensure the box is tall enough for content */
+  width: 90%; /* Ensure the box takes the full available width */
+  background-color: #EDF6F9; /* Background color for the box */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow */
+}
+/* Ensure the box is centered on the page */
+.two-column-box {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.two-column-box .column {
+  flex: 1; /* Equal width for both columns */
+  padding: 45px; /* Space inside each column */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow-wrap: break-word; /* Ensure long text wraps properly */
+  font-size: 1em; /* Adjust the font size for content within the columns */
+  word-wrap: break-word;
+  line-height: 1.5; /* Adjust line height for readability */
+}
+
+
+
+/* Stylized "VS" divider */
+.two-column-box .divider {
+  position: absolute; /* Position it absolutely in the middle */
+  top: 30%; /* Vertical center */
+  left: 44%; /* Horizontal center */
+  width: 80px; /* Width of the ellipse */
+  height: 100px; /* Height of the ellipse */
+  background-color: lightgrey; /* Background is transparent */
+  clip-path: ellipse(50% 50% at 50% 50%); /* Create a tilted ellipse shape */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Shadow effect for the ellipse */
+  transform: rotate(-30deg); /* Tilt the ellipse */
+  letter-spacing: 1.5em; /* Increase letter spacing */
+  display: flex; /* Use flexbox to center text */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.two-column-box .divider::before {
+  content: "V"; /* The "V" letter */
+  position: absolute;
+  top: -30%; /* Raise the "V" much higher */
+  font-size: 5em; /* Larger font size */
+  font-weight: bold;
+  color: #007BFF; /* Light color for a subtle look */
+}
+
+.two-column-box .divider::after {
+  content: "S"; /* The "S" letter */
+  position: relative;
+  bottom: 5%; /* Lower the "S" */
+  right: -10%;
+  font-size: 5em; /* Slightly smaller font size */
+  font-weight: bold;
+  color: #FD62AD; /* Light color for a subtle look */
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*symbol outside of the box*/
+/* Container for the custom text box */
+.image-outside_box {
+  position: relative; /* Position relative to allow overlapping elements */
+  border: 2px solid #007BFF; /* Border for the text box */
+  border-radius: 20px; /* Rounded corners */
+  padding: 12px;
+  margin: 30px auto 10px; /* Center the box with some margin at the top */
+  width: 80%; /* Width of the box */
+  background-color: #f9f9f9; /* Background color for the text box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
+  #z-index: 1; /* Ensure text box stays on top */
+}
+
+/* Small background image that is half outside the box */
+.image-outside_box::before {
+  content: ""; /* Pseudo-element to hold the image */
+  position: absolute;
+  top: -25px; /* Position the image to be half outside the box */
+  left: -20px; /* Adjust this to move the image horizontally */
+  width: 40px; /* Width of the image */
+  height: 40px; /* Height of the image */
+  background-image: url("../figure/attention.png"); /* Path to your image */
+  background-size: cover; /* Make sure the image covers the area */
+  background-repeat: no-repeat;
+  z-index: 2; /* Ensure the image stays behind the text box */
+}
+
+
+
+
+
+
+/* The next two rules make the horizontal line go straight across in top navbar */
+
+.summary > li:first-child {
+    height: 50px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.book .book-summary ul.summary li.divider {
+    height: 0px;
+}

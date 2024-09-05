@@ -1,0 +1,93 @@
+--- 
+title: "A Practical Guide to Data Anonymisation"
+author: "Alice Nikuze, Deiniece  Nazareth, Minsi Li"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  This is a minimal example of using the bookdown package to write a book.
+  set in the _output.yml file.
+  The HTML output format for this example is bookdown::gitbook,
+#link-citations: yes
+#github-repo: rstudio/bookdown-demo
+favicon: figure/favicon.ico
+apple-touch-icon: "figure/logo.jpeg"
+apple-touch-icon-size: 180
+output:
+  html_document:
+  theme: yeti
+  toc: true
+  toc_float: true
+
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      fig.align = "center")
+Sys.setlocale("LC_TIME", "English")
+#local({r <- getOption("repos") r["CRAN"] <- "https://cloud.r-project.org" options(repos=r)})
+
+```
+
+
+# Introduction
+```{r, results='asis'}
+```
+
+In today's data-driven world, privacy concerns have become paramount. With the increasing collection of personal data in research, researchers bear the responsibility of ensuring the protection of the privacy rights of the individuals participating in their studies. In addition, the General Data Protection Regulation (GDPR) in Europe requires researchers affiliated with any institution within the European Economic Area (EEA) to protect the privacy of research participants if they handle personal data in their research. In this context, the more personal data are collected, the greater the need for data de-identification.
+
+```{r table_content,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+  knitr::include_graphics("figure/introduction.png")
+```
+<div class="pink-box">
+
+This guide provides practical guidance on pseudonymizing and anonymizing personal data in research- the two data de-identification approaches. It includes examples of various techniques for different types of research data and is structured as follows:
+
+•	In **Chapter 2**, the term "personal data" is defined.
+
+•	In **Chapter 3**, the principle of data minimisation is introduced.
+
+•	In **Chapter 4**, the concepts of data pseudonymisation and anonymisation are explained.
+
+•	In **Chapter 5**, the pseudonymization and anonymisation techniques for different types of research data, mainly textual data, numerical data, audio and visual data and spatial data are discussed. Practical examples regarding these types of data are given.
+
+•	In **Chapter 6**, the guide concludes with some practical considerations.
+</div>
+
+
+:::note
+
+This guide is produced by data stewards in University of Twente (UT).We welcome feedback and contributions of any type, please read our for more information.
+:::
+
+:::warning
+
+If you work at the University Medical Centre Utrecht (UMCU) or any other institution outside of Utrecht University, some of the guidelines in the Data Privacy Handbook may not be in line with your institutional guidelines. Please consult with your local privacy staff whenever you are in doubt about this.
+:::
+
+## Disclaimer
+
+The content presented in this Practical Guide to Data Anonymisation has been carefully curated by data steward in University of Twente.  
+
+This practical guide is a 'living' book that is continually being written, 
+updated and reviewed. Its contents can therefore change, or become outdated or 
+redundant. Hence, the information presented is provided "as is", **without 
+guarantees of accuracy or completeness**.
+
+As scientific research may differ depending on the discipline, topic, and 
+context, measures needed or taken to ensure GDPR-compliance will vary across 
+research projects. The authors can therefore **not be held responsible, nor 
+accountable** for any negative consequences arising from interpretation and use 
+of the content of this guide.
+
+**For the most up-to-date and official/
+authoritative information, please refer to the 
+[university website](https://www.utwente.nl/en/service-portal/university-library/research-data-management){target="_blank"}, 
+to which this guide is a hands-on, practical supplement**. Moreover, before 
+implementing the guidance laid out in this guide, always seek the advice of 
+data steward in your faculty to confirm the suitability of any proposed 
+solution to your project.  

@@ -1,0 +1,545 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={A Practical Guide to Data Anonymisation},
+  pdfauthor={Alice Nikuze, Deiniece Nazareth, Minsi Li},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{A Practical Guide to Data Anonymisation}
+\author{Alice Nikuze, Deiniece Nazareth, Minsi Li}
+\date{2024-08-29}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{Introduction}\label{introduction}
+
+In today's data-driven world, privacy concerns have become paramount. With the increasing collection of personal data in research, researchers bear the responsibility of ensuring the protection of the privacy rights of the individuals participating in their studies. In addition, the General Data Protection Regulation (GDPR) in Europe requires researchers affiliated with any institution within the European Economic Area (EEA) to protect the privacy of research participants if they handle personal data in their research. In this context, the more personal data are collected, the greater the need for data de-identification.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/introduction.png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/introduction} \end{center}
+
+This guide provides practical guidance on pseudonymizing and anonymizing personal data in research- the two data de-identification approaches. It includes examples of various techniques for different types of research data and is structured as follows:
+
+• In \textbf{Chapter 2}, the term'' personal data'' is defined.
+
+• In \textbf{Chapter 3}, the principle of data minimisation is introduced.
+
+• In \textbf{Chapter 4}, the concepts of data pseudonymisation and anonymisation are explained.
+
+• In \textbf{Chapter 5}, the pseudonymization and anonymisation techniques for different types of research data, mainly textual data, numerical data, audio and visual data and spatial data are discussed. Practical examples regarding these types of data are given.
+
+• In \textbf{Chapter 6}, the guide concludes with some practical considerations.
+
+This guide is produced by data stewards in University of Twente (UT).We welcome feedback and contributions of any type, please read our for more information.
+
+If you work at the University Medical Centre Utrecht (UMCU) or any other institution outside of Utrecht University, some of the guidelines in the Data Privacy Handbook may not be in line with your institutional guidelines. Please consult with your local privacy staff whenever you are in doubt about this.
+
+\chapter{What is personal data?}\label{personal_data}
+
+The term ``Personal data'' refers to any information that enables you to identify a living person. According to the GDPR, a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/2\_identifiers.png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/2_identifiers} \end{center}
+
+\textbf{Direct identifiers}: any a piece of information sufficient on its own to identify an individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc.
+
+\textbf{Indirect identifiers}: any information that can reveal someone's identity when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.
+
+It is worth noting that some identifiers are particularly considered \textbf{strong indirect identifiers} because they can significantly increase the risk of identifying an individual when combined with other information. Examples of strong identifiers include a date of birth, an IP address etc.
+
+For extensive overview of different types of identifiers, see Table 1.
+
+\textbf{Table 1.} Overview of identifiers typically processed in research (Add reference)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/type\_identifiers.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/type_identifiers} \end{center}
+
+\chapter{Data minimization principle}\label{minimization}
+
+\emph{Data minimization} is a key principle of data privacy and involves limiting data collection and retention to only what is relevant, necessary and adequate to accomplish a given purpose. In line with this principle, a researcher should only collect and retain the personal data that is required for a research study in mind.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/minimization.png"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/minimization} \end{center}
+
+In practice, personal data minimization can be achieved by:
+
+• \textbf{Planning carefully what kind of personal data is necessary for the research purpose It is adviced to carefully plan this early during the research design phase.} For instance, you should not ask for the age of a research participant (data subject) if the age effect is not investigated in the research.
+
+• \textbf{Collecting aggregated information if detailed information is not necessary.} For example, if the age range is sufficient for the analysis, you should not collect the actual age of the participant.
+
+• \textbf{Limiting open-ended questions in surveys.} Answers to open-ended survey questions provided by respondents occasionally contain personal data about the respondents themselves or other people. Having many open-ended questions in your survey requires more anonymization effort after collecting the data.
+
+• \textbf{Instructing research participants sufficiently to avoid providing unnecessary personal data.} In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people's names or addresses) before conducting the interview is well worth the effort.
+
+• \textbf{Adjusting the settings of the data collection tool (e.g., survey tools) to avoid collecting unnecessary personal data.} Some survey tools are per default set up to collect personal data such as the location and/or IP address of the user. Always check the settings of the tool you use for data collection.
+
+Collecting only the minimum amount of personal data necessary for your research reduces the threat of data breaches and privacy violations, thereby reducing potential consequences for the research participants.
+
+When personal data are necessary and have been collected for research, research participants' identities should be protected. Two techniques are used to ensure that research participants remain anonymous and untraceable during and after research- \textbf{pseudonymisation} and \textbf{anonymization}.
+
+\chapter{Pseudonymisation versus Anonymisation}\label{pseudony_anony}
+
+\section{Pseudonymisation}\label{pseudonymisation}
+
+\emph{Pseudonymisation} is a de-identification process after which personal data can no longer be attributed to a specific data subject without the use of additional information. This process is also known as coding. It involves creating \textbf{two separate files}, one linking the personal data to the pseudonyms and another file which contains only the pseudonyms and the supplied research information. The former file is known as \textbf{a key file} or \textbf{code list} and must be kept separately from the latter file.
+
+The key file should be subjected to extra security measures (such as secured storage, password protection and encryption) to ensure that the identities of research participants are protected.
+
+\section{Anonymisation}\label{anonymisation}
+
+\emph{Anonymisation} is another de-identification process which involves deleting direct and/or indirect identifiers from the data, such that there is no way to re-establish the link between individuals (research participants) and the research information they have supplied. In this case, there is no key file.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/pseduni\_anony.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/pseduni_anony} \end{center}
+
+\emph{Pseudonymization} is employed to protect the identities of research participants by substituting direct identifiers with \emph{pseudonyms}. This process is \textbf{reversible} and can still allow \textbf{re-identification}.
+
+In contrast, \emph{anonymisation} involves \textbf{deleting the identifiers}, rendering \textbf{re-identification impossible}, even by researchers themselves. The process is \textbf{irreversible}.
+
+\emph{Pseudonymization} is employed to protect the identities of research participants by substituting direct identifiers with \emph{pseudonyms}. This process is \textbf{reversible} and can still allow \textbf{re-identification}.
+
+In contrast, \emph{anonymisation} involves \textbf{deleting the identifiers}, rendering \textbf{re-identification impossible}, even by researchers themselves. The process is \textbf{irreversible}.
+
+\chapter{Research Data Types and Pseudonymisation and Anonymisation Techniques}\label{techniques}
+
+The pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: \textbf{textual data}, \textbf{numerical data}, \textbf{audio and visual data}, and \textbf{geospatial data}.
+
+To see which techniques are most suitable for your data, it is helpful to first see what you want to anonymize. Based on the approach of \href{https://ukdataservice.ac.uk/learning-hub/research-data-management/anonymisation/anonymisation-step-by-step/}{UK Data services}, you can follow these 3 steps to deindentify your data. Deniece: to do still
+
+Step 1. Know your data: What kind of research data type do you have? What kind of data do you want to anonymize or pseudonimyze? Do you have textual data or numerical? Or do you have interview recordings consisting of audio?
+
+Step 2. Identify your identifiers in your data: Looking at your data, what kind of identifiers do you see? What kind of identifiers do you want to anonymize or pseudonymize? Do you have names, places, year of birth etc? Are there combinations of identifiers in your data that can identify a person? Or are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood.
+
+Step 3.
+
+\section{Textual data}\label{textual-data}
+
+\emph{Textual data} refers to any text-based content such as transcripts of interviews, workshops and focus group discussions, open-ended questions in surveys, observational notes, meeting notes, etc. This data type can be de-identified by generalizing the identifying information, replacing or deleting the identifiers such as research participants' names, gender, age, income, places and institutions names, addresses (physical location, email and IP), telephone numbers and any other sensitive information. The following techniques are commonly used to pseudonymise or anonymise textual data:
+
+\subsection{Generalisation}\label{generalisation}
+
+Generalisation involves reducing detailed information so that potentially disclosive information is replaced, aggregated or deleted.
+
+\textbf{Replace}
+This approach mainly involves replacing or categorizing identifiers with vague descriptors, such as replacing the actual names of individuals with aliases or with other aggregated information.
+
+\textbf{Delete}
+If the identifying information cannot be replaced or generalized, the entire variable or text may need to be deleted and explicitly marked as such by using {[}brackets{]} for example.
+
+\subsection{Distort}\label{distort}
+
+In certain cases, instead of deleting crucial information needed to understand context and content, it's possible to distort the information by changing other identifiers.
+For example, if you interviewed someone who participated in a high-level sports competition, and if that information is of importance in research, then you may change other values. You could change the years when the competition took place, the region (place, country) or even the gender of the person, if this is not crucial information.
+
+Table XX below presents the most common identifiers in textual data and the suitable anonymization techniques with practical examples.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/distort.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/distort} \end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/distort\_2.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/distort_2} \end{center}
+
+\textbf{Masking}
+Masking textual data involves replacing letters or symbols (punctuation) in identifying information entirely or partially with a special symbol (such as '*' or `x'). It is commonly used for email addresses, names of locations, etc.
+
+This technique is more suitable for tabular textual data, meaning that data is stored in the form of columns and/or rows.
+
+See the table below for examples.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/mask.jpg"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/mask} \end{center}
+
+For more inspiration on how to anonymize textual data, please consult this illustrative example provided by \href{https://dmeg.cessda.eu/Data-Management-Expert-Guide/5.-Protect/Anonymisation}{CESSDA}, which demonstrates the process of anonymizing an interview script.
+
+Tools
+
+Masking can be performed through manipulation in character data and natural language processing in R or Python. Some examples can be found in the Mask attributes section under Numerical Data in this guide.
+
+\section{Numerical data}\label{numerical-data}
+
+Numerical data is data in the form of numbers and is often displayed in a table with rows and columns. The techniques commonly used to anonymise numerical data include:
+
+\subsection{Suppression}\label{suppression}
+
+Suppression involves deleting the identifying information from the data. Some attributes (variables) or records (observations) can be removed in certain cases to make the identifier is not unique anymore.
+
+\subsection{Swapping}\label{swapping}
+
+This technique is also known as shuffling and permutation.
+
+When each data subjects has attributes which are stored in the columns in a spreadsheet, swap the attributes among two random data subjects till exhaust all data subjects in the dataset. In this way, the distribution of attributes would not be changes, while each data subject's attributes are changed. For example, when collecting each data subject's email address and IP address, swap each subject's IP address would reduce the chances of identifying one data subject with their both email address and IP address.
+
+\#\#\#Masking
+
+The same way letters in textual data are replaced, numbers can be entirely or partially replaced with a special symbol (such as '*' or `x').
+
+See the table below for examples.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/mask\_numeric.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/mask_numeric} \end{center}
+
+\subsection{Generalisation}\label{generalisation-1}
+
+Generalisation techniques reduce the granularity of the attributes/records in the data. It can be performed by：
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  \textbf{Categorising personal identifiers.}* For example, age is replaced by an age category or range.
+\item
+  \textbf{Top and bottom coding of the upper or lower ranges.} Very high and low values are grouped into categories to minimize identifiability due to outliers. For example, age records above a certain upper and lower limit are classified as groups to avoid recognition of exceptionally older or younger individuals while preserving actual ages for the rest of the population within the wider group researched. A top code of `` X or more'' could be applied to avoid identifying older subjects.
+\item
+  \textbf{Collapsing and/or combining variables.} Merging data recorded in two or more variables into a single category. This is particularly useful if the initial data collection creates several categories with very few subjects in each.
+\item
+  \textbf{Perturbation can be used where small changes in value are acceptable.} This technique involves rounding, adding noise, or replacing real values with simulation values. It should not be used when data accuracy is critical. The following section demonstrates examples of rounding and adding noise techniques with practical examples.
+\end{enumerate}
+
+\textbf{Rounding}
+
+It returns a number rounded to a base number to prevent exact matching with external data sources(\url{https://sdcpractice.readthedocs.io/en/latest/anon_methods.html\#special-case-census-data}). It can be used to deal with data like age, height, weight, or house number. Examples of rounding is demonstrated with tools, Excel, R, or Python.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/rounding.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/rounding} \end{center}
+
+\textbf{Noise addition}
+
+This technique adds or subtracts the original values with a random number. Larger random numbers result in higher levels of noise. Note that the results of noise addition are irreversible because each modification introduces randomness to the original values.
+
+This technique can be used to few values, such as outliers, or to entire dataset. When handling data with continuous value, the distribution of continuous data should be preserved to maintain more information in the datasets. Examples can be found in the table below.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/noise\_addition.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/noise_addition} \end{center}
+
+\section{Audio-Visual data}\label{audio-visual-data}
+
+Audio-visual data includes various forms of multimedia content, such as videos, movies, and audio recordings, including voices and visual components. In research, these forms of data capture interviews, workshops and any other form of communication with research participants involving their voices and/or images. Anonymizing these types of data involves modifying the audio, video or images, which will be introduced in this section.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/audio\_warning.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/audio_warning} \end{center}
+
+Keep in mind that these techniques can be time-comsuing or expensive to use.
+
+\subsection{Voice transformation/distortion}\label{voice-transformationdistortion}
+
+This technique involves disguising voices such as altering the pitch in a recording. Keep in mind that transforming or distorting the voice can reduce the usefulness of the data. Therefore, the decision of modifying sounds should be made based on your research objectives.
+
+\subsection{Blurring, pixelation or obscuring}\label{blurring-pixelation-or-obscuring}
+
+Blurring by pixelating specific regions of a video image or a picture, such as faces, can effectively anonymize individuals. This technique involves reducing the level of detail in those areas, making it harder to identify the person. In addition, you can also obscure the face of a person. See Image XX for an example of pixelating a face.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/blurred\_face.jpg"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/blurred_face} \end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/blur\_notice.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/blur_notice} \end{center}
+
+\textbf{Simpel distortion} of the audio or imagery can \textbf{only prevent idetnfication} based on the speaker's voice or iamge but it \textbf{cannot remove other idetnfiying information} that might exist in the recoding, such as speaking patterns or the mentioned personal information.
+
+\subsection{Mute or bleep out the identifying information}\label{mute-or-bleep-out-the-identifying-information}
+
+In audio or video recordings, you can also mute or bleep out identifying information to anonymize the audio-visual data. For example, you can mute or bleep out identifiers such as names, places or other information. Please see image XX below where the personal name has been muted in the audio recording.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/mute.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/mute} \end{center}
+
+\textbf{Software that can be used for audio-visual data}
+
+• For audio data, audio editing software such as Audacity can be used to transform or distort the voice or bleep out personal information.
+
+• Different video editing software such as Adobe Premiere can be used to blur or pixelate video recordings or transform, distort or bleep out information in the audio recording.
+
+• For images, image editor tools such as Photoshop and Paint can be used to blur, pixelate or obscure faces or personal information in pictures and images.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/software\_audio\_video.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/software_audio_video} \end{center}
+
+\section{Geospatial data}\label{geospatial-data}
+
+Geospatial data refers to data that is associated with specific geographic locations. Spatial data are used in research for analysis, visualization, and understanding of relationships and patterns within a geographic context. This section presents some of the techniques used to de-identify spatial data. The existing anonymisation techniques fall into two categories of \emph{generalization} and \emph{randomization}.
+
+\#\#Spatial generalisation
+
+\textbf{Spatial aggregation}
+
+Spatial aggregation is on the techniques commonly used to anonymise geospatial data. The method helps to mask the exact locations of individuals while still preserving the overall spatial patterns and trends. Spatiall aggregation can take two forms. The first form, which is area aggregation, involves reducing the level of detail by summarising the spatial details into larger spatial units, such as census blocks, zip codes, cities or any other administrative units.
+The second form is known as point aggregation and involves assigning multiple individual records to one point location. Examples include a population dot map where one dot represents 100 persons.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/geo\_data.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figure/geo_data} 
+
+}
+
+\caption{Spatial aggregation of individual cases using census enumeration units (Paul A. Zandbergen, 2014).}(\#fig:geo_data)
+\end{figure}
+
+\textbf{Spatial displacement/Adjusting Spatial Coordinates}
+
+Spatial displacement is another simplest way of anonymising data with exact spatial coordinates by displacing the coordinates in some way. The technique involves shifting spatial data points to different locations within a certain range or distance by for example, adding or subtracting a fixed or random number to both the x-axis and the y-axis.
+
+This can preserve the spatial distribution and density of your data while making it difficult to pinpoint the exact location of each point. It involves altering data accuracy to weaken links between the data and the individuals. This would mean that a map feature, for example, a point, is displaced to a new location (d -- distance) away from its original location.
+
+Spatial displacement should be done with utmost care to ensure that the adjustments do not conflict with the spatial realities, for example by putting a house in the middle of the sea!
+
+\url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600804/}
+
+\subsection{Attribute anonymisation}\label{attribute-anonymisation}
+
+Attribute anonymization involves deleting or modifying any attributes or variables that could identify or link to data subjects, such as names, addresses, phone numbers, or email addresses. This can protect the personal or confidential information of your data subjects while retaining some non-identifying information for analysis and visualization.
+
+\chapter{Practical considerations}\label{tips}
+
+Anonymisation affect the utility of the data, where in some case the data become useless for reuse. Therefore, it should be clearly documented in the metadata of the dataset whether anonymisation has been performed.
+
+Create a key file (a de-anonymisation key) of all removals, replacements, aggregations or generalisations made. Store such a key file securely and separately from your data files (reference).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figure/practical\_consid.png"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.8\linewidth]{figure/practical_consid} \end{center}
+
+Anonymization affect the utility of the data, where in some case the data become useless for reuse. Therefore, it should be clearly documented in the metadata of the dataset where anonymization has been performed.
+
+Create a key file(a de-anonymization key) of all removals, replacements, aggregations or generalisations made. Store such a key file securely and separately from data files(refereces needed).
+
+\chapter{Sharing your book}\label{sharing-your-book}
+
+\section{Publishing}\label{publishing}
+
+HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
+
+\section{404 pages}\label{pages}
+
+By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
+
+\section{Metadata for sharing}\label{metadata-for-sharing}
+
+Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
+
+This \texttt{gitbook} uses the same social sharing data across all chapters in your book- all links shared will look the same.
+
+Specify your book's source repository on GitHub using the \texttt{edit} key under the configuration options in the \texttt{\_output.yml} file, which allows users to suggest an edit by linking to a chapter's source file.
+
+Read more about the features of this output format here:
+
+\url{https://pkgs.rstudio.com/bookdown/reference/gitbook.html}
+
+Or use:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{?bookdown}\SpecialCharTok{::}\NormalTok{gitbook}
+\end{Highlighting}
+\end{Shaded}
+
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
