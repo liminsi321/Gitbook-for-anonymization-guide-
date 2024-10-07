@@ -2,11 +2,6 @@
 
 The term "Personal data" refers to any information that enables you to identify a living person. According to the GDPR,  a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.
 
-```{r 2_identifiers,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
-
-  knitr::include_graphics("figure/2_identifiers.png")
-
-```
 
 <div class="two-column-box">
   <div class="column">
@@ -28,7 +23,7 @@ For extensive overview of different types of identifiers, see Table 1.
 
 **Table 1.** Overview of identifiers typically processed in research (Add reference)
 
-```{r type_identifiers,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
-  knitr::include_graphics("figure/type_identifiers.png") 
+```{r type_identifiers,fig.label="type_identifiers",fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
+  knitr::include_graphics("figure/type_identifiers.png",dpi = 600) 
 ```
 

@@ -1,6 +1,6 @@
 --- 
 title: "A Practical Guide to Data Anonymisation"
-author: "Alice Nikuze, Deiniece  Nazareth, Minsi Li"
+author: "Alice Nikuze, Deniece  Nazareth, Minsi Li"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -29,20 +29,21 @@ knitr::opts_chunk$set(echo = TRUE,
                       message = FALSE,
                       fig.align = "center")
 Sys.setlocale("LC_TIME", "English")
-#local({r <- getOption("repos") r["CRAN"] <- "https://cloud.r-project.org" options(repos=r)})
 
 ```
 
 
 # Introduction
-```{r, results='asis'}
+```{r, results='asis',echo=FALSE}
+# Load required packages
+library('bookdown')
+library('DiagrammeR')
+library('ggplot2')
 ```
 
 In today's data-driven world, privacy concerns have become paramount. With the increasing collection of personal data in research, researchers bear the responsibility of ensuring the protection of the privacy rights of the individuals participating in their studies. In addition, the General Data Protection Regulation (GDPR) in Europe requires researchers affiliated with any institution within the European Economic Area (EEA) to protect the privacy of research participants if they handle personal data in their research. In this context, the more personal data are collected, the greater the need for data de-identification.
 
-```{r table_content,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
-  knitr::include_graphics("figure/introduction.png")
-```
+
 <div class="pink-box">
 
 This guide provides practical guidance on pseudonymizing and anonymizing personal data in research- the two data de-identification approaches. It includes examples of various techniques for different types of research data and is structured as follows:
@@ -91,3 +92,5 @@ to which this guide is a hands-on, practical supplement**. Moreover, before
 implementing the guidance laid out in this guide, always seek the advice of 
 data steward in your faculty to confirm the suitability of any proposed 
 solution to your project.  
+
+

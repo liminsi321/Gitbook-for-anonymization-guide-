@@ -28,22 +28,9 @@ Or use:
 ?bookdown::gitbook
 ```
 
-## Checkbox Exercise
-
-What are the primary colors?
-## Radio Button Exercise
-
-Which is the largest planet in our solar system?
-
-```{r echo=FALSE}
-webexercises::webex_radio(
-  options = c("Earth", "Jupiter", "Mars", "Venus"),
-  correct = "Jupiter",
-  incorrect_msg = "Not quite, try again!",
-  correct_msg = "Correct!"
-)
+```{r anony_vis,fig.align='center',fig.width=12, fig.height=9, out.width="95%",echo=FALSE}
+  knitr::include_graphics("figure/anonymization techniques textual data (3).png") 
 ```
-
 
 
 

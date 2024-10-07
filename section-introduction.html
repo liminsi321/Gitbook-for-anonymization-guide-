@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>A Practical Guide to Data Anonymisation</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="A Practical Guide to Data Anonymisation" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="A Practical Guide to Data Anonymisation" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+<meta name="author" content="Alice Nikuze, Deiniece Nazareth, Minsi Li" />
+
+
+<meta name="date" content="2024-09-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="figure/logo.jpeg" />
+  <link rel="shortcut icon" href="figure/favicon.ico" type="image/x-icon" />
+
+
+<!-- HEAD_CONTENT -->
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="www/webex.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a href="./"><img src="figure/logo.jpeg"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path=""><a href="#section-introduction"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path=""><a href="#section-disclaimer"><i class="fa fa-check"></i><b>1.1</b> Disclaimer</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="./"A Practical Guide to Data Anonymisation</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Practical Guide to Data Anonymisation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-header">
+<h1 class="title">A Practical Guide to Data Anonymisation</h1>
+<p class="author"><em>Alice Nikuze, Deiniece Nazareth, Minsi Li</em></p>
+<p class="date"><em>2024-09-05</em></p>
+</div>
+<div id="section-introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction<a href="#section-introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In today's data-driven world, privacy concerns have become paramount. With the increasing collection of personal data in research, researchers bear the responsibility of ensuring the protection of the privacy rights of the individuals participating in their studies. In addition, the General Data Protection Regulation (GDPR) in Europe requires researchers affiliated with any institution within the European Economic Area (EEA) to protect the privacy of research participants if they handle personal data in their research. In this context, the more personal data are collected, the greater the need for data de-identification.</p>
+<div class="pink-box">
+<p>This guide provides practical guidance on pseudonymizing and anonymizing personal data in research- the two data de-identification approaches. It includes examples of various techniques for different types of research data and is structured as follows:</p>
+<p>• In <strong>Chapter 2</strong>, the term "personal data" is defined.</p>
+<p>• In <strong>Chapter 3</strong>, the principle of data minimisation is introduced.</p>
+<p>• In <strong>Chapter 4</strong>, the concepts of data pseudonymisation and anonymisation are explained.</p>
+<p>• In <strong>Chapter 5</strong>, the pseudonymization and anonymisation techniques for different types of research data, mainly textual data, numerical data, audio and visual data and spatial data are discussed. Practical examples regarding these types of data are given.</p>
+<p>• In <strong>Chapter 6</strong>, the guide concludes with some practical considerations.</p>
+</div>
+<div class="note">
+<p>This guide is produced by data stewards in University of Twente (UT).We welcome feedback and contributions of any type, please read our for more information.</p>
+</div>
+<div class="warning">
+<p>If you work at the University Medical Centre Utrecht (UMCU) or any other institution outside of Utrecht University, some of the guidelines in the Data Privacy Handbook may not be in line with your institutional guidelines. Please consult with your local privacy staff whenever you are in doubt about this.</p>
+</div>
+<div id="section-disclaimer" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Disclaimer<a href="#section-disclaimer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The content presented in this Practical Guide to Data Anonymisation has been carefully curated by data steward in University of Twente.</p>
+<p>This practical guide is a 'living' book that is continually being written,
+updated and reviewed. Its contents can therefore change, or become outdated or
+redundant. Hence, the information presented is provided "as is", <strong>without
+guarantees of accuracy or completeness</strong>.</p>
+<p>As scientific research may differ depending on the discipline, topic, and
+context, measures needed or taken to ensure GDPR-compliance will vary across
+research projects. The authors can therefore <strong>not be held responsible, nor
+accountable</strong> for any negative consequences arising from interpretation and use
+of the content of this guide.</p>
+<p><strong>For the most up-to-date and official/
+authoritative information, please refer to the
+<a href="https://www.utwente.nl/en/service-portal/university-library/research-data-management" target="_blank">university website</a>,
+to which this guide is a hands-on, practical supplement</strong>. Moreover, before
+implementing the guidance laid out in this guide, always seek the advice of
+data steward in your faculty to confirm the suitability of any proposed
+solution to your project.</p>
+
+<script type="application/shiny-prerendered" data-context="server-start">
+knitr::opts_chunk$set(echo = TRUE, 
+                      warning = FALSE, 
+                      message = FALSE,
+                      fig.align = "center")
+Sys.setlocale("LC_TIME", "English")
+
+</script>
+
+<!--html_preserve-->
+<script type="application/shiny-prerendered" data-context="dependencies">
+{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["jquery"]},{"type":"character","attributes":{},"value":["3.6.0"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/3.6.0"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["jquery-3.6.0.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["jquerylib"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.1.4"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["fuse"]},{"type":"character","attributes":{},"value":["6.4.6"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["href"]}},"value":[{"type":"character","attributes":{},"value":["https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["dist/fuse.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["gitbook"]},{"type":"character","attributes":{},"value":["2.6.7"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["resources/gitbook"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/app.min.js","js/clipboard.min.js","js/plugin-search.js","js/plugin-sharing.js","js/plugin-fontsettings.js","js/plugin-bookdown.js","js/jquery.highlight.js","js/plugin-clipboard.js"]},{"type":"character","attributes":{},"value":["css/style.css","css/plugin-table.css","css/plugin-bookdown.css","css/plugin-highlight.css","css/plugin-search.css","css/plugin-fontsettings.css","css/plugin-clipboard.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["bookdown"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.40"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["anchor-sections"]},{"type":"character","attributes":{},"value":["1.1.0"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["rmd/h/anchor-sections"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["anchor-sections.js"]},{"type":"character","attributes":{},"value":["anchor-sections.css","anchor-sections-hash.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["rmarkdown"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["2.28"]}]}]}
+</script>
+<!--/html_preserve-->
+<!--html_preserve-->
+<script type="application/shiny-prerendered" data-context="execution_dependencies">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]}},"value":[{"type":"character","attributes":{},"value":["base","bookdown","bslib","cachem","cli","compiler","datasets","digest","evaluate","fastmap","graphics","grDevices","htmltools","httpuv","jquerylib","jsonlite","knitr","later","lifecycle","magrittr","methods","mime","promises","R6","Rcpp","rlang","rmarkdown","rstudioapi","sass","shiny","stats","tools","utils","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["4.4.1","0.40","0.8.0","1.1.0","3.6.3","4.4.1","4.4.1","0.6.36","0.24.0","1.2.0","4.4.1","4.4.1","0.5.8.1","1.6.15","0.1.4","1.8.8","1.48","1.3.2","1.0.4","2.0.3","4.4.1","0.12","1.3.0","2.5.1","1.0.13","1.1.4","2.28","0.16.0","0.4.9","1.9.1","4.4.1","4.4.1","4.4.1","0.45","1.8-4","2.3.9"]}]}]}
+</script>
+<!--/html_preserve-->
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  var t = document.getElementsByClassName("webex-total_correct");
+  for (var i = 0; i < t.length; i++) {
+    p = t[i].parentElement;
+    var correct = p.getElementsByClassName("webex-correct").length;
+    var solvemes = p.getElementsByClassName("webex-solveme").length;
+    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+    var selects = p.getElementsByClassName("webex-select").length;
+
+    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* check answers */
+check_func = function() {
+  console.log("webex: check answers");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('unchecked')) {
+    cl.remove("unchecked");
+    this.innerHTML = "Hide Answers";
+  } else {
+    cl.add("unchecked");
+    this.innerHTML = "Show Answers";
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  var check_sections = document.getElementsByClassName("webex-check");
+  console.log("check:", check_sections.length);
+  for (var i = 0; i < check_sections.length; i++) {
+    check_sections[i].classList.add("unchecked");
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Show Answers";
+    btn.classList.add("webex-check-button");
+    btn.onclick = check_func;
+    check_sections[i].appendChild(btn);
+
+    let spn = document.createElement("span");
+    spn.classList.add("webex-total_correct");
+    check_sections[i].appendChild(spn);
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  update_total_correct();
+}
+
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

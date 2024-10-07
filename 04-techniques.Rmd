@@ -2,13 +2,51 @@
 
 The pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: **textual data**, **numerical data**, **audio and visual data**, and **geospatial data**.
 
-To see which techniques are most suitable for your data, it is helpful to first see what you want to anonymize. Based on the approach of [UK Data services](https://ukdataservice.ac.uk/learning-hub/research-data-management/anonymisation/anonymisation-step-by-step/){target="_blank"}, you can follow these 3 steps to deindentify your data. Deniece: to do still
-
+To see which techniques are most suitable for your data, it is helpful to first see what you want to anonymize. Based on the approach of [UK Data services](https://ukdataservice.ac.uk/learning-hub/research-data-management/anonymisation/anonymisation-step-by-step/){target="_blank"}, you can follow these 3 steps to deindentify your data. 
 Step 1. Know your data: What kind of research data type do you have? What kind of data do you want to anonymize or pseudonimyze? Do you have textual data or numerical? Or do you have interview recordings consisting of audio?
 
 Step 2. Identify your identifiers in your data: Looking at your data, what kind of identifiers do you see? What kind of identifiers do you want to anonymize or pseudonymize? Do you have names, places, year of birth etc? Are there combinations of identifiers in your data that can identify a person? Or are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood.
 
-Step 3. 
+Step 3.
+
+
+
+```{r, echo=FALSE}
+#install.packages("flextable")
+library(flextable)
+
+#create the dataframe for the tabel 
+anonymization_steps <-
+  data.frame(
+    Steps = c("1. Know your data","2. Implement anonymisation techniques","3. Assess disclosure risk"),
+    Questions = c("For different types of idetifiers, see [Personal data](#personal_data)","Ensure all dirct and indirect indentifers are removed","Ensure all dirct and indirect indentifers are removed"),
+    Examples = c("What kind of data do you want to anonymize or pseudonimyze, such as textual, numertical, audio, video data?","Any remaining information in the dataset still sensitive, or unique?","Are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood?"),
+    stringsAsFactors = FALSE)
+
+# Create a flextable with customized styling
+gradient_colors <- colorRampPalette(c("#007BFF", "#FD62AD"))(n = 3)  # Generates 6 colors between blue and pink
+set_flextable_defaults(font.family = "Arial", font.size = 10, padding = 2)
+ft <- flextable(anonymization_steps) %>%
+  set_caption("Anonymization steps and practical questions") %>%
+  set_header_labels(Steps = "Anonymization steps", Questions = "Relevant questions", 
+                    Examples = "Examples") %>%
+  valign(valign = "center", part = "header") %>% 
+  theme_vanilla() %>%
+  #font(size = 12, part = "header")%>%
+  bold(i = 1, part = "header")%>%
+  bg(part = "header", bg = gradient_colors)
+# Additional table styling and alignment
+ft <- ft %>%
+  align(align = "center", part = "all") %>%  # Center-align the content in all parts
+  align(align = "left", j = "Steps", part = "all") %>%  # Left-align the "Steps" column
+  autofit(add_w = .1, unit = "cm")  # Adjust column widths automatically
+  #font(size = 13, color = "white", family = "Arial", part = "header")
+# Display the flextable
+ft
+```
+
+
+
 
 ## Textual data
 
@@ -31,10 +69,10 @@ For example, if you interviewed someone who participated in a high-level sports 
 
 Table XX below presents the most common identifiers in textual data and the suitable anonymization techniques with practical examples.
 
-```{r distort,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r distort,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/distort.png") 
 ```
-```{r distort_2,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r distort_2,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/distort_2.png") 
 ```
 
@@ -45,7 +83,7 @@ This technique is more suitable for tabular textual data, meaning that data is s
 
 See the table below for examples.
 
-```{r mask_textual,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r mask_textual,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/mask.jpg") 
 ```
 
@@ -74,7 +112,7 @@ The same way letters in textual data are replaced, numbers can be entirely or pa
 
 See the table below for examples.
 
-```{r mask_numeric,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r mask_numeric,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/mask_numeric.png") 
 ```
 
@@ -94,7 +132,7 @@ See the table below for examples.
 
 It returns a number rounded to a base number to prevent exact matching with external data sources (https://sdcpractice.readthedocs.io/en/latest/anon_methods.html#special-case-census-data). It can be used to deal with data like age, height, weight, or house number. Examples of rounding is demonstrated with tools, Excel, R, or Python.
 
-```{r rounding,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r rounding,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/rounding.png") 
 ```
 **Noise addition**
@@ -103,7 +141,7 @@ This technique adds or subtracts the original values with a random number. Large
 
 This technique can be used to few values, such as outliers, or to entire dataset. When handling data with continuous value, the distribution of continuous data should be preserved to maintain more information in the datasets. Examples can be found in the table below.
 
-```{r noise_addition,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r noise_addition,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/noise_addition.png") 
 ```
 
@@ -111,9 +149,7 @@ This technique can be used to few values, such as outliers, or to entire dataset
 
 Audio-visual data includes various forms of multimedia content, such as videos, movies, and audio recordings, including voices and visual components. In research, these forms of data capture interviews, workshops and any other form of communication with research participants involving their voices and/or images. Anonymizing these types of data involves modifying the audio, video or images, which will be introduced in this section.
 
-```{r audio_warning,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
-  knitr::include_graphics("figure/audio_warning.png") 
-```
+
 <div class="attention">
 Keep in mind that these techniques can be time-consuming or expensive to use.
 
@@ -135,11 +171,11 @@ This technique involves disguising voices such as altering the pitch in a record
 
 Blurring by pixelating specific regions of a video image or a picture, such as faces, can effectively anonymize individuals. This technique involves reducing the level of detail in those areas, making it harder to identify the person. In addition, you can also obscure the face of a person. See Image XX for an example of pixelating a face.
 
-```{r blurred_face,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r blurred_face,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/blurred_face.jpg") 
 ```
 
-```{r blur_notice,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r blur_notice,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/blur_notice.png") 
 ```
 <div class="bubble">
@@ -151,7 +187,7 @@ Blurring by pixelating specific regions of a video image or a picture, such as f
 
 In audio or video recordings, you can also mute or bleep out identifying information to anonymize the audio-visual data. For example, you can mute or bleep out identifiers such as names, places or other information. Please see image XX below where the personal name has been muted in the audio recording.
 
-```{r mute,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r mute,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/mute.png") 
 ```
 <div class="software">
@@ -183,7 +219,7 @@ In audio or video recordings, you can also mute or bleep out identifying informa
 
 
 
-```{r software_audio_video,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
+```{r software_audio_video,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/software_audio_video.png") 
 ```
 
@@ -199,7 +235,7 @@ Spatial aggregation is on the techniques commonly used to anonymise geospatial d
 The second form is known as point aggregation and involves assigning multiple individual records to one point location. Examples include a population dot map where one dot represents 100 persons.  
 
 
-```{r geo_data,fig.align='center',fig.width=10, fig.height=7, out.width="80%",fig.cap="Spatial aggregation of individual cases using census enumeration units (Paul A. Zandbergen, 2014)."}
+```{r geo_data,fig.align='center',fig.width=10, fig.height=7, out.width="80%",fig.cap="Spatial aggregation of individual cases using census enumeration units (Paul A. Zandbergen, 2014).", echo=FALSE}
   knitr::include_graphics("figure/geo_data.png") 
 ```
 **Spatial displacement/Adjusting Spatial Coordinates**

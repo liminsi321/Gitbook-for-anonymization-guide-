@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Research Data Types and Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Research Data Types and Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Research Data Types and Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+<meta name="author" content="Alice Nikuze, Deiniece Nazareth, Minsi Li" />
+
+
+<meta name="date" content="2024-09-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="figure/logo.jpeg" />
+  <link rel="shortcut icon" href="figure/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="section-pseudony_anony.html"/>
+<link rel="next" href="section-tips.html"/>
+<!-- HEAD_CONTENT -->
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #204a87; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #204a87; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="www/webex.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a href="./"><img src="figure/logo.jpeg"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#section-disclaimer"><i class="fa fa-check"></i><b>1.1</b> Disclaimer</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-personal_data.html"><a href="section-personal_data.html"><i class="fa fa-check"></i><b>2</b> What is personal data?</a></li>
+<li class="chapter" data-level="3" data-path="section-minimization.html"><a href="section-minimization.html"><i class="fa fa-check"></i><b>3</b> Data minimization principle</a></li>
+<li class="chapter" data-level="4" data-path="section-pseudony_anony.html"><a href="section-pseudony_anony.html"><i class="fa fa-check"></i><b>4</b> Pseudonymisation versus Anonymisation</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-pseudony_anony.html"><a href="section-pseudony_anony.html#section-pseudonymisation"><i class="fa fa-check"></i><b>4.1</b> Pseudonymisation</a></li>
+<li class="chapter" data-level="4.2" data-path="section-pseudony_anony.html"><a href="section-pseudony_anony.html#section-anonymisation"><i class="fa fa-check"></i><b>4.2</b> Anonymisation</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-techniques.html"><a href="section-techniques.html"><i class="fa fa-check"></i><b>5</b> Research Data Types and Pseudonymisation and Anonymisation Techniques</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-techniques.html"><a href="section-techniques.html#section-textual-data"><i class="fa fa-check"></i><b>5.1</b> Textual data</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="section-techniques.html"><a href="section-techniques.html#section-generalisation"><i class="fa fa-check"></i><b>5.1.1</b> Generalisation</a></li>
+<li class="chapter" data-level="5.1.2" data-path="section-techniques.html"><a href="section-techniques.html#section-distort"><i class="fa fa-check"></i><b>5.1.2</b> Distort</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="section-techniques.html"><a href="section-techniques.html#section-numerical-data"><i class="fa fa-check"></i><b>5.2</b> Numerical data</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="section-techniques.html"><a href="section-techniques.html#section-suppression"><i class="fa fa-check"></i><b>5.2.1</b> Suppression</a></li>
+<li class="chapter" data-level="5.2.2" data-path="section-techniques.html"><a href="section-techniques.html#section-swapping"><i class="fa fa-check"></i><b>5.2.2</b> Swapping</a></li>
+<li class="chapter" data-level="5.2.3" data-path="section-techniques.html"><a href="section-techniques.html#section-masking"><i class="fa fa-check"></i><b>5.2.3</b> Masking</a></li>
+<li class="chapter" data-level="5.2.4" data-path="section-techniques.html"><a href="section-techniques.html#section-generalisation-1"><i class="fa fa-check"></i><b>5.2.4</b> Generalisation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="section-techniques.html"><a href="section-techniques.html#section-audio-visual-data"><i class="fa fa-check"></i><b>5.3</b> Audio-Visual data</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="section-techniques.html"><a href="section-techniques.html#section-voice-transformationdistortion"><i class="fa fa-check"></i><b>5.3.1</b> Voice transformation/distortion</a></li>
+<li class="chapter" data-level="5.3.2" data-path="section-techniques.html"><a href="section-techniques.html#section-blurring-pixelation-or-obscuring"><i class="fa fa-check"></i><b>5.3.2</b> Blurring, pixelation or obscuring</a></li>
+<li class="chapter" data-level="5.3.3" data-path="section-techniques.html"><a href="section-techniques.html#section-mute-or-bleep-out-the-identifying-information"><i class="fa fa-check"></i><b>5.3.3</b> Mute or bleep out the identifying information</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="section-techniques.html"><a href="section-techniques.html#section-geospatial-data"><i class="fa fa-check"></i><b>5.4</b> Geospatial data</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="section-techniques.html"><a href="section-techniques.html#section-attribute-anonymisation"><i class="fa fa-check"></i><b>5.4.1</b> Attribute anonymisation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-tips.html"><a href="section-tips.html"><i class="fa fa-check"></i><b>6</b> Practical considerations</a></li>
+<li class="chapter" data-level="7" data-path="section-sharing-your-book.html"><a href="section-sharing-your-book.html"><i class="fa fa-check"></i><b>7</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="section-sharing-your-book.html"><a href="section-sharing-your-book.html#section-publishing"><i class="fa fa-check"></i><b>7.1</b> Publishing</a></li>
+<li class="chapter" data-level="7.2" data-path="section-sharing-your-book.html"><a href="section-sharing-your-book.html#section-pages"><i class="fa fa-check"></i><b>7.2</b> 404 pages</a></li>
+<li class="chapter" data-level="7.3" data-path="section-sharing-your-book.html"><a href="section-sharing-your-book.html#section-metadata-for-sharing"><i class="fa fa-check"></i><b>7.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="section-references.html"><a href="section-references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="./"A Practical Guide to Data Anonymisation</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Practical Guide to Data Anonymisation</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-techniques" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Research Data Types and Pseudonymisation and Anonymisation Techniques<a href="section-techniques.html#section-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: <strong>textual data</strong>, <strong>numerical data</strong>, <strong>audio and visual data</strong>, and <strong>geospatial data</strong>.</p>
+<p>To see which techniques are most suitable for your data, it is helpful to first see what you want to anonymize. Based on the approach of <a href="https://ukdataservice.ac.uk/learning-hub/research-data-management/anonymisation/anonymisation-step-by-step/" target="_blank">UK Data services</a>, you can follow these 3 steps to deindentify your data. Deniece: to do still</p>
+<p>Step 1. Know your data: What kind of research data type do you have? What kind of data do you want to anonymize or pseudonimyze? Do you have textual data or numerical? Or do you have interview recordings consisting of audio?</p>
+<p>Step 2. Identify your identifiers in your data: Looking at your data, what kind of identifiers do you see? What kind of identifiers do you want to anonymize or pseudonymize? Do you have names, places, year of birth etc? Are there combinations of identifiers in your data that can identify a person? Or are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood.</p>
+<p>Step 3.</p>
+<div id="section-textual-data" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Textual data<a href="section-techniques.html#section-textual-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Textual data</em> refers to any text-based content such as transcripts of interviews, workshops and focus group discussions, open-ended questions in surveys, observational notes, meeting notes, etc. This data type can be de-identified by generalizing the identifying information, replacing or deleting the identifiers such as research participants' names, gender, age, income, places and institutions names, addresses (physical location, email and IP), telephone numbers and any other sensitive information. The following techniques are commonly used to pseudonymise or anonymise textual data:</p>
+<div id="section-generalisation" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Generalisation<a href="section-techniques.html#section-generalisation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Generalisation involves reducing detailed information so that potentially disclosive information is replaced, aggregated or deleted.</p>
+<p><strong>Replace</strong>
+This approach mainly involves replacing or categorizing identifiers with vague descriptors, such as replacing the actual names of individuals with aliases or with other aggregated information.</p>
+<p><strong>Delete</strong>
+If the identifying information cannot be replaced or generalized, the entire variable or text may need to be deleted and explicitly marked as such by using [brackets] for example.</p>
+</div>
+<div id="section-distort" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Distort<a href="section-techniques.html#section-distort" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In certain cases, instead of deleting crucial information needed to understand context and content, it's possible to distort the information by changing other identifiers.
+For example, if you interviewed someone who participated in a high-level sports competition, and if that information is of importance in research, then you may change other values. You could change the years when the competition took place, the region (place, country) or even the gender of the person, if this is not crucial information.</p>
+<p>Table XX below presents the most common identifiers in textual data and the suitable anonymization techniques with practical examples.</p>
+<p><img src="figure/distort.png" width="80%" style="display: block; margin: auto;" />
+<img src="figure/distort_2.png" width="80%" style="display: block; margin: auto;" /></p>
+<p><strong>Masking</strong>
+Masking textual data involves replacing letters or symbols (punctuation) in identifying information entirely or partially with a special symbol (such as '*' or 'x'). It is commonly used for email addresses, names of locations, etc.</p>
+<p>This technique is more suitable for tabular textual data, meaning that data is stored in the form of columns and/or rows.</p>
+<p>See the table below for examples.</p>
+<p><img src="figure/mask.jpg" width="80%" style="display: block; margin: auto;" /></p>
+<p>For more inspiration on how to anonymize textual data, please consult this illustrative example provided by <a href="https://dmeg.cessda.eu/Data-Management-Expert-Guide/5.-Protect/Anonymisation">CESSDA</a>, which demonstrates the process of anonymizing an interview script.</p>
+<p>Tools</p>
+<p>Masking can be performed through manipulation in character data and natural language processing in R or Python. Some examples can be found in the Mask attributes section under Numerical Data in this guide.</p>
+</div>
+</div>
+<div id="section-numerical-data" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Numerical data<a href="section-techniques.html#section-numerical-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Numerical data is data in the form of numbers and is often displayed in a table with rows and columns. The techniques commonly used to anonymise numerical data include:</p>
+<div id="section-suppression" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Suppression<a href="section-techniques.html#section-suppression" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppression involves deleting the identifying information from the data. Some attributes (variables) or records (observations) can be removed in certain cases to make the identifier is not unique anymore.</p>
+</div>
+<div id="section-swapping" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Swapping<a href="section-techniques.html#section-swapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This technique is also known as shuffling and permutation.</p>
+<p>When each data subjects has attributes which are stored in the columns in a spreadsheet, swap the attributes among two random data subjects till exhaust all data subjects in the dataset. In this way, the distribution of attributes would not be changes, while each data subject’s attributes are changed. For example, when collecting each data subject’s email address and IP address, swap each subject’s IP address would reduce the chances of identifying one data subject with their both email address and IP address.</p>
+</div>
+<div id="section-masking" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Masking<a href="section-techniques.html#section-masking" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The same way letters in textual data are replaced, numbers can be entirely or partially replaced with a special symbol (such as '*' or 'x').</p>
+<p>See the table below for examples.</p>
+<p><img src="figure/mask_numeric.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="section-generalisation-1" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Generalisation<a href="section-techniques.html#section-generalisation-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Generalisation techniques reduce the granularity of the attributes/records in the data. It can be performed by：</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Categorising personal identifiers.</strong>* For example, age is replaced by an age category or range.</p></li>
+<li><p><strong>Top and bottom coding of the upper or lower ranges.</strong> Very high and low values are grouped into categories to minimize identifiability due to outliers. For example, age records above a certain upper and lower limit are classified as groups to avoid recognition of exceptionally older or younger individuals while preserving actual ages for the rest of the population within the wider group researched. A top code of “ X or more” could be applied to avoid identifying older subjects.</p></li>
+<li><p><strong>Collapsing and/or combining variables.</strong> Merging data recorded in two or more variables into a single category. This is particularly useful if the initial data collection creates several categories with very few subjects in each.</p></li>
+<li><p><strong>Perturbation can be used where small changes in value are acceptable.</strong> This technique involves rounding, adding noise, or replacing real values with simulation values. It should not be used when data accuracy is critical. The following section demonstrates examples of rounding and adding noise techniques with practical examples.</p></li>
+</ol>
+<p><strong>Rounding</strong></p>
+<p>It returns a number rounded to a base number to prevent exact matching with external data sources (<a href="https://sdcpractice.readthedocs.io/en/latest/anon_methods.html#special-case-census-data" class="uri">https://sdcpractice.readthedocs.io/en/latest/anon_methods.html#special-case-census-data</a>). It can be used to deal with data like age, height, weight, or house number. Examples of rounding is demonstrated with tools, Excel, R, or Python.</p>
+<p><img src="figure/rounding.png" width="80%" style="display: block; margin: auto;" />
+<strong>Noise addition</strong></p>
+<p>This technique adds or subtracts the original values with a random number. Larger random numbers result in higher levels of noise. Note that the results of noise addition are irreversible because each modification introduces randomness to the original values.</p>
+<p>This technique can be used to few values, such as outliers, or to entire dataset. When handling data with continuous value, the distribution of continuous data should be preserved to maintain more information in the datasets. Examples can be found in the table below.</p>
+<p><img src="figure/noise_addition.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="section-audio-visual-data" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Audio-Visual data<a href="section-techniques.html#section-audio-visual-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Audio-visual data includes various forms of multimedia content, such as videos, movies, and audio recordings, including voices and visual components. In research, these forms of data capture interviews, workshops and any other form of communication with research participants involving their voices and/or images. Anonymizing these types of data involves modifying the audio, video or images, which will be introduced in this section.</p>
+<div class="attention">
+<p>Keep in mind that these techniques can be time-consuming or expensive to use.</p>
+</div>
+<div>
+Icons made by <a href="https://www.flaticon.com/authors/icon-mania" title="Icon mania"> Icon mania </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
+</div>
+<div class="image-outside_box">
+<p>Keep in mind that these techniques can be time-consuming or expensive to use.</p>
+</div>
+<div id="section-voice-transformationdistortion" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Voice transformation/distortion<a href="section-techniques.html#section-voice-transformationdistortion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This technique involves disguising voices such as altering the pitch in a recording. Keep in mind that transforming or distorting the voice can reduce the usefulness of the data. Therefore, the decision of modifying sounds should be made based on your research objectives.</p>
+</div>
+<div id="section-blurring-pixelation-or-obscuring" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Blurring, pixelation or obscuring<a href="section-techniques.html#section-blurring-pixelation-or-obscuring" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Blurring by pixelating specific regions of a video image or a picture, such as faces, can effectively anonymize individuals. This technique involves reducing the level of detail in those areas, making it harder to identify the person. In addition, you can also obscure the face of a person. See Image XX for an example of pixelating a face.</p>
+<p><img src="figure/blurred_face.jpg" width="80%" style="display: block; margin: auto;" /></p>
+<img src="figure/blur_notice.png" width="80%" style="display: block; margin: auto;" />
+<div class="bubble">
+<p><strong>Simpel distortion</strong> of the audio or imagery can <strong>only prevent idetnfication</strong> based on the speaker's voice or iamge but it <strong>cannot remove other idetnfiying information</strong> that might exist in the recoding, such as speaking patterns or the mentioned personal information.</p>
+</div>
+</div>
+<div id="section-mute-or-bleep-out-the-identifying-information" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Mute or bleep out the identifying information<a href="section-techniques.html#section-mute-or-bleep-out-the-identifying-information" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In audio or video recordings, you can also mute or bleep out identifying information to anonymize the audio-visual data. For example, you can mute or bleep out identifiers such as names, places or other information. Please see image XX below where the personal name has been muted in the audio recording.</p>
+<img src="figure/mute.png" width="80%" style="display: block; margin: auto;" />
+<div class="software">
+<p><strong>Software for audio-visual data</strong></p>
+<p>• For audio data, audio editing software such as Audacity can be used to transform or distort the voice or bleep out personal information.</p>
+<p>• Different video editing software such as Adobe Premiere can be used to blur or pixelate video recordings or transform, distort or bleep out information in the audio recording.</p>
+<p>• For images, image editor tools such as Photoshop and Paint can be used to blur, pixelate or obscure faces or personal information in pictures and images.</p>
+</div>
+<div class="box-with-title">
+<div class="box-title">
+<strong>Software for audio-visual data</strong>
+</div>
+<div class="box-with-title">
+<p>• For audio data, audio editing software such as <strong>Audacity</strong> can be used to transform or distort the voice or bleep out personal information.</p>
+<p>• Different video editing software such as <strong>Adobe Premiere</strong> can be used to blur or pixelate video recordings or transform, distort or bleep out information in the audio recording.</p>
+• For images, image editor tools such as <strong>Photoshop and Paint</strong> can be used to blur, pixelate or obscure faces or personal information in pictures and images.
+</div>
+</div>
+<p><img src="figure/software_audio_video.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="section-geospatial-data" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Geospatial data<a href="section-techniques.html#section-geospatial-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Geospatial data refers to data that is associated with specific geographic locations. Spatial data are used in research for analysis, visualization, and understanding of relationships and patterns within a geographic context. This section presents some of the techniques used to de-identify spatial data. The existing anonymisation techniques fall into two categories of <em>generalization</em> and <em>randomization</em>.</p>
+<p>##Spatial generalisation</p>
+<p><strong>Spatial aggregation</strong></p>
+<p>Spatial aggregation is on the techniques commonly used to anonymise geospatial data. The method helps to mask the exact locations of individuals while still preserving the overall spatial patterns and trends. Spatiall aggregation can take two forms. The first form, which is area aggregation, involves reducing the level of detail by summarising the spatial details into larger spatial units, such as census blocks, zip codes, cities or any other administrative units.
+The second form is known as point aggregation and involves assigning multiple individual records to one point location. Examples include a population dot map where one dot represents 100 persons.</p>
+<div class="figure" style="text-align: center">
+<img src="figure/geo_data.png" alt="Spatial aggregation of individual cases using census enumeration units (Paul A. Zandbergen, 2014)." width="80%" />
+<p class="caption">
+(#fig:geo_data)Spatial aggregation of individual cases using census enumeration units (Paul A. Zandbergen, 2014).
+</p>
+</div>
+<p><strong>Spatial displacement/Adjusting Spatial Coordinates</strong></p>
+<p>Spatial displacement is another simplest way of anonymising data with exact spatial coordinates by displacing the coordinates in some way. The technique involves shifting spatial data points to different locations within a certain range or distance by for example, adding or subtracting a fixed or random number to both the x-axis and the y-axis.</p>
+<p>This can preserve the spatial distribution and density of your data while making it difficult to pinpoint the exact location of each point. It involves altering data accuracy to weaken links between the data and the individuals. This would mean that a map feature, for example, a point, is displaced to a new location (d – distance) away from its original location.</p>
+<p>Spatial displacement should be done with utmost care to ensure that the adjustments do not conflict with the spatial realities, for example by putting a house in the middle of the sea!</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600804/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600804/</a></p>
+<div id="section-attribute-anonymisation" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Attribute anonymisation<a href="section-techniques.html#section-attribute-anonymisation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Attribute anonymisation involves deleting or modifying any attributes or variables that could identify or link to data subjects, such as names, addresses, phone numbers, or email addresses. This technique can protect the personal or confidential information of data subjects while retaining some non-identifying information for analysis.</p>
+
+</div>
+</div>
+</div>
+<script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  var t = document.getElementsByClassName("webex-total_correct");
+  for (var i = 0; i < t.length; i++) {
+    p = t[i].parentElement;
+    var correct = p.getElementsByClassName("webex-correct").length;
+    var solvemes = p.getElementsByClassName("webex-solveme").length;
+    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+    var selects = p.getElementsByClassName("webex-select").length;
+
+    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* check answers */
+check_func = function() {
+  console.log("webex: check answers");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('unchecked')) {
+    cl.remove("unchecked");
+    this.innerHTML = "Hide Answers";
+  } else {
+    cl.add("unchecked");
+    this.innerHTML = "Show Answers";
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  var check_sections = document.getElementsByClassName("webex-check");
+  console.log("check:", check_sections.length);
+  for (var i = 0; i < check_sections.length; i++) {
+    check_sections[i].classList.add("unchecked");
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Show Answers";
+    btn.classList.add("webex-check-button");
+    btn.onclick = check_func;
+    check_sections[i].appendChild(btn);
+
+    let spn = document.createElement("span");
+    spn.classList.add("webex-total_correct");
+    check_sections[i].appendChild(spn);
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  update_total_correct();
+}
+
+</script>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="section-pseudony_anony.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-tips.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["APracticalGuidetoDataAnonymisation.pdf", "APracticalGuidetoDataAnonymisation.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

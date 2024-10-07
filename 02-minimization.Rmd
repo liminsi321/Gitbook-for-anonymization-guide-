@@ -2,11 +2,7 @@
 
 *Data minimization* is a key principle of data privacy and involves limiting data collection and retention to only what is relevant, necessary and adequate to accomplish a given purpose. In line with this principle, a researcher should only collect and retain the personal data that is required for a research study in mind. 
 
-```{r minimization, fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
 
-  knitr::include_graphics("figure/minimization.png")
-
-```
 <div class="pink-box">
 
 In practice, personal data minimization can be achieved by:

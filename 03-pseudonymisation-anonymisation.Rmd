@@ -10,9 +10,7 @@ The key file should be subjected to extra security measures (such as secured sto
 
 *Anonymisation* is another de-identification process which involves deleting direct and/or indirect identifiers from the data, such that there is no way to re-establish the link between individuals (research participants) and the research information they have supplied. In this case, there is <u>no key file</u>.
 
-```{r pseduni_anony,fig.align='center',fig.width=10, fig.height=7, out.width="80%"}
-  knitr::include_graphics("figure/pseduni_anony.png") 
-```
+
 
 :::{.bubble}
 
