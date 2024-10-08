@@ -9,8 +9,6 @@ Step 2. Identify your identifiers in your data: Looking at your data, what kind 
 
 Step 3.
 
-
-
 ```{r, echo=FALSE}
 #install.packages("flextable")
 library(flextable)
@@ -40,12 +38,9 @@ ft <- ft %>%
   align(align = "center", part = "all") %>%  # Center-align the content in all parts
   align(align = "left", j = "Steps", part = "all") %>%  # Left-align the "Steps" column
   autofit(add_w = .1, unit = "cm")  # Adjust column widths automatically
-  #font(size = 13, color = "white", family = "Arial", part = "header")
 # Display the flextable
 ft
 ```
-
-
 
 
 ## Textual data

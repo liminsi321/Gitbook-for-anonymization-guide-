@@ -36,6 +36,9 @@ Sys.setlocale("LC_TIME", "English")
 # Introduction
 ```{r, results='asis',echo=FALSE}
 # Load required packages
+#install.packages("renv")
+library(renv)
+#renv::init()
 library('bookdown')
 library('DiagrammeR')
 library('ggplot2')
