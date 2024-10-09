@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 What is personal data? | A Practical Guide to Data Anonymisation</title>
+  <title>Chapter 8 Audio-Visual data | A Practical Guide to Data Anonymisation</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 set in the _output.yml file.
 The HTML output format for this example is bookdown::gitbook,</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 What is personal data? | A Practical Guide to Data Anonymisation" />
+  <meta property="og:title" content="Chapter 8 Audio-Visual data | A Practical Guide to Data Anonymisation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 What is personal data? | A Practical Guide to Data Anonymisation" />
+  <meta name="twitter:title" content="Chapter 8 Audio-Visual data | A Practical Guide to Data Anonymisation" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 set in the _output.yml file.
@@ -36,8 +36,8 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="180x180" href="figure/logo.jpeg" />
   <link rel="shortcut icon" href="figure/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="minimization.html"/>
+<link rel="prev" href="numerical-data.html"/>
+<link rel="next" href="geospatial-data.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -141,27 +141,42 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="personal_data" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> What is personal data?<a href="personal_data.html#personal_data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The term "Personal data" refers to any information that enables you to identify a living person. According to the GDPR, a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.</p>
-<div class="two-column-box">
-<div class="column">
-<p><strong>Direct identifiers</strong></p>
-Any information sufficient on its own to identify an individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc.
+<div id="audio-visual-data" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Audio-Visual data<a href="audio-visual-data.html#audio-visual-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Audio-visual data includes various forms of multimedia content, such as videos, movies, and audio recordings, including voices and visual components. In research, these forms of data capture interviews, workshops and any other form of communication with research participants involving their voices and/or images. Anonymizing these types of data involves modifying the audio, video or images, which will be introduced in this section.</p>
+<div class="attention">
+<p>Keep in mind that these techniques can be time-consuming or expensive to use.</p>
 </div>
-<div class="divider">
+<div>
+Icons made by <a href="https://www.flaticon.com/authors/icon-mania" title="Icon mania"> Icon mania </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a>
+</div>
+<div class="image-outside_box">
+<p>Keep in mind that these techniques can be time-consuming or expensive to use.</p>
+</div>
+<div id="voice-transformationdistortion" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Voice transformation/distortion<a href="audio-visual-data.html#voice-transformationdistortion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This technique involves disguising voices such as altering the pitch in a recording. Keep in mind that transforming or distorting the voice can reduce the usefulness of the data. Therefore, the decision of modifying sounds should be made based on your research objectives.</p>
+</div>
+<div id="blurring-pixelation-or-obscuring" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Blurring, pixelation or obscuring<a href="audio-visual-data.html#blurring-pixelation-or-obscuring" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Blurring by pixelating specific regions of a video image or a picture, such as faces, can effectively anonymize individuals. This technique involves reducing the level of detail in those areas, making it harder to identify the person. In addition, you can also obscure the face of a person. See Image XX for an example of pixelating a face.</p>
+<p><img src="figure/blurred_face.jpg" width="80%" style="display: block; margin: auto;" /></p>
+<div class="bubble">
+<p><strong>Simpel distortion</strong> of the audio or imagery can <strong>only prevent idetnfication</strong> based on the speaker's voice or iamge but it <strong>cannot remove other idetnfiying information</strong> that might exist in the recoding, such as speaking patterns or the mentioned personal information.</p>
+</div>
+</div>
+<div id="mute-or-bleep-out-the-identifying-information" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Mute or bleep out the identifying information<a href="audio-visual-data.html#mute-or-bleep-out-the-identifying-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In audio or video recordings, you can also mute or bleep out identifying information to anonymize the audio-visual data. For example, you can mute or bleep out identifiers such as names, places or other information. Please see image XX below where the personal name has been muted in the audio recording.</p>
+<img src="figure/mute.png" width="80%" style="display: block; margin: auto;" />
+<div class="software">
+<p><strong>Software for audio-visual data</strong></p>
+<p>• For audio data, audio editing software such as Audacity can be used to transform or distort the voice or bleep out personal information.</p>
+<p>• Different video editing software such as Adobe Premiere can be used to blur or pixelate video recordings or transform, distort or bleep out information in the audio recording.</p>
+<p>• For images, image editor tools such as Photoshop and Paint can be used to blur, pixelate or obscure faces or personal information in pictures and images.</p>
+</div>
 
 </div>
-<div class="column">
-<p><strong>Indirect identifiers</strong></p>
-Any information that can reveal an individual when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.
-</div>
-</div>
-<p>It is worth noting that some identifiers are particularly considered <strong>strong indirect identifiers</strong> because they can significantly increase the risk of identifying an individual when combined with other information. Examples of strong identifiers include a date of birth, an IP address etc.</p>
-<p>For extensive overview of different types of identifiers, see Table 1.</p>
-<p><strong>Table 1.</strong> Overview of identifiers typically processed in research (Add reference)</p>
-<p><img src="figure/type_identifiers.png" width="80%" style="display: block; margin: auto;" /></p>
-
 </div>
 <script>
 
@@ -374,8 +389,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="minimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="numerical-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="geospatial-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

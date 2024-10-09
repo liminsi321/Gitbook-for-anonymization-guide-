@@ -1,0 +1,28 @@
+# Geospatial data
+
+Geospatial data refers to data that is associated with specific geographic locations.  Spatial data are used in research for analysis, visualization, and understanding of relationships and patterns within a geographic context. This section presents some of the techniques used to de-identify spatial data. The existing anonymisation techniques fall into two categories of *generalization* and *randomization*.
+
+## Spatial generalisation
+
+**Spatial aggregation**
+
+Spatial aggregation is on the techniques commonly used to anonymise geospatial data. The method helps to mask the exact locations of individuals while still preserving the overall spatial patterns and trends. Spatiall aggregation can take two forms.  The first form, which is area aggregation, involves reducing the level of detail by summarising the spatial details into larger spatial units, such as census blocks, zip codes, cities or any other administrative units. 
+The second form is known as point aggregation and involves assigning multiple individual records to one point location. Examples include a population dot map where one dot represents 100 persons.  
+
+
+```{r geo_data,fig.align='center',fig.width=10, fig.height=7, out.width="80%",fig.cap="Spatial aggregation of individual cases using census enumeration units (Paul A. Zandbergen, 2014).", echo=FALSE}
+  knitr::include_graphics("figure/geo_data.png") 
+```
+**Spatial displacement/Adjusting Spatial Coordinates**
+
+Spatial displacement is another simplest way of anonymising data with exact spatial coordinates by displacing the coordinates in some way.  The technique involves shifting spatial data points to different locations within a certain range or distance by for example, adding or subtracting a fixed or random number to both the x-axis and the y-axis. 
+
+This can preserve the spatial distribution and density of your data while making it difficult to pinpoint the exact location of each point. It involves altering data accuracy to weaken links between the data and the individuals. This would mean that a map feature, for example, a point, is displaced to a new location (d – distance) away from its original location. 
+
+Spatial displacement should be done with utmost care to ensure that the adjustments do not conflict with the spatial realities, for example by putting a house in the middle of the sea!
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600804/
+
+## Attribute anonymisation
+
+Attribute anonymisation involves deleting or modifying any attributes or variables that could identify or link to data subjects, such as names, addresses, phone numbers, or email addresses. This technique can protect the personal or confidential information of data subjects while retaining some non-identifying information for analysis. 

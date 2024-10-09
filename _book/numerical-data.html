@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 What is personal data? | A Practical Guide to Data Anonymisation</title>
+  <title>Chapter 7 Numerical data | A Practical Guide to Data Anonymisation</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 set in the _output.yml file.
 The HTML output format for this example is bookdown::gitbook,</p>" />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 What is personal data? | A Practical Guide to Data Anonymisation" />
+  <meta property="og:title" content="Chapter 7 Numerical data | A Practical Guide to Data Anonymisation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 What is personal data? | A Practical Guide to Data Anonymisation" />
+  <meta name="twitter:title" content="Chapter 7 Numerical data | A Practical Guide to Data Anonymisation" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 set in the _output.yml file.
@@ -36,8 +36,8 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="180x180" href="figure/logo.jpeg" />
   <link rel="shortcut icon" href="figure/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="minimization.html"/>
+<link rel="prev" href="textual-data.html"/>
+<link rel="next" href="audio-visual-data.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -141,27 +141,42 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="personal_data" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> What is personal data?<a href="personal_data.html#personal_data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The term "Personal data" refers to any information that enables you to identify a living person. According to the GDPR, a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.</p>
-<div class="two-column-box">
-<div class="column">
-<p><strong>Direct identifiers</strong></p>
-Any information sufficient on its own to identify an individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc.
+<div id="numerical-data" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Numerical data<a href="numerical-data.html#numerical-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Numerical data is data in the form of numbers and is often displayed in a table with rows and columns. The techniques commonly used to anonymise numerical data include:</p>
+<div id="suppression" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Suppression<a href="numerical-data.html#suppression" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Suppression involves deleting the identifying information from the data. Some attributes (variables) or records (observations) can be removed in certain cases to make the identifier is not unique anymore.</p>
 </div>
-<div class="divider">
+<div id="swapping" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Swapping<a href="numerical-data.html#swapping" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This technique is also known as shuffling and permutation.</p>
+<p>When each data subjects has attributes which are stored in the columns in a spreadsheet, swap the attributes among two random data subjects till exhaust all data subjects in the dataset. In this way, the distribution of attributes would not be changes, while each data subject’s attributes are changed. For example, when collecting each data subject’s email address and IP address, swap each subject’s IP address would reduce the chances of identifying one data subject with their both email address and IP address.</p>
+</div>
+<div id="masking" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Masking<a href="numerical-data.html#masking" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The same way letters in textual data are replaced, numbers can be entirely or partially replaced with a special symbol (such as '*' or 'x').</p>
+<p>See the table below for examples.</p>
+<p><img src="figure/mask_numeric.png" width="80%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="generalisation-1" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Generalisation<a href="numerical-data.html#generalisation-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Generalisation techniques reduce the granularity of the attributes/records in the data. It can be performed by：</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Categorising personal identifiers.</strong>* For example, age is replaced by an age category or range.</p></li>
+<li><p><strong>Top and bottom coding of the upper or lower ranges.</strong> Very high and low values are grouped into categories to minimize identifiability due to outliers. For example, age records above a certain upper and lower limit are classified as groups to avoid recognition of exceptionally older or younger individuals while preserving actual ages for the rest of the population within the wider group researched. A top code of “ X or more” could be applied to avoid identifying older subjects.</p></li>
+<li><p><strong>Collapsing and/or combining variables.</strong> Merging data recorded in two or more variables into a single category. This is particularly useful if the initial data collection creates several categories with very few subjects in each.</p></li>
+<li><p><strong>Perturbation can be used where small changes in value are acceptable.</strong> This technique involves rounding, adding noise, or replacing real values with simulation values. It should not be used when data accuracy is critical. The following section demonstrates examples of rounding and adding noise techniques with practical examples.</p></li>
+</ol>
+<p><strong>Rounding</strong></p>
+<p>It returns a number rounded to a base number to prevent exact matching with external data sources (<a href="https://sdcpractice.readthedocs.io/en/latest/anon_methods.html#special-case-census-data" class="uri">https://sdcpractice.readthedocs.io/en/latest/anon_methods.html#special-case-census-data</a>). It can be used to deal with data like age, height, weight, or house number. Examples of rounding is demonstrated with tools, Excel, R, or Python.</p>
+<p><img src="figure/rounding.png" width="80%" style="display: block; margin: auto;" />
+<strong>Noise addition</strong></p>
+<p>This technique adds or subtracts the original values with a random number. Larger random numbers result in higher levels of noise. Note that the results of noise addition are irreversible because each modification introduces randomness to the original values.</p>
+<p>This technique can be used to few values, such as outliers, or to entire dataset. When handling data with continuous value, the distribution of continuous data should be preserved to maintain more information in the datasets. Examples can be found in the table below.</p>
+<p><img src="figure/noise_addition.png" width="80%" style="display: block; margin: auto;" /></p>
 
 </div>
-<div class="column">
-<p><strong>Indirect identifiers</strong></p>
-Any information that can reveal an individual when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.
-</div>
-</div>
-<p>It is worth noting that some identifiers are particularly considered <strong>strong indirect identifiers</strong> because they can significantly increase the risk of identifying an individual when combined with other information. Examples of strong identifiers include a date of birth, an IP address etc.</p>
-<p>For extensive overview of different types of identifiers, see Table 1.</p>
-<p><strong>Table 1.</strong> Overview of identifiers typically processed in research (Add reference)</p>
-<p><img src="figure/type_identifiers.png" width="80%" style="display: block; margin: auto;" /></p>
-
 </div>
 <script>
 
@@ -374,8 +389,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="minimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="textual-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="audio-visual-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

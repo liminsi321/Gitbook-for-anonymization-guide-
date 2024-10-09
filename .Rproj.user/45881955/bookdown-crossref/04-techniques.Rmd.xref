@@ -1,16 +1,2 @@
 h1:techniques Research Data Types and Pseudonymisation and Anonymisation Techniques
-h2:textual-data Textual data
-h3:generalisation Generalisation
-h3:distort Distort
-h2:numerical-data Numerical data
-h3:suppression Suppression
-h3:swapping Swapping
-h3:masking Masking
-h3:generalisation-1 Generalisation
-h2:audio-visual-data Audio-Visual data
-h3:voice-transformationdistortion Voice transformation/distortion
-h3:blurring-pixelation-or-obscuring Blurring, pixelation or obscuring
-h3:mute-or-bleep-out-the-identifying-information Mute or bleep out the identifying information
-h2:geospatial-data Geospatial data
-h3:attribute-anonymisation Attribute anonymisation
 

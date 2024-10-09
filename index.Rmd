@@ -17,11 +17,11 @@ favicon: figure/favicon.ico
 apple-touch-icon: "figure/logo.jpeg"
 apple-touch-icon-size: 180
 output:
-  html_document:
-  theme: yeti
-  toc: true
-  toc_float: true
-
+  bookdown::pdf_book:        # PDF output
+    latex_engine: xelatex    # You can use pdflatex or lualatex as well
+  bookdown::html_book:       # HTML output
+    toc: true
+    toc_float: true
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, 
@@ -33,6 +33,11 @@ Sys.setlocale("LC_TIME", "English")
 ```
 
 
+bookdown::render_book("index.Rmd", "bookdown::html_book")
+bookdown::render_book("index.Rmd", "bookdown::pdf_book")
+
+
+
 # Introduction
 ```{r, results='asis',echo=FALSE}
 # Load required packages
@@ -42,6 +47,11 @@ library(renv)
 library('bookdown')
 library('DiagrammeR')
 library('ggplot2')
+library('bookdown')
+library('rmarkdown')
+library('flextable')
+#install.packages("tinytex")
+#tinytex::install_tinytex(force = TRUE)
 ```
 
 In today's data-driven world, privacy concerns have become paramount. With the increasing collection of personal data in research, researchers bear the responsibility of ensuring the protection of the privacy rights of the individuals participating in their studies. In addition, the General Data Protection Regulation (GDPR) in Europe requires researchers affiliated with any institution within the European Economic Area (EEA) to protect the privacy of research participants if they handle personal data in their research. In this context, the more personal data are collected, the greater the need for data de-identification.
@@ -95,5 +105,8 @@ to which this guide is a hands-on, practical supplement**. Moreover, before
 implementing the guidance laid out in this guide, always seek the advice of 
 data steward in your faculty to confirm the suitability of any proposed 
 solution to your project.  
+
+
+
 
 

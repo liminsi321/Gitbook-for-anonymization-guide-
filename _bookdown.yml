@@ -10,7 +10,9 @@ rmd_files:
   - 02-minimization.Rmd
   - 03-pseudonymisation-anonymisation.Rmd
   - 04-techniques.Rmd
-  - 05-tips.Rmd
-  - 06-share.Rmd
-  - 07-references.Rmd
+  - 05-textual.Rmd
+  - 06-numeric.Rmd
+  - 07-audio-video.Rmd
+  - 08-geospatial.Rmd
+  - 09-tips.Rmd
 
