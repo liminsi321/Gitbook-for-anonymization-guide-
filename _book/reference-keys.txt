@@ -1,7 +1,9 @@
 introduction
-disclaimer
+how-to-cite-and-license
+acknowledgements
 personal_data
 minimization
+data-minimization
 pseudony_anony
 pseudonymisation
 anonymisation

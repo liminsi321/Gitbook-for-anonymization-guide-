@@ -7,12 +7,11 @@ rmd_files:
   html:
   - index.Rmd
   - 01-intro.Rmd
-  - 02-minimization.Rmd
-  - 03-pseudonymisation-anonymisation.Rmd
-  - 04-techniques.Rmd
-  - 05-textual.Rmd
-  - 06-numeric.Rmd
-  - 07-audio-video.Rmd
-  - 08-geospatial.Rmd
-  - 09-tips.Rmd
+  - 02-personal_data.Rmd
+  - 03-principles_concepts.Rmd
+  - 04-textual.Rmd
+  - 05-numeric.Rmd
+  - 06-audio_video.Rmd
+  - 07-geospatial.Rmd
+  - 08-tips.Rmd
 

@@ -1,0 +1,69 @@
+# Principle and Concepts of data minimization {#minimization}
+
+## Data minimization
+
+*Data minimization* is a key principle of data privacy and involves limiting data collection and retention to only what is **relevant**, **necessary**, and **adequate** to accomplish a given purpose. In line with this principle, a researcher should only collect and retain the personal data that is required for a research study in mind. 
+
+
+<div class="pink-box">
+
+In practice, personal data minimization can be achieved by:
+
+•	**Planning carefully what kind of personal data is necessary for the research purpose  It is advised to carefully plan this early during the research design phase.** For instance, you should not ask for the age of a research participant (data subject) if the age effect is not investigated in the research.
+
+•	**Collecting aggregated information if detailed information is not necessary.**  For example, if the age range is sufficient for the analysis, you should not collect the actual age of the participant. 
+
+•	**Limiting open-ended questions in surveys.** Answers to open-ended survey questions provided by respondents occasionally contain personal data about the respondents themselves or other people. Having many open-ended questions in your survey requires more anonymization effort after collecting the data. 
+
+•	**Instructing research participants sufficiently to avoid providing unnecessary personal data.** In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people's names or addresses) before conducting the interview is well worth the effort. 
+
+•	**Adjusting the settings of the data collection tool (e.g., survey tools) to avoid collecting unnecessary personal data.** Some survey tools are per default set up to collect personal data such as the location and/or IP address of the user.  Always check the settings of the tool you use for data collection. 
+
+
+</div>
+
+
+Collecting only the minimum amount of personal data necessary for your research  reduces the threat of data breaches and privacy violations, thereby reducing potential consequences for the research participants. 
+
+When personal data are necessary and have been collected for research, research participants’ identities should be protected. Two techniques are used to ensure that research participants remain anonymous and untraceable during and after research- **pseudonymisation** and **anonymization**.
+
+## Pseudonymisation versus Anonymisation {#pseudony_anony}
+
+### Pseudonymisation 
+
+*Pseudonymisation* is a de-identification process after which personal data can no longer be attributed to a specific data subject without the use of additional information. This process is also referred to as coding. It involves creating <u> **two separate files**</u>, one linking the personal data to the pseudonyms (made-up values/tokens) and another file which contains only the pseudonyms and the supplied research information. The former file is known as **a key file** or **code list** and must be kept separately from the latter file. 
+
+The key file should be subjected to extra security measures (such as secured storage, password protection and encryption) to ensure that the identities of research participants are protected.
+
+### Anonymisation
+
+*Anonymisation* is another de-identification process which involves deleting direct and/or indirect identifiers from the data, such that there is no way to re-establish the link between individuals (research participants) and the research information they have supplied. In this case, there is <u>no key file</u>.
+
+
+:::{.bubble}
+
+*Pseudonymization* is employed to protect the identities of research participants by substituting direct identifiers with *pseudonyms*. This process is **reversible** and can still allow **re-identification**.
+
+In contrast, *anonymisation* involves **deleting the identifiers**, rendering **re-identification impossible**, even by researchers themselves. The process is **irreversible**.
+:::
+
+As a good practice, the details of how anonymisation was done should be clearly documented for future reference. Note that such documentation should be protected as it may facilitate re-identification of the anonymized data.
+
+Unlike pseudonymized data, anonymized data does not fall under GDPR. However,please note that, fully anonymized data can be difficult to achieve  Additionally, full anonymization is sometimes not desirable, especially in qualitative research, as you may lose the context or usability of the data. 
+
+
+
+<div class="tips">
+
+**Practical Consideration**
+
+•	Anonymization affect the utility of the data, where in some case the data become useless for reuse. Therefore, it should be clearly documented in the metadata of the dataset where anonymization has been performed.
+
+•	Create a key file(a de-anonymization key) of all removals, replacements, aggregations or generalisations made. Store such a key file securely and separately from data files(refereces needed).
+
+</div>
+
+<div> Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a> 
+</div>
+
+

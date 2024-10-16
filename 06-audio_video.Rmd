@@ -4,16 +4,8 @@ Audio-visual data includes various forms of multimedia content, such as videos, 
 
 
 <div class="attention">
-Keep in mind that these techniques can be time-consuming or expensive to use.
-
-</div>
+Keep in mind that these techniques can be time-consuming or expensive to use.</div>
 <div> Icons made by <a href="https://www.flaticon.com/authors/icon-mania" title="Icon mania"> Icon mania </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
-
-
-<div class="image-outside_box">
-Keep in mind that these techniques can be time-consuming or expensive to use.
-</div>
-
 
 
 ## Voice transformation/distortion

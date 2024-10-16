@@ -17,8 +17,8 @@ favicon: figure/favicon.ico
 apple-touch-icon: "figure/logo.jpeg"
 apple-touch-icon-size: 180
 output:
-  bookdown::pdf_book:        # PDF output
-    latex_engine: xelatex    # You can use pdflatex or lualatex as well
+  bookdown::pdf_book:  default      # PDF output
+    #latex_engine: xelatex    # You can use pdflatex or lualatex as well
   bookdown::html_book:       # HTML output
     toc: true
     toc_float: true
@@ -31,10 +31,6 @@ knitr::opts_chunk$set(echo = TRUE,
 Sys.setlocale("LC_TIME", "English")
 
 ```
-
-
-bookdown::render_book("index.Rmd", "bookdown::html_book")
-bookdown::render_book("index.Rmd", "bookdown::pdf_book")
 
 
 
@@ -54,14 +50,13 @@ library('flextable')
 #tinytex::install_tinytex(force = TRUE)
 ```
 
-In today's data-driven world, privacy concerns have become paramount. With the increasing collection of personal data in research, researchers bear the responsibility of ensuring the protection of the privacy rights of the individuals participating in their studies. In addition, the General Data Protection Regulation (GDPR) in Europe requires researchers affiliated with any institution within the European Economic Area (EEA) to protect the privacy of research participants if they handle personal data in their research. In this context, the more personal data are collected, the greater the need for data de-identification.
+In today's data-driven world, privacy concerns have become paramount. With the increasing collection of personal data in research, researchers bear the responsibility of ensuring the protection of the privacy rights of the individuals participating in their studies. In addition, the General Data Protection Regulation (GDPR) in Europe requires researchers affiliated with any institution within the European Economic Area (EEA) to protect the privacy of research participants if they handle personal data in their research. In this context, the more personal data are collected, the greater the need for data de-identification and, eventually, anonymization. 
+
+This guide provides practical guidance on pseudonymizing and anonymizing personal data in research. It includes hands-on examples of various techniques for different types of research data. Although extensive techniques and examples are given, please note that this guide does not contain every issue related to pseudonymization or anonymisation. As the de-identification of your research data is often complex and a case by case solution. Please advise your privacy contact person for more information.  The guide is structured as follows:
 
 
 <div class="pink-box">
-
-This guide provides practical guidance on pseudonymizing and anonymizing personal data in research- the two data de-identification approaches. It includes examples of various techniques for different types of research data and is structured as follows:
-
-•	In **Chapter 2**, the term "personal data" is defined.
+•	In **Chapter 2**, concepts and principles of data anonymisation are introduced.
 
 •	In **Chapter 3**, the principle of data minimisation is introduced.
 
@@ -80,33 +75,11 @@ This guide is produced by data stewards in University of Twente (UT).We welcome 
 
 :::warning
 
-If you work at the University Medical Centre Utrecht (UMCU) or any other institution outside of Utrecht University, some of the guidelines in the Data Privacy Handbook may not be in line with your institutional guidelines. Please consult with your local privacy staff whenever you are in doubt about this.
+If you work on medical research or any other institution outside of University of Twente, some of the guidelines in the practial guide Handbook may not be in line with your institutional guidelines. Please consult with your local privacy staff whenever you are in doubt about this.
 :::
 
-## Disclaimer
+## How to cite and license
 
-The content presented in this Practical Guide to Data Anonymisation has been carefully curated by data steward in University of Twente.  
-
-This practical guide is a 'living' book that is continually being written, 
-updated and reviewed. Its contents can therefore change, or become outdated or 
-redundant. Hence, the information presented is provided "as is", **without 
-guarantees of accuracy or completeness**.
-
-As scientific research may differ depending on the discipline, topic, and 
-context, measures needed or taken to ensure GDPR-compliance will vary across 
-research projects. The authors can therefore **not be held responsible, nor 
-accountable** for any negative consequences arising from interpretation and use 
-of the content of this guide.
-
-**For the most up-to-date and official/
-authoritative information, please refer to the 
-[university website](https://www.utwente.nl/en/service-portal/university-library/research-data-management){target="_blank"}, 
-to which this guide is a hands-on, practical supplement**. Moreover, before 
-implementing the guidance laid out in this guide, always seek the advice of 
-data steward in your faculty to confirm the suitability of any proposed 
-solution to your project.  
-
-
-
+## Acknowledgements
 
 

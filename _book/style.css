@@ -106,7 +106,8 @@ div.note {
 
 /*-----------------------------------------------------------------------------------*/
 /*bubble box*/
-div.bubble,div.attention, div.software, div.tips {
+
+div.bubble,div.software, div.tips {
   border-radius: 20px; /* Rounded corners */
   padding: 15px;
   padding: 1em;
@@ -123,11 +124,6 @@ div.bubble {
   background-color: #ECE3F0;
 }
 
-div.attention {
-  background-image: url("../figure/attention.png");
-  background-color: #ECE3F0;
-}
-
 div.software {
   background-image: url("../figure/software.png");
   background-color: #ECE3F0;
@@ -137,6 +133,69 @@ div.tips {
   background-image: url("../figure/tips.png");
   background-color: #ECE3F0;
 }
+
+/*-----------------------------------------------------------------------------------*/
+/*attention box: too small to make  individual one*/
+
+
+div.attention {
+  border-radius: 20px;        /* Rounded corners */
+  padding: 15px 1em;          /* Padding inside the box */
+  margin: 1em auto;           /* Center the box and add vertical space */
+  padding-left: 100px;        /* Space for the background image */
+  background-size: 50px;      /* Size of the background image */
+  background-repeat: no-repeat;
+  background-position: left top;
+  min-height: 50px;           /* Minimum height of the box */
+  width: 95%;                 /* Set width to 80% of the page */
+  background-color: #ECE3F0;  /* Background color */
+  background-image: url("../figure/attention.png"); /* Background image */
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*three columns box*/
+.three-column-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Adjust spacing below the container if needed */
+  min-height: 100px
+  color: black;
+  border-radius: 15px;
+  min-height: 80px
+}
+
+/* Style for the titles, if necessary */
+.three-column h2 {
+  text-align: center; /* Left-align titles if needed */
+  margin-bottom: 30px; /* Space below the title */
+}
+
+/* Style for each column */
+.three-column {
+  border-radius: 15px;
+  border: 3px solid transparent;
+  border-image: linear-gradient(to right, #007BFF, #FD62AD) 1; 
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 5px; /* Adjust spacing between columns */
+  text-align: centerright; /* Center-align text in the column */
+}
+
+/* Ensuring columns are equal width */
+.three-column:nth-child(1);
+.three-column:nth-child(2);
+.three-column:nth-child(3) {
+  border-radius: 15px;
+  width: calc(33.33% - 10px);
+}
+
+
+
+
+
 
 
 /* Container for the box with title */
