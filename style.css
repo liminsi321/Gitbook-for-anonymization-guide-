@@ -160,23 +160,14 @@ div.attention {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px; /* Adjust spacing below the container if needed */
-  min-height: 100px
-  color: black;
-  border-radius: 15px;
-  min-height: 80px
-}
-
-/* Style for the titles, if necessary */
-.three-column h2 {
-  text-align: center; /* Left-align titles if needed */
-  margin-bottom: 30px; /* Space below the title */
 }
 
 /* Style for each column */
 .three-column {
-  border-radius: 15px;
+  border-radius: 20px;
   border: 3px solid transparent;
-  border-image: linear-gradient(to right, #007BFF, #FD62AD) 1; 
+  border-image: linear-gradient(to right, #007BFF, #FD62AD) 1;
+  border-image-slice: 1;
   flex: 1;
   padding: 10px;
   box-sizing: border-box;
@@ -185,13 +176,16 @@ div.attention {
 }
 
 /* Ensuring columns are equal width */
-.three-column:nth-child(1);
-.three-column:nth-child(2);
+.three-column:nth-child(1),
+.three-column:nth-child(2),
 .three-column:nth-child(3) {
-  border-radius: 15px;
   width: calc(33.33% - 10px);
 }
-
+/* Style for the titles, if necessary */
+.three-column h2 {
+  text-align: center; /* Left-align titles if needed */
+  margin-bottom: 30px; /* Space below the title */
+}
 
 
 
@@ -385,7 +379,6 @@ div.attention {
 
 
 
-
 /* The next two rules make the horizontal line go straight across in top navbar */
 
 .summary > li:first-child {
@@ -397,3 +390,68 @@ div.attention {
 .book .book-summary ul.summary li.divider {
     height: 0px;
 }
+
+
+
+
+
+/* -----------Pretty details tag--------------------*/
+details {
+  width: 100% /*620px*/;
+  padding: 6px;
+}
+
+details > summary {
+  font-family: Phantomsans, sans-serif; /* Use the explicit font family */
+  font-size: 18px; /* Larger font size for better readability */
+  font-weight: bold; /* Retain bold font */
+  
+  /* Center alignment */
+  justify-content: center;
+  align-items: center;
+  
+  /* Gradient background for a more modern look */
+  background-image: linear-gradient(144deg, #D1C4E9, #90CAF9 80%, #B2EBF2);
+  
+  /* Rounded corners for a button-like look */
+  border-radius: .25rem;
+
+  /* Shadow to add depth */
+  box-shadow: 3px 3px 4px grey;
+  
+  /* Clickable cursor */
+  cursor: pointer;
+
+  /* Keep sufficient padding for usability */
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px); /* Retaining padding from the first version for better sizing */
+  
+  /* Transition effect for hover or interaction feedback */
+  transition: all 250ms;
+
+  /* Additional styling */
+  color: white; /* Ensure the text contrasts with the gradient */
+  display: inline-flex;
+  margin: 0;
+  min-height: 4rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: auto;
+  margin-right: 5px;
+  line-height: 1.2; 
+}
+
+
+details > div {
+  border-radius: 0 0 10px 10px;
+  padding: 12px 6px;
+  margin: 0;
+  box-shadow: 3px 3px 4px grey;
+}
+
+details[open] > summary {
+  background-color: #FFCD00;
+}
+
+  
+

@@ -5,14 +5,11 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
+url: "https://github.com/UniversityOfTwente/anonymization-guide/tree/main/_book"
+github_repo: "UniversityOfTwente/anonymization-guide"
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  This is a minimal example of using the bookdown package to write a book.
-  set in the _output.yml file.
-  The HTML output format for this example is bookdown::gitbook,
-#link-citations: yes
-#github-repo: rstudio/bookdown-demo
+  This is a practical guideline for anonymization of reserach data, created by data steward at University of Twente.  
 favicon: figure/favicon.ico
 apple-touch-icon: "figure/logo.jpeg"
 apple-touch-icon-size: 180
@@ -38,7 +35,7 @@ Sys.setlocale("LC_TIME", "English")
 ```{r, results='asis',echo=FALSE}
 # Load required packages
 #install.packages("renv")
-library(renv)
+#library(renv)
 #renv::init()
 library('bookdown')
 library('DiagrammeR')
@@ -70,12 +67,12 @@ This guide provides practical guidance on pseudonymizing and anonymizing persona
 
 :::note
 
-This guide is produced by data stewards in University of Twente (UT).We welcome feedback and contributions of any type, please read our for more information.
+This guide is produced by data stewards in University of Twente (UT).We welcome feedback and contributions of any type, please reach out to us for more information.
 :::
 
 :::warning
 
-If you work on medical research or any other institution outside of University of Twente, some of the guidelines in the practial guide Handbook may not be in line with your institutional guidelines. Please consult with your local privacy staff whenever you are in doubt about this.
+If you work on medical research or any other institution outside of University of Twente, some of the guidelines in the practical guide Handbook may not be in line with your institutional guidelines. Please consult with your local privacy staff whenever you are in doubt about this.
 :::
 
 ## How to cite and license

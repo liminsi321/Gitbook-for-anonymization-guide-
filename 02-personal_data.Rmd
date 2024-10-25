@@ -9,7 +9,7 @@
 
 In practice, personal data minimization can be achieved by:
 
-•	**Planning carefully what kind of personal data is necessary for the research purpose  It is advised to carefully plan this early during the research design phase.** For instance, you should not ask for the age of a research participant (data subject) if the age effect is not investigated in the research.
+•	**Planning carefully what kind of personal data is necessary for the research purpose.** It is advised to carefully plan this early during the research design phase. For instance, you should not ask for the age of a research participant (data subject) if the age effect is not investigated in the research.
 
 •	**Collecting aggregated information if detailed information is not necessary.**  For example, if the age range is sufficient for the analysis, you should not collect the actual age of the participant. 
 
@@ -18,9 +18,30 @@ In practice, personal data minimization can be achieved by:
 •	**Instructing research participants sufficiently to avoid providing unnecessary personal data.** In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people's names or addresses) before conducting the interview is well worth the effort. 
 
 •	**Adjusting the settings of the data collection tool (e.g., survey tools) to avoid collecting unnecessary personal data.** Some survey tools are per default set up to collect personal data such as the location and/or IP address of the user.  Always check the settings of the tool you use for data collection. 
-
-
 </div>
+
+<ol>
+  <li><details><summary><b>**Planning carefully what kind of personal data is necessary for the research purpose.**</b></summary>
+  <div>It is advised to carefully plan this early during the research design phase. For instance, you should not ask for the age of a research participant (data subject) if the age effect is not investigated in the research.<br></div>
+  </details></li>
+  <li><details><summary><b>**Collecting aggregated information if detailed information is not necessary.** </b></summary>
+  <div><ul>
+    <li> For example, if the age range is sufficient for the analysis, you should not collect the actual age of the participant.<br></div>
+  </details></li>
+  <li><details><summary><b>**Limiting open-ended questions in surveys.**</b></summary>
+  <div>Answers to open-ended survey questions provided by respondents occasionally contain personal data about the respondents themselves or other people. Having many open-ended questions in your survey requires more anonymization effort after collecting the data.</div></details></li>
+  <li><details><summary><b>	**Instructing research participants sufficiently to avoid providing unnecessary personal data.** </b></summary>
+  <div>In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people's names or addresses) before conducting the interview is well worth the effort. 
+  </div></details></li>
+    <li><details><summary><b>	**Instructing research participants sufficiently to avoid providing unnecessary personal data.** </b></summary>
+  <div>In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people's names or addresses) before conducting the interview is well worth the effort. 
+  </div></details></li>
+    <li><details><summary><b>	**Adjusting the settings of the data collection tool (e.g., survey tools) to avoid collecting unnecessary personal data.** </b></summary>
+  <div>Some survey tools are per default set up to collect personal data such as the location and/or IP address of the user.  Always check the settings of the tool you use for data collection.</div></details></li>
+</ol>
+
+
+
 
 
 Collecting only the minimum amount of personal data necessary for your research  reduces the threat of data breaches and privacy violations, thereby reducing potential consequences for the research participants. 

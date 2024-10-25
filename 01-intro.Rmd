@@ -23,7 +23,7 @@ Any information that  can reveal an individual when combined with other availabl
 
 <div class="three-column-container">
   <div class="three-column">**Direct identifiers**  
-    Information unique to an individual, such as a name, phone number, picture, security number, audio recording, video, or photograph, can directly identify that person.
+    Information unique to an individual can directly identify that person.
   </div>
   <div class="three-column">**Strong indirect identifiers**  
     Information that can easily identify an individual, such as a rare event, uncommon disease, unique job title, or IP address.
