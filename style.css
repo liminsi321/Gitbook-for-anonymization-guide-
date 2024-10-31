@@ -405,30 +405,22 @@ details > summary {
   font-family: Phantomsans, sans-serif; /* Use the explicit font family */
   font-size: 18px; /* Larger font size for better readability */
   font-weight: bold; /* Retain bold font */
-  
-  /* Center alignment */
-  justify-content: center;
+  justify-content: center;  /* Center alignment */
   align-items: center;
   
   /* Gradient background for a more modern look */
   background-image: linear-gradient(144deg, #D1C4E9, #90CAF9 80%, #B2EBF2);
   
   /* Rounded corners for a button-like look */
-  border-radius: .25rem;
-
-  /* Shadow to add depth */
-  box-shadow: 3px 3px 4px grey;
-  
-  /* Clickable cursor */
+  border-radius: .25rem;  /* Shadow to add depth */
+  box-shadow: 3px 3px 4px grey; /* Clickable cursor */
   cursor: pointer;
 
   /* Keep sufficient padding for usability */
   padding: calc(.875rem - 1px) calc(1.5rem - 1px); /* Retaining padding from the first version for better sizing */
   
   /* Transition effect for hover or interaction feedback */
-  transition: all 250ms;
-
-  /* Additional styling */
+  transition: all 250ms;  /* Additional styling */
   color: white; /* Ensure the text contrasts with the gradient */
   display: inline-flex;
   margin: 0;
@@ -447,11 +439,36 @@ details > div {
   padding: 12px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px grey;
+}}
+
+
+
+/* -----------footer--------------------*/
+footer {
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
 }
 
-details[open] > summary {
-  background-color: #FFCD00;
+footer div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-  
+footer img {
+    height: 150px;
+    width: auto;
+}
 
+footer p {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}

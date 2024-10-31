@@ -2,25 +2,6 @@
 
 The term "Personal data" refers to any information that enables you to identify a living person. According to the GDPR,  a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.
 
-<div class="pink-box">
-•	**Direct identifiers**
-
-Any piece of information unique to an individual, such as a name or a phone number,a picture, security numbers, audio/sound, video, photographs that by itself can identify that person.
-
-
-•**Strong indirect identifiers**
-
-Information that  can be used to identify an individual quite easily, such as a rare event, rare disease, unusual job title or IP address. 
-
-
-•**Indirect identifiers**
-
-Any information that  can reveal an individual when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc. 
-
-</div>
-
-
-
 <div class="three-column-container">
   <div class="three-column">**Direct identifiers**  
     Information unique to an individual can directly identify that person.
@@ -32,12 +13,6 @@ Any information that  can reveal an individual when combined with other availabl
     Information that, when combined with other data, can identify an individual, such as address, age, gender, occupation, location, health records, or ethnic group.
   </div>
 </div>
-
-
-
-
-
-
 
 It is worth noting that some identifiers are particularly considered **strong indirect identifiers** because they can significantly increase the risk of identifying an individual when combined with other information. Examples of strong identifiers include a date of birth,  an IP address etc.
 

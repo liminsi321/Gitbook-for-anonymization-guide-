@@ -76,7 +76,8 @@ If you work on medical research or any other institution outside of University o
 :::
 
 ## How to cite and license
+A Practical Guide to Data Anonymization © 2024 by Alice Nikuze, Deniece Nazareth, Minsi Li is licensed under CC BY 4.0.
 
 ## Acknowledgements
-
+We would like to extend our sincere gratitude to dr. Qian Zhang for her invaluable contribution during the conceptualization phase of this guide. We also wish to express our sincere appreciation to Nestor De la Paz Ruiz for his contribution, whose efforts were instrumental in transforming this guide into a Gitbook.
 

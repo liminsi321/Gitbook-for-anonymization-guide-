@@ -23,7 +23,7 @@
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2024-10-25" />
+<meta name="date" content="2024-10-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -88,6 +88,35 @@
 <li class="chapter" data-level="3" data-path="minimization.html"><a href="minimization.html"><i class="fa fa-check"></i><b>3</b> Principle and Concepts of data minimization</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="minimization.html"><a href="minimization.html#data-minimization"><i class="fa fa-check"></i><b>3.1</b> Data minimization</a></li>
+<li class="chapter" data-level="3.2" data-path="minimization.html"><a href="minimization.html#pseudony_anony"><i class="fa fa-check"></i><b>3.2</b> Pseudonymisation versus Anonymisation</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="minimization.html"><a href="minimization.html#pseudonymisation"><i class="fa fa-check"></i><b>3.2.1</b> Pseudonymisation</a></li>
+<li class="chapter" data-level="3.2.2" data-path="minimization.html"><a href="minimization.html#anonymisation"><i class="fa fa-check"></i><b>3.2.2</b> Anonymisation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="techniques.html"><a href="techniques.html"><i class="fa fa-check"></i><b>4</b> Research Data Types and Pseudonymisation and Anonymisation Techniques</a></li>
+<li class="chapter" data-level="5" data-path="textual-data.html"><a href="textual-data.html"><i class="fa fa-check"></i><b>5</b> Textual data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="textual-data.html"><a href="textual-data.html#generalisation"><i class="fa fa-check"></i><b>5.1</b> Generalisation</a></li>
+<li class="chapter" data-level="5.2" data-path="textual-data.html"><a href="textual-data.html#distort"><i class="fa fa-check"></i><b>5.2</b> Distort</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="numerical-data.html"><a href="numerical-data.html"><i class="fa fa-check"></i><b>6</b> Numerical data</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="numerical-data.html"><a href="numerical-data.html#suppression"><i class="fa fa-check"></i><b>6.1</b> Suppression</a></li>
+<li class="chapter" data-level="6.2" data-path="numerical-data.html"><a href="numerical-data.html#swapping"><i class="fa fa-check"></i><b>6.2</b> Swapping</a></li>
+<li class="chapter" data-level="6.3" data-path="numerical-data.html"><a href="numerical-data.html#masking"><i class="fa fa-check"></i><b>6.3</b> Masking</a></li>
+<li class="chapter" data-level="6.4" data-path="numerical-data.html"><a href="numerical-data.html#generalisation-1"><i class="fa fa-check"></i><b>6.4</b> Generalisation</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="audio-visual-data.html"><a href="audio-visual-data.html"><i class="fa fa-check"></i><b>7</b> Audio-Visual data</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="audio-visual-data.html"><a href="audio-visual-data.html#voice-transformationdistortion"><i class="fa fa-check"></i><b>7.1</b> Voice transformation/distortion</a></li>
+<li class="chapter" data-level="7.2" data-path="audio-visual-data.html"><a href="audio-visual-data.html#blurring-pixelation-or-obscuring"><i class="fa fa-check"></i><b>7.2</b> Blurring, pixelation or obscuring</a></li>
+<li class="chapter" data-level="7.3" data-path="audio-visual-data.html"><a href="audio-visual-data.html#mute-or-bleep-out-the-identifying-information"><i class="fa fa-check"></i><b>7.3</b> Mute or bleep out the identifying information</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="geospatial-data.html"><a href="geospatial-data.html"><i class="fa fa-check"></i><b>8</b> Geospatial data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="geospatial-data.html"><a href="geospatial-data.html#spatial-generalisation"><i class="fa fa-check"></i><b>8.1</b> Spatial generalisation</a></li>
+<li class="chapter" data-level="8.2" data-path="geospatial-data.html"><a href="geospatial-data.html#attribute-anonymisation"><i class="fa fa-check"></i><b>8.2</b> Attribute anonymisation</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="./"A Practical Guide to Data Anonymisation</a></li>
@@ -116,7 +145,7 @@
 Step 1. Know your data: What kind of research data type do you have? What kind of data do you want to anonymize or pseudonimyze? Do you have textual data or numerical? Or do you have interview recordings consisting of audio?</p>
 <p>Step 2. Identify your identifiers in your data: Looking at your data, what kind of identifiers do you see? What kind of identifiers do you want to anonymize or pseudonymize? Do you have names, places, year of birth etc? Are there combinations of identifiers in your data that can identify a person? Or are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood.</p>
 <p>Step 3.</p>
-<div class="tabwid"><style>.cl-4ee277d2{}.cl-4ed388d0{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-4ed388e4{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-4ed9125a{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:2pt;padding-top:2pt;padding-left:2pt;padding-right:2pt;line-height: 1;background-color:transparent;}.cl-4ed9126e{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:2pt;padding-top:2pt;padding-left:2pt;padding-right:2pt;line-height: 1;background-color:transparent;}.cl-4ed943ba{width:2.561in;background-color:rgba(0, 123, 255, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943c4{width:4.267in;background-color:rgba(126, 110, 214, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943c5{width:8.228in;background-color:rgba(253, 98, 173, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943ce{width:2.561in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943cf{width:4.267in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943d8{width:8.228in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943d9{width:2.561in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943e2{width:4.267in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943e3{width:8.228in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943e4{width:2.561in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943ec{width:4.267in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-4ed943ed{width:8.228in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-4ee277d2'>
+<div class="tabwid"><style>.cl-772db082{}.cl-771e3698{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-771e36ca{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-7724a352{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:2pt;padding-top:2pt;padding-left:2pt;padding-right:2pt;line-height: 1;background-color:transparent;}.cl-7724a35c{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:2pt;padding-top:2pt;padding-left:2pt;padding-right:2pt;line-height: 1;background-color:transparent;}.cl-7724cfda{width:2.561in;background-color:rgba(0, 123, 255, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cfe4{width:4.267in;background-color:rgba(126, 110, 214, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cfe5{width:8.228in;background-color:rgba(253, 98, 173, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cfee{width:2.561in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cfef{width:4.267in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cff8{width:8.228in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cff9{width:2.561in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cffa{width:4.267in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724d002{width:8.228in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724d003{width:2.561in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724d00c{width:4.267in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724d00d{width:8.228in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-772db082'>
 
 ```
 
@@ -124,215 +153,70 @@ Step 1. Know your data: What kind of research data type do you have? What kind o
 
 ```{=html}
 
-<thead><tr style="overflow-wrap:break-word;"><th class="cl-4ed943ba"><p class="cl-4ed9125a"><span class="cl-4ed388d0">Anonymization steps</span></p></th><th class="cl-4ed943c4"><p class="cl-4ed9126e"><span class="cl-4ed388d0">Relevant questions</span></p></th><th class="cl-4ed943c5"><p class="cl-4ed9126e"><span class="cl-4ed388d0">Examples</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-4ed943ce"><p class="cl-4ed9125a"><span class="cl-4ed388e4">1. Know your data</span></p></td><td class="cl-4ed943cf"><p class="cl-4ed9126e"><span class="cl-4ed388e4">For different types of idetifiers, see [Personal data](#personal_data)</span></p></td><td class="cl-4ed943d8"><p class="cl-4ed9126e"><span class="cl-4ed388e4">What kind of data do you want to anonymize or pseudonimyze, such as textual, numertical, audio, video data?</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4ed943d9"><p class="cl-4ed9125a"><span class="cl-4ed388e4">2. Implement anonymisation techniques</span></p></td><td class="cl-4ed943e2"><p class="cl-4ed9126e"><span class="cl-4ed388e4">Ensure all dirct and indirect indentifers are removed</span></p></td><td class="cl-4ed943e3"><p class="cl-4ed9126e"><span class="cl-4ed388e4">Any remaining information in the dataset still sensitive, or unique?</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-4ed943e4"><p class="cl-4ed9125a"><span class="cl-4ed388e4">3. Assess disclosure risk</span></p></td><td class="cl-4ed943ec"><p class="cl-4ed9126e"><span class="cl-4ed388e4">Ensure all dirct and indirect indentifers are removed</span></p></td><td class="cl-4ed943ed"><p class="cl-4ed9126e"><span class="cl-4ed388e4">Are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood?</span></p></td></tr></tbody></table></div>
+<thead><tr style="overflow-wrap:break-word;"><th class="cl-7724cfda"><p class="cl-7724a352"><span class="cl-771e3698">Anonymization steps</span></p></th><th class="cl-7724cfe4"><p class="cl-7724a35c"><span class="cl-771e3698">Relevant questions</span></p></th><th class="cl-7724cfe5"><p class="cl-7724a35c"><span class="cl-771e3698">Examples</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-7724cfee"><p class="cl-7724a352"><span class="cl-771e36ca">1. Know your data</span></p></td><td class="cl-7724cfef"><p class="cl-7724a35c"><span class="cl-771e36ca">For different types of idetifiers, see [Personal data](#personal_data)</span></p></td><td class="cl-7724cff8"><p class="cl-7724a35c"><span class="cl-771e36ca">What kind of data do you want to anonymize or pseudonimyze, such as textual, numertical, audio, video data?</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7724cff9"><p class="cl-7724a352"><span class="cl-771e36ca">2. Implement anonymisation techniques</span></p></td><td class="cl-7724cffa"><p class="cl-7724a35c"><span class="cl-771e36ca">Ensure all dirct and indirect indentifers are removed</span></p></td><td class="cl-7724d002"><p class="cl-7724a35c"><span class="cl-771e36ca">Any remaining information in the dataset still sensitive, or unique?</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7724d003"><p class="cl-7724a352"><span class="cl-771e36ca">3. Assess disclosure risk</span></p></td><td class="cl-7724d00c"><p class="cl-7724a35c"><span class="cl-771e36ca">Ensure all dirct and indirect indentifers are removed</span></p></td><td class="cl-7724d00d"><p class="cl-7724a35c"><span class="cl-771e36ca">Are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood?</span></p></td></tr></tbody></table></div>
 
 </div>
-<script>
-
-/* update total correct if #webex-total_correct exists */
-update_total_correct = function() {
-  console.log("webex: update total_correct");
-
-  var t = document.getElementsByClassName("webex-total_correct");
-  for (var i = 0; i < t.length; i++) {
-    p = t[i].parentElement;
-    var correct = p.getElementsByClassName("webex-correct").length;
-    var solvemes = p.getElementsByClassName("webex-solveme").length;
-    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
-    var selects = p.getElementsByClassName("webex-select").length;
-
-    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
-  }
-}
-
-/* webex-solution button toggling function */
-b_func = function() {
-  console.log("webex: toggle hide");
-
-  var cl = this.parentElement.classList;
-  if (cl.contains('open')) {
-    cl.remove("open");
-  } else {
-    cl.add("open");
-  }
-}
-
-/* check answers */
-check_func = function() {
-  console.log("webex: check answers");
-
-  var cl = this.parentElement.classList;
-  if (cl.contains('unchecked')) {
-    cl.remove("unchecked");
-    this.innerHTML = "Hide Answers";
-  } else {
-    cl.add("unchecked");
-    this.innerHTML = "Show Answers";
-  }
-}
-
-/* function for checking solveme answers */
-solveme_func = function(e) {
-  console.log("webex: check solveme");
-
-  var real_answers = JSON.parse(this.dataset.answer);
-  var my_answer = this.value;
-  var cl = this.classList;
-  if (cl.contains("ignorecase")) {
-    my_answer = my_answer.toLowerCase();
-  }
-  if (cl.contains("nospaces")) {
-    my_answer = my_answer.replace(/ /g, "")
-  }
-
-  if (my_answer == "") {
-    cl.remove("webex-correct");
-    cl.remove("webex-incorrect");
-  } else if (real_answers.includes(my_answer)) {
-    cl.add("webex-correct");
-    cl.remove("webex-incorrect");
-  } else {
-    cl.add("webex-incorrect");
-    cl.remove("webex-correct");
-  }
-
-  // match numeric answers within a specified tolerance
-  if(this.dataset.tol > 0){
-    var tol = JSON.parse(this.dataset.tol);
-    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
-    if (matches.reduce((a, b) => a + b, 0) > 0) {
-      cl.add("webex-correct");
-    } else {
-      cl.remove("webex-correct");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* Style for the footer */
+    .footer {
+      border-top: 2px solid #ddd; /* Line above the footer */
+      padding: 20px 0;
+      margin-top: 20px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
-  }
 
-  // added regex bit
-  if (cl.contains("regex")){
-    answer_regex = RegExp(real_answers.join("|"))
-    if (answer_regex.test(my_answer)) {
-      cl.add("webex-correct");
+    /* Logo styling */
+    .footer-logo {
+      height: 150px; /* Adjust this size as needed */
+      width: auto;
     }
-  }
 
-  update_total_correct();
-}
-
-/* function for checking select answers */
-select_func = function(e) {
-  console.log("webex: check select");
-
-  var cl = this.classList
-
-  /* add style */
-  cl.remove("webex-incorrect");
-  cl.remove("webex-correct");
-  if (this.value == "answer") {
-    cl.add("webex-correct");
-  } else if (this.value != "blank") {
-    cl.add("webex-incorrect");
-  }
-
-  update_total_correct();
-}
-
-/* function for checking radiogroups answers */
-radiogroups_func = function(e) {
-  console.log("webex: check radiogroups");
-
-  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
-  var cl = checked_button.parentElement.classList;
-  var labels = checked_button.parentElement.parentElement.children;
-
-  /* get rid of styles */
-  for (i = 0; i < labels.length; i++) {
-    labels[i].classList.remove("webex-incorrect");
-    labels[i].classList.remove("webex-correct");
-  }
-
-  /* add style */
-  if (checked_button.value == "answer") {
-    cl.add("webex-correct");
-  } else {
-    cl.add("webex-incorrect");
-  }
-
-  update_total_correct();
-}
-
-window.onload = function() {
-  console.log("webex onload");
-  /* set up solution buttons */
-  var buttons = document.getElementsByTagName("button");
-
-  for (var i = 0; i < buttons.length; i++) {
-    if (buttons[i].parentElement.classList.contains('webex-solution')) {
-      buttons[i].onclick = b_func;
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
-  }
 
-  var check_sections = document.getElementsByClassName("webex-check");
-  console.log("check:", check_sections.length);
-  for (var i = 0; i < check_sections.length; i++) {
-    check_sections[i].classList.add("unchecked");
-
-    let btn = document.createElement("button");
-    btn.innerHTML = "Show Answers";
-    btn.classList.add("webex-check-button");
-    btn.onclick = check_func;
-    check_sections[i].appendChild(btn);
-
-    let spn = document.createElement("span");
-    spn.classList.add("webex-total_correct");
-    check_sections[i].appendChild(spn);
-  }
-
-  /* set up webex-solveme inputs */
-  var solveme = document.getElementsByClassName("webex-solveme");
-
-  for (var i = 0; i < solveme.length; i++) {
-    /* make sure input boxes don't auto-anything */
-    solveme[i].setAttribute("autocomplete","off");
-    solveme[i].setAttribute("autocorrect", "off");
-    solveme[i].setAttribute("autocapitalize", "off");
-    solveme[i].setAttribute("spellcheck", "false");
-    solveme[i].value = "";
-
-    /* adjust answer for ignorecase or nospaces */
-    var cl = solveme[i].classList;
-    var real_answer = solveme[i].dataset.answer;
-    if (cl.contains("ignorecase")) {
-      real_answer = real_answer.toLowerCase();
+    .footer-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
     }
-    if (cl.contains("nospaces")) {
-      real_answer = real_answer.replace(/ /g, "");
+
+    .footer-link a {
+      color: #007acc; /* Customize link color */
+      text-decoration: none;
     }
-    solveme[i].dataset.answer = real_answer;
 
-    /* attach checking function */
-    solveme[i].onkeyup = solveme_func;
-    solveme[i].onchange = solveme_func;
+    .footer-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <footer class="footer">
+    <!-- Logo Section -->
+    <div class="footer-logo-section">
+      <img src="figure/UT%20backgrounds%201920x1080-1.png" alt="Book Logo" class="footer-logo">
+    </div>
 
-    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
-  }
-
-  /* set up radiogroups */
-  var radiogroups = document.getElementsByClassName("webex-radiogroup");
-  for (var i = 0; i < radiogroups.length; i++) {
-    radiogroups[i].onchange = radiogroups_func;
-  }
-
-  /* set up selects */
-  var selects = document.getElementsByClassName("webex-select");
-  for (var i = 0; i < selects.length; i++) {
-    selects[i].onchange = select_func;
-    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
-  }
-
-  update_total_correct();
-}
-
-</script>
+    <!-- Book Name and Repository Link Section -->
+    <div class="footer-content">
+      <div class="footer-title">A Practical Guide to Data Anonymisation</div>
+      <div class="footer-link">
+        <a href="ttps://github.com/UniversityOfTwente/anonymization-guide" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
             </section>
 
           </div>
@@ -381,7 +265,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["APracticalGuidetoDataAnonymisation.pdf", "APracticalGuidetoDataAnonymisation.epub"],
+"download": null,
 "search": {
 "engine": "fuse",
 "options": null

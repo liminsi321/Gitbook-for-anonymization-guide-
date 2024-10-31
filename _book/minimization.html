@@ -23,7 +23,7 @@
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2024-10-25" />
+<meta name="date" content="2024-10-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -88,6 +88,35 @@
 <li class="chapter" data-level="3" data-path="minimization.html"><a href="minimization.html"><i class="fa fa-check"></i><b>3</b> Principle and Concepts of data minimization</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="minimization.html"><a href="minimization.html#data-minimization"><i class="fa fa-check"></i><b>3.1</b> Data minimization</a></li>
+<li class="chapter" data-level="3.2" data-path="minimization.html"><a href="minimization.html#pseudony_anony"><i class="fa fa-check"></i><b>3.2</b> Pseudonymisation versus Anonymisation</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="minimization.html"><a href="minimization.html#pseudonymisation"><i class="fa fa-check"></i><b>3.2.1</b> Pseudonymisation</a></li>
+<li class="chapter" data-level="3.2.2" data-path="minimization.html"><a href="minimization.html#anonymisation"><i class="fa fa-check"></i><b>3.2.2</b> Anonymisation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="techniques.html"><a href="techniques.html"><i class="fa fa-check"></i><b>4</b> Research Data Types and Pseudonymisation and Anonymisation Techniques</a></li>
+<li class="chapter" data-level="5" data-path="textual-data.html"><a href="textual-data.html"><i class="fa fa-check"></i><b>5</b> Textual data</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="textual-data.html"><a href="textual-data.html#generalisation"><i class="fa fa-check"></i><b>5.1</b> Generalisation</a></li>
+<li class="chapter" data-level="5.2" data-path="textual-data.html"><a href="textual-data.html#distort"><i class="fa fa-check"></i><b>5.2</b> Distort</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="numerical-data.html"><a href="numerical-data.html"><i class="fa fa-check"></i><b>6</b> Numerical data</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="numerical-data.html"><a href="numerical-data.html#suppression"><i class="fa fa-check"></i><b>6.1</b> Suppression</a></li>
+<li class="chapter" data-level="6.2" data-path="numerical-data.html"><a href="numerical-data.html#swapping"><i class="fa fa-check"></i><b>6.2</b> Swapping</a></li>
+<li class="chapter" data-level="6.3" data-path="numerical-data.html"><a href="numerical-data.html#masking"><i class="fa fa-check"></i><b>6.3</b> Masking</a></li>
+<li class="chapter" data-level="6.4" data-path="numerical-data.html"><a href="numerical-data.html#generalisation-1"><i class="fa fa-check"></i><b>6.4</b> Generalisation</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="audio-visual-data.html"><a href="audio-visual-data.html"><i class="fa fa-check"></i><b>7</b> Audio-Visual data</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="audio-visual-data.html"><a href="audio-visual-data.html#voice-transformationdistortion"><i class="fa fa-check"></i><b>7.1</b> Voice transformation/distortion</a></li>
+<li class="chapter" data-level="7.2" data-path="audio-visual-data.html"><a href="audio-visual-data.html#blurring-pixelation-or-obscuring"><i class="fa fa-check"></i><b>7.2</b> Blurring, pixelation or obscuring</a></li>
+<li class="chapter" data-level="7.3" data-path="audio-visual-data.html"><a href="audio-visual-data.html#mute-or-bleep-out-the-identifying-information"><i class="fa fa-check"></i><b>7.3</b> Mute or bleep out the identifying information</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="geospatial-data.html"><a href="geospatial-data.html"><i class="fa fa-check"></i><b>8</b> Geospatial data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="geospatial-data.html"><a href="geospatial-data.html#spatial-generalisation"><i class="fa fa-check"></i><b>8.1</b> Spatial generalisation</a></li>
+<li class="chapter" data-level="8.2" data-path="geospatial-data.html"><a href="geospatial-data.html#attribute-anonymisation"><i class="fa fa-check"></i><b>8.2</b> Attribute anonymisation</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="./"A Practical Guide to Data Anonymisation</a></li>
@@ -114,15 +143,7 @@
 <div id="data-minimization" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Data minimization<a href="minimization.html#data-minimization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><em>Data minimization</em> is a key principle of data privacy and involves limiting data collection and retention to only what is <strong>relevant</strong>, <strong>necessary</strong>, and <strong>adequate</strong> to accomplish a given purpose. In line with this principle, a researcher should only collect and retain the personal data that is required for a research study in mind.</p>
-<div class="pink-box">
-<p>In practice, personal data minimization can be achieved by:</p>
-<p>• <strong>Planning carefully what kind of personal data is necessary for the research purpose.</strong> It is advised to carefully plan this early during the research design phase. For instance, you should not ask for the age of a research participant (data subject) if the age effect is not investigated in the research.</p>
-<p>• <strong>Collecting aggregated information if detailed information is not necessary.</strong> For example, if the age range is sufficient for the analysis, you should not collect the actual age of the participant.</p>
-<p>• <strong>Limiting open-ended questions in surveys.</strong> Answers to open-ended survey questions provided by respondents occasionally contain personal data about the respondents themselves or other people. Having many open-ended questions in your survey requires more anonymization effort after collecting the data.</p>
-<p>• <strong>Instructing research participants sufficiently to avoid providing unnecessary personal data.</strong> In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people's names or addresses) before conducting the interview is well worth the effort.</p>
-<p>• <strong>Adjusting the settings of the data collection tool (e.g., survey tools) to avoid collecting unnecessary personal data.</strong> Some survey tools are per default set up to collect personal data such as the location and/or IP address of the user. Always check the settings of the tool you use for data collection.</p>
-</div>
-<ol>
+<ul>
 <li>
 <details>
 <summary>
@@ -139,8 +160,6 @@ It is advised to carefully plan this early during the research design phase. For
 <b><strong>Collecting aggregated information if detailed information is not necessary.</strong> </b>
 </summary>
 <div>
-<ul>
-<li>
 For example, if the age range is sufficient for the analysis, you should not collect the actual age of the participant.<br>
 </div>
 </details>
@@ -161,7 +180,7 @@ Answers to open-ended survey questions provided by respondents occasionally cont
 <b> <strong>Instructing research participants sufficiently to avoid providing unnecessary personal data.</strong> </b>
 </summary>
 <div>
-In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people's names or addresses) before conducting the interview is well worth the effort.
+In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people’s names or addresses) before conducting the interview is well worth the effort.
 </div>
 </details>
 </li>
@@ -171,7 +190,7 @@ In open-ended questions in surveys and during interviews, the participant might 
 <b> <strong>Instructing research participants sufficiently to avoid providing unnecessary personal data.</strong> </b>
 </summary>
 <div>
-In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people's names or addresses) before conducting the interview is well worth the effort.
+In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people’s names or addresses) before conducting the interview is well worth the effort.
 </div>
 </details>
 </li>
@@ -185,9 +204,10 @@ Some survey tools are per default set up to collect personal data such as the lo
 </div>
 </details>
 </li>
-</ol>
+</ul>
 <p>Collecting only the minimum amount of personal data necessary for your research reduces the threat of data breaches and privacy violations, thereby reducing potential consequences for the research participants.</p>
 <p>When personal data are necessary and have been collected for research, research participants’ identities should be protected. Two techniques are used to ensure that research participants remain anonymous and untraceable during and after research- <strong>pseudonymisation</strong> and <strong>anonymization</strong>.</p>
+</div>
 <div id="pseudony_anony" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Pseudonymisation versus Anonymisation<a href="minimization.html#pseudony_anony" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="pseudonymisation" class="section level3 hasAnchor" number="3.2.1">
@@ -210,217 +230,73 @@ Some survey tools are per default set up to collect personal data such as the lo
 <p>• Create a key file(a de-anonymization key) of all removals, replacements, aggregations or generalisations made. Store such a key file securely and separately from data files(refereces needed).</p>
 </div>
 <div>
-<p>Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></p>
+<p>Icons made by <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com’</a></p>
 </div>
 
 </div>
 </div>
-<script>
-
-/* update total correct if #webex-total_correct exists */
-update_total_correct = function() {
-  console.log("webex: update total_correct");
-
-  var t = document.getElementsByClassName("webex-total_correct");
-  for (var i = 0; i < t.length; i++) {
-    p = t[i].parentElement;
-    var correct = p.getElementsByClassName("webex-correct").length;
-    var solvemes = p.getElementsByClassName("webex-solveme").length;
-    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
-    var selects = p.getElementsByClassName("webex-select").length;
-
-    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
-  }
-}
-
-/* webex-solution button toggling function */
-b_func = function() {
-  console.log("webex: toggle hide");
-
-  var cl = this.parentElement.classList;
-  if (cl.contains('open')) {
-    cl.remove("open");
-  } else {
-    cl.add("open");
-  }
-}
-
-/* check answers */
-check_func = function() {
-  console.log("webex: check answers");
-
-  var cl = this.parentElement.classList;
-  if (cl.contains('unchecked')) {
-    cl.remove("unchecked");
-    this.innerHTML = "Hide Answers";
-  } else {
-    cl.add("unchecked");
-    this.innerHTML = "Show Answers";
-  }
-}
-
-/* function for checking solveme answers */
-solveme_func = function(e) {
-  console.log("webex: check solveme");
-
-  var real_answers = JSON.parse(this.dataset.answer);
-  var my_answer = this.value;
-  var cl = this.classList;
-  if (cl.contains("ignorecase")) {
-    my_answer = my_answer.toLowerCase();
-  }
-  if (cl.contains("nospaces")) {
-    my_answer = my_answer.replace(/ /g, "")
-  }
-
-  if (my_answer == "") {
-    cl.remove("webex-correct");
-    cl.remove("webex-incorrect");
-  } else if (real_answers.includes(my_answer)) {
-    cl.add("webex-correct");
-    cl.remove("webex-incorrect");
-  } else {
-    cl.add("webex-incorrect");
-    cl.remove("webex-correct");
-  }
-
-  // match numeric answers within a specified tolerance
-  if(this.dataset.tol > 0){
-    var tol = JSON.parse(this.dataset.tol);
-    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
-    if (matches.reduce((a, b) => a + b, 0) > 0) {
-      cl.add("webex-correct");
-    } else {
-      cl.remove("webex-correct");
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* Style for the footer */
+    .footer {
+      border-top: 2px solid #ddd; /* Line above the footer */
+      padding: 20px 0;
+      margin-top: 20px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
-  }
 
-  // added regex bit
-  if (cl.contains("regex")){
-    answer_regex = RegExp(real_answers.join("|"))
-    if (answer_regex.test(my_answer)) {
-      cl.add("webex-correct");
+    /* Logo styling */
+    .footer-logo {
+      height: 150px; /* Adjust this size as needed */
+      width: auto;
     }
-  }
 
-  update_total_correct();
-}
-
-/* function for checking select answers */
-select_func = function(e) {
-  console.log("webex: check select");
-
-  var cl = this.classList
-
-  /* add style */
-  cl.remove("webex-incorrect");
-  cl.remove("webex-correct");
-  if (this.value == "answer") {
-    cl.add("webex-correct");
-  } else if (this.value != "blank") {
-    cl.add("webex-incorrect");
-  }
-
-  update_total_correct();
-}
-
-/* function for checking radiogroups answers */
-radiogroups_func = function(e) {
-  console.log("webex: check radiogroups");
-
-  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
-  var cl = checked_button.parentElement.classList;
-  var labels = checked_button.parentElement.parentElement.children;
-
-  /* get rid of styles */
-  for (i = 0; i < labels.length; i++) {
-    labels[i].classList.remove("webex-incorrect");
-    labels[i].classList.remove("webex-correct");
-  }
-
-  /* add style */
-  if (checked_button.value == "answer") {
-    cl.add("webex-correct");
-  } else {
-    cl.add("webex-incorrect");
-  }
-
-  update_total_correct();
-}
-
-window.onload = function() {
-  console.log("webex onload");
-  /* set up solution buttons */
-  var buttons = document.getElementsByTagName("button");
-
-  for (var i = 0; i < buttons.length; i++) {
-    if (buttons[i].parentElement.classList.contains('webex-solution')) {
-      buttons[i].onclick = b_func;
+    /* Footer content styling */
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
-  }
 
-  var check_sections = document.getElementsByClassName("webex-check");
-  console.log("check:", check_sections.length);
-  for (var i = 0; i < check_sections.length; i++) {
-    check_sections[i].classList.add("unchecked");
-
-    let btn = document.createElement("button");
-    btn.innerHTML = "Show Answers";
-    btn.classList.add("webex-check-button");
-    btn.onclick = check_func;
-    check_sections[i].appendChild(btn);
-
-    let spn = document.createElement("span");
-    spn.classList.add("webex-total_correct");
-    check_sections[i].appendChild(spn);
-  }
-
-  /* set up webex-solveme inputs */
-  var solveme = document.getElementsByClassName("webex-solveme");
-
-  for (var i = 0; i < solveme.length; i++) {
-    /* make sure input boxes don't auto-anything */
-    solveme[i].setAttribute("autocomplete","off");
-    solveme[i].setAttribute("autocorrect", "off");
-    solveme[i].setAttribute("autocapitalize", "off");
-    solveme[i].setAttribute("spellcheck", "false");
-    solveme[i].value = "";
-
-    /* adjust answer for ignorecase or nospaces */
-    var cl = solveme[i].classList;
-    var real_answer = solveme[i].dataset.answer;
-    if (cl.contains("ignorecase")) {
-      real_answer = real_answer.toLowerCase();
+    .footer-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
     }
-    if (cl.contains("nospaces")) {
-      real_answer = real_answer.replace(/ /g, "");
+
+    .footer-link a {
+      color: #007acc; /* Customize link color */
+      text-decoration: none;
     }
-    solveme[i].dataset.answer = real_answer;
 
-    /* attach checking function */
-    solveme[i].onkeyup = solveme_func;
-    solveme[i].onchange = solveme_func;
+    .footer-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <footer class="footer">
+    <!-- Logo Section -->
+    <div class="footer-logo-section">
+      <img src="figure/UT%20backgrounds%201920x1080-1.png" alt="Book Logo" class="footer-logo">
+    </div>
 
-    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
-  }
-
-  /* set up radiogroups */
-  var radiogroups = document.getElementsByClassName("webex-radiogroup");
-  for (var i = 0; i < radiogroups.length; i++) {
-    radiogroups[i].onchange = radiogroups_func;
-  }
-
-  /* set up selects */
-  var selects = document.getElementsByClassName("webex-select");
-  for (var i = 0; i < selects.length; i++) {
-    selects[i].onchange = select_func;
-    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
-  }
-
-  update_total_correct();
-}
-
-</script>
+    <!-- Book Name and Repository Link Section -->
+    <div class="footer-content">
+      <div class="footer-title">A Practical Guide to Data Anonymisation</div>
+      <div class="footer-link">
+        <a href="ttps://github.com/UniversityOfTwente/anonymization-guide" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
             </section>
 
           </div>
@@ -469,7 +345,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["APracticalGuidetoDataAnonymisation.pdf", "APracticalGuidetoDataAnonymisation.epub"],
+"download": null,
 "search": {
 "engine": "fuse",
 "options": null

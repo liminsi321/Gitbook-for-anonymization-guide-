@@ -23,4 +23,3 @@ mute-or-bleep-out-the-identifying-information
 geospatial-data
 spatial-generalisation
 attribute-anonymisation
-tips
