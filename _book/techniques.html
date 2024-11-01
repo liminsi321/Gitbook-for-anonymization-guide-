@@ -23,7 +23,7 @@
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2024-10-31" />
+<meta name="date" content="2024-11-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,8 +52,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<link href="libs/tabwid-1.1.3/tabwid.css" rel="stylesheet" />
-<script src="libs/tabwid-1.1.3/tabwid.js"></script>
 
 
 
@@ -94,7 +92,14 @@
 <li class="chapter" data-level="3.2.2" data-path="minimization.html"><a href="minimization.html#anonymisation"><i class="fa fa-check"></i><b>3.2.2</b> Anonymisation</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="techniques.html"><a href="techniques.html"><i class="fa fa-check"></i><b>4</b> Research Data Types and Pseudonymisation and Anonymisation Techniques</a></li>
+<li class="chapter" data-level="4" data-path="techniques.html"><a href="techniques.html"><i class="fa fa-check"></i><b>4</b> Research Data Types and Pseudonymisation and Anonymisation Techniques</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="techniques.html"><a href="techniques.html#is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset"><i class="fa fa-check"></i><b>4.1</b> Is that possible to single out, link, or infer individual from the dataset?</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="techniques.html"><a href="techniques.html#sensitivity"><i class="fa fa-check"></i><b>4.1.1</b> 2.Sensitivity</a></li>
+<li class="chapter" data-level="4.1.2" data-path="techniques.html"><a href="techniques.html#additional-information-and-techniques-for-re-identification."><i class="fa fa-check"></i><b>4.1.2</b> 3. Additional information and techniques for re-identification.</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="textual-data.html"><a href="textual-data.html"><i class="fa fa-check"></i><b>5</b> Textual data</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="textual-data.html"><a href="textual-data.html#generalisation"><i class="fa fa-check"></i><b>5.1</b> Generalisation</a></li>
@@ -140,21 +145,48 @@
             <section class="normal" id="section-">
 <div id="techniques" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Research Data Types and Pseudonymisation and Anonymisation Techniques<a href="techniques.html#techniques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Following the concepts and principles of data anonymization, before diving into the technique of anonymization, this section will focus on practical steps to plan and assess data anonymization.</p>
+<p>To see which techniques are most suitable for your data, it is helpful first to see what you want to anonymize. Based on the approach of Personal Data Protection Commission of Singapore, you can follow these steps to identify your data.</p>
+<p>Anonymized data refers to data after removing personal information to avoid the possibility of re-identify one individual from the data. Anonymization is not an absolute value, but a spectrum.</p>
+<p>In the following scenarios, data is not considered as anonymized data:
+:::warning
+• Raw data containing personal data still exist.
+• Key or other information that can be used to re-identify individuals in the dataset still exist.
+:::</p>
+<p>Anonymizing textual data, such as interview transcripts, is challenging to fully achieve. Certain personal details are closely tied to data utility and, for research purposes, may not be removed. For instance, when investigating stakeholders’ views on policy, data utility of the textual data is related to the personal information of the interviewee, such as professional background, experience. Furthermore, even when researchers remove as much personal information as possible, there remains a risk of re-identification through singling out, inference, or linking with other information, techniques, or external datasets. If such data is shared publicly, individuals familiar with the data subjects may still be able to re-identify them.</p>
+<p>When anonymizing data, it’s essential to balance the protection of data subjects’ privacy with the utility of the data. Data utility refers to the data’s ability to address research questions effectively. For example, in a study on student performance and family socioeconomic status, identifiers like student names, gender, and age should be removed to protect privacy, while information on grades and family economic conditions should be retained, as these are critical for addressing the research objectives.</p>
+<p>To assess the completeness of anonymization, the following questions are relevant:</p>
+<div id="is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Is that possible to single out, link, or infer individual from the dataset?<a href="techniques.html#is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Single out refers to isolate someone from the dataset.
+Link refers to combine information within and outside of the dataset to identify an individual.
+Inference refers to infer, guess, or predict details about an individual.
+For multimedia data, three categories should be taken care:
+Biometric identifiers that are distinctive, measurable, generally unique and permanent personal characteristics used to identify individuals. This includes physiological biometrics (face, iris, ear, fingerprint) and behavioral biometrics (voice, gait, gesture, lipmotion, and typing style);
+Soft biometrics of some vague physical, behavioral or adhered human characteristic that is not necessarily permanent or distinctive (height, weight, eye color, silhouette, age, gender, race, moles, tattoos, birthmarks, and scars);
+Non-biometric identifiers including text context, speech context, specific social-political and environmental context, dressing style, and hairstyle.
+<a href="https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf" class="uri">https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf</a>
+Chapter 2: How do we ensure anonymisation is effective?</p>
+<p>##2. Any remaining information in the dataset still sensitive, or unique?
+### Uniqueness
+To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers (<a href="https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf" class="uri">https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf</a>).
+However, it is necessary to distinguish between uniqueness in the sample and uniqueness in the population. Risk of identification is higher when the uniqueness in the population. However, some uniqueness in a sample is equivalent to the uniqueness in the population. For example, a patient with rare disease is unique in the sample and in the neighbourhood; a surgeon in a hospital and in the city.</p>
+<div id="sensitivity" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> 2.Sensitivity<a href="techniques.html#sensitivity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Whether the information can put individuals or certain groups into vulnerable place, such as physical and mental harms, revelation of financial, political, religion, sexual orientation, or embarrassment.</p>
+</div>
+<div id="additional-information-and-techniques-for-re-identification." class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> 3. Additional information and techniques for re-identification.<a href="techniques.html#additional-information-and-techniques-for-re-identification." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To assess the possibility of “reasonable likely” to re-identify individuals from anonymized data, it is relevant to consider the following questions:
+• Any external information exist to identify individuals, such as other datasets, personal knowledge.
+• Techniques that can be reverse the anonymization or link data.
+• “Motivated intruders”. Someone who is competent, have appropriate resources, and investigative techniques to re-identify individuals in the dataset. The motivated intruders could be investigative journalists, estranged partners, stalkers, industrial spies, or acquaintances of data subjects.
+• The scope of releasing data: a defined group or public domain
+The cost of re-identification: someone with access to significant specialist expertise, analytical power, or prior knowledge can re-identify individuals, the cost is higher.</p>
 <p>The pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: <strong>textual data</strong>, <strong>numerical data</strong>, <strong>audio and visual data</strong>, and <strong>geospatial data</strong>.</p>
-<p>To see which techniques are most suitable for your data, it is helpful to first see what you want to anonymize. Based on the approach of <a href="https://ukdataservice.ac.uk/learning-hub/research-data-management/anonymisation/anonymisation-step-by-step/" target="_blank">UK Data services</a>, you can follow these 3 steps to deindentify your data.
-Step 1. Know your data: What kind of research data type do you have? What kind of data do you want to anonymize or pseudonimyze? Do you have textual data or numerical? Or do you have interview recordings consisting of audio?</p>
-<p>Step 2. Identify your identifiers in your data: Looking at your data, what kind of identifiers do you see? What kind of identifiers do you want to anonymize or pseudonymize? Do you have names, places, year of birth etc? Are there combinations of identifiers in your data that can identify a person? Or are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood.</p>
-<p>Step 3.</p>
-<div class="tabwid"><style>.cl-772db082{}.cl-771e3698{font-family:'Arial';font-size:10pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-771e36ca{font-family:'Arial';font-size:10pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-7724a352{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:2pt;padding-top:2pt;padding-left:2pt;padding-right:2pt;line-height: 1;background-color:transparent;}.cl-7724a35c{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:2pt;padding-top:2pt;padding-left:2pt;padding-right:2pt;line-height: 1;background-color:transparent;}.cl-7724cfda{width:2.561in;background-color:rgba(0, 123, 255, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cfe4{width:4.267in;background-color:rgba(126, 110, 214, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cfe5{width:8.228in;background-color:rgba(253, 98, 173, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cfee{width:2.561in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cfef{width:4.267in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cff8{width:8.228in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cff9{width:2.561in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724cffa{width:4.267in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724d002{width:8.228in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724d003{width:2.561in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724d00c{width:4.267in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-7724d00d{width:8.228in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing='true' class='cl-772db082'>
 
-```
-
-<caption style="display:table-caption;margin:0pt;text-align:center;border-bottom: 0.00pt solid transparent;border-top: 0.00pt solid transparent;border-left: 0.00pt solid transparent;border-right: 0.00pt solid transparent;padding-top:3pt;padding-bottom:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;">(\#tab:unnamed-chunk-2)<span>Anonymization steps and practical questions</span></caption>
-
-```{=html}
-
-<thead><tr style="overflow-wrap:break-word;"><th class="cl-7724cfda"><p class="cl-7724a352"><span class="cl-771e3698">Anonymization steps</span></p></th><th class="cl-7724cfe4"><p class="cl-7724a35c"><span class="cl-771e3698">Relevant questions</span></p></th><th class="cl-7724cfe5"><p class="cl-7724a35c"><span class="cl-771e3698">Examples</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-7724cfee"><p class="cl-7724a352"><span class="cl-771e36ca">1. Know your data</span></p></td><td class="cl-7724cfef"><p class="cl-7724a35c"><span class="cl-771e36ca">For different types of idetifiers, see [Personal data](#personal_data)</span></p></td><td class="cl-7724cff8"><p class="cl-7724a35c"><span class="cl-771e36ca">What kind of data do you want to anonymize or pseudonimyze, such as textual, numertical, audio, video data?</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7724cff9"><p class="cl-7724a352"><span class="cl-771e36ca">2. Implement anonymisation techniques</span></p></td><td class="cl-7724cffa"><p class="cl-7724a35c"><span class="cl-771e36ca">Ensure all dirct and indirect indentifers are removed</span></p></td><td class="cl-7724d002"><p class="cl-7724a35c"><span class="cl-771e36ca">Any remaining information in the dataset still sensitive, or unique?</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-7724d003"><p class="cl-7724a352"><span class="cl-771e36ca">3. Assess disclosure risk</span></p></td><td class="cl-7724d00c"><p class="cl-7724a35c"><span class="cl-771e36ca">Ensure all dirct and indirect indentifers are removed</span></p></td><td class="cl-7724d00d"><p class="cl-7724a35c"><span class="cl-771e36ca">Are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood?</span></p></td></tr></tbody></table></div>
-
+</div>
+</div>
 </div>
 <!DOCTYPE html>
 <html lang="en">

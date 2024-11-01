@@ -1,45 +1,50 @@
 # Research Data Types and Pseudonymisation and Anonymisation Techniques {#techniques}
+Following the concepts and principles of data anonymization, before diving into the technique of anonymization, this section will focus on practical steps to plan and assess data  anonymization.
+
+To see which techniques are most suitable for your data, it is helpful first to see what you want to anonymize. Based on the approach of Personal Data Protection Commission of Singapore,  you can follow these steps to identify your data. 
+
+Anonymized data refers to data after removing personal information to avoid the possibility of re-identify one individual from the data. Anonymization is not an absolute value, but a spectrum. 
+
+In the following scenarios, data is not considered as anonymized data:
+:::warning
+•	Raw data containing personal data still exist. 
+•	Key or other information that can be used to re-identify individuals in the dataset still exist.
+:::
+
+Anonymizing textual data, such as interview transcripts, is challenging to fully achieve. Certain personal details are closely tied to data utility and, for research purposes, may not be removed. For instance, when investigating stakeholders’ views on policy, data utility of the textual data is related to the personal information of the interviewee, such as professional background, experience. Furthermore, even when researchers remove as much personal information as possible, there remains a risk of re-identification through singling out, inference, or linking with other information, techniques, or external datasets. If such data is shared publicly, individuals familiar with the data subjects may still be able to re-identify them.
+
+When anonymizing data, it’s essential to balance the protection of data subjects’ privacy with the utility of the data. Data utility refers to the data's ability to address research questions effectively. For example, in a study on student performance and family socioeconomic status, identifiers like student names, gender, and age should be removed to protect privacy, while information on grades and family economic conditions should be retained, as these are critical for addressing the research objectives.
+
+To assess the completeness of anonymization, the following questions are relevant:
+
+## Is that possible to single out, link, or infer individual from the dataset?
+Single out refers to isolate someone from the dataset.
+Link refers to combine information within and outside of the dataset to identify an individual.
+Inference refers to infer, guess, or predict details about an individual.
+For multimedia data, three categories should be taken care:
+Biometric identifiers that are distinctive, measurable, generally unique and permanent personal characteristics used to identify individuals. This includes physiological biometrics (face, iris, ear, fingerprint) and behavioral biometrics (voice, gait, gesture, lipmotion, and typing style);
+Soft biometrics of some vague physical, behavioral or adhered human characteristic that is not necessarily permanent or distinctive (height, weight, eye color, silhouette, age, gender, race, moles, tattoos, birthmarks, and scars); 
+Non-biometric identifiers including text context, speech context, specific social-political and environmental context, dressing style, and hairstyle. 
+https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf
+Chapter 2: How do we ensure anonymisation is effective?
+
+##2.	Any remaining information in the dataset still sensitive, or unique? 
+###	Uniqueness 
+To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers (https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf).
+However, it is necessary to distinguish between uniqueness in the sample and uniqueness in the population. Risk of identification is higher when the uniqueness in the population. However, some uniqueness in a sample is equivalent to the uniqueness in the population. For example, a patient with rare disease is unique in the sample and in the neighbourhood; a surgeon in a hospital and in the city.
+
+### 2.Sensitivity 
+Whether the information can put individuals or certain groups into vulnerable place, such as physical and mental harms, revelation of financial, political, religion, sexual orientation, or embarrassment.
+
+### 3.	Additional information and techniques for re-identification.
+To assess the possibility of “reasonable likely” to re-identify individuals from anonymized data, it is relevant to consider the following questions:
+•	Any external information exist to identify individuals, such as other datasets, personal knowledge.
+•	Techniques that can be reverse the anonymization or link data.
+•	“Motivated  intruders”. Someone who is competent, have appropriate resources, and investigative techniques to re-identify individuals in the dataset. The motivated intruders could be investigative journalists, estranged partners, stalkers, industrial spies, or acquaintances of data subjects. 
+•	The scope of releasing data: a defined group or public domain 
+The cost of re-identification: someone with access to significant specialist expertise, analytical power, or prior knowledge can re-identify individuals, the cost is higher.
 
 The pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: **textual data**, **numerical data**, **audio and visual data**, and **geospatial data**.
 
-To see which techniques are most suitable for your data, it is helpful to first see what you want to anonymize. Based on the approach of [UK Data services](https://ukdataservice.ac.uk/learning-hub/research-data-management/anonymisation/anonymisation-step-by-step/){target="_blank"}, you can follow these 3 steps to deindentify your data. 
-Step 1. Know your data: What kind of research data type do you have? What kind of data do you want to anonymize or pseudonimyze? Do you have textual data or numerical? Or do you have interview recordings consisting of audio?
-
-Step 2. Identify your identifiers in your data: Looking at your data, what kind of identifiers do you see? What kind of identifiers do you want to anonymize or pseudonymize? Do you have names, places, year of birth etc? Are there combinations of identifiers in your data that can identify a person? Or are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood.
-
-Step 3.
-
-```{r, echo=FALSE}
-#install.packages("flextable")
-library(flextable)
-
-#create the dataframe for the tabel 
-anonymization_steps <-
-  data.frame(
-    Steps = c("1. Know your data","2. Implement anonymisation techniques","3. Assess disclosure risk"),
-    Questions = c("For different types of idetifiers, see [Personal data](#personal_data)","Ensure all dirct and indirect indentifers are removed","Ensure all dirct and indirect indentifers are removed"),
-    Examples = c("What kind of data do you want to anonymize or pseudonimyze, such as textual, numertical, audio, video data?","Any remaining information in the dataset still sensitive, or unique?","Are there isolated incidences or unique events in your data that are easy to identify, for example a rare disease in a neighbourhood?"),
-    stringsAsFactors = FALSE)
-
-# Create a flextable with customized styling
-gradient_colors <- colorRampPalette(c("#007BFF", "#FD62AD"))(n = 3)  # Generates 6 colors between blue and pink
-set_flextable_defaults(font.family = "Arial", font.size = 10, padding = 2)
-ft <- flextable(anonymization_steps) %>%
-  set_caption("Anonymization steps and practical questions") %>%
-  set_header_labels(Steps = "Anonymization steps", Questions = "Relevant questions", 
-                    Examples = "Examples") %>%
-  valign(valign = "center", part = "header") %>% 
-  theme_vanilla() %>%
-  #font(size = 12, part = "header")%>%
-  bold(i = 1, part = "header")%>%
-  bg(part = "header", bg = gradient_colors)
-# Additional table styling and alignment
-ft <- ft %>%
-  align(align = "center", part = "all") %>%  # Center-align the content in all parts
-  align(align = "left", j = "Steps", part = "all") %>%  # Left-align the "Steps" column
-  autofit(add_w = .1, unit = "cm")  # Adjust column widths automatically
-# Display the flextable
-ft
-```
 
 

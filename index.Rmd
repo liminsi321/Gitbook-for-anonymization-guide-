@@ -65,16 +65,6 @@ This guide provides practical guidance on pseudonymizing and anonymizing persona
 </div>
 
 
-:::note
-
-This guide is produced by data stewards in University of Twente (UT).We welcome feedback and contributions of any type, please reach out to us for more information.
-:::
-
-:::warning
-
-If you work on medical research or any other institution outside of University of Twente, some of the guidelines in the practical guide Handbook may not be in line with your institutional guidelines. Please consult with your local privacy staff whenever you are in doubt about this.
-:::
-
 ## How to cite and license
 A Practical Guide to Data Anonymization © 2024 by Alice Nikuze, Deniece Nazareth, Minsi Li is licensed under CC BY 4.0.
 

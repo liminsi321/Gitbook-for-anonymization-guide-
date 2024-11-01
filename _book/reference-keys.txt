@@ -8,6 +8,9 @@ pseudony_anony
 pseudonymisation
 anonymisation
 techniques
+is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset
+sensitivity
+additional-information-and-techniques-for-re-identification.
 textual-data
 generalisation
 distort
