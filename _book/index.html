@@ -23,7 +23,7 @@
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2024-11-01" />
+<meta name="date" content="2024-11-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,9 +59,31 @@
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="www/webex.css" type="text/css" />
 </head>
 
 <body>
@@ -94,23 +116,29 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="techniques.html"><a href="techniques.html"><i class="fa fa-check"></i><b>4</b> Research Data Types and Pseudonymisation and Anonymisation Techniques</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="techniques.html"><a href="techniques.html#is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset"><i class="fa fa-check"></i><b>4.1</b> Is that possible to single out, link, or infer individual from the dataset?</a>
+<li class="chapter" data-level="4.1" data-path="techniques.html"><a href="techniques.html#is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset"><i class="fa fa-check"></i><b>4.1</b> Is that possible to single out, link, or infer individual from the dataset?</a></li>
+<li class="chapter" data-level="4.2" data-path="techniques.html"><a href="techniques.html#any-remaining-information-in-the-dataset-still-sensitive-or-unique"><i class="fa fa-check"></i><b>4.2</b> Any remaining information in the dataset still sensitive, or unique?</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="techniques.html"><a href="techniques.html#sensitivity"><i class="fa fa-check"></i><b>4.1.1</b> 2.Sensitivity</a></li>
-<li class="chapter" data-level="4.1.2" data-path="techniques.html"><a href="techniques.html#additional-information-and-techniques-for-re-identification."><i class="fa fa-check"></i><b>4.1.2</b> 3. Additional information and techniques for re-identification.</a></li>
+<li class="chapter" data-level="4.2.1" data-path="techniques.html"><a href="techniques.html#uniqueness"><i class="fa fa-check"></i><b>4.2.1</b> Uniqueness</a></li>
+<li class="chapter" data-level="4.2.2" data-path="techniques.html"><a href="techniques.html#sensitivity"><i class="fa fa-check"></i><b>4.2.2</b> Sensitivity</a></li>
 </ul></li>
+<li class="chapter" data-level="4.3" data-path="techniques.html"><a href="techniques.html#any-additional-information-and-techniques-for-re-identification."><i class="fa fa-check"></i><b>4.3</b> Any additional information and techniques for re-identification.</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="textual-data.html"><a href="textual-data.html"><i class="fa fa-check"></i><b>5</b> Textual data</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="textual-data.html"><a href="textual-data.html#generalisation"><i class="fa fa-check"></i><b>5.1</b> Generalisation</a></li>
-<li class="chapter" data-level="5.2" data-path="textual-data.html"><a href="textual-data.html#distort"><i class="fa fa-check"></i><b>5.2</b> Distort</a></li>
+<li class="chapter" data-level="5.1" data-path="textual-data.html"><a href="textual-data.html#generalisation-replace-or-aggregate"><i class="fa fa-check"></i><b>5.1</b> Generalisation: Replace or aggregate</a></li>
+<li class="chapter" data-level="5.2" data-path="textual-data.html"><a href="textual-data.html#distort"><i class="fa fa-check"></i><b>5.2</b> Distort</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="textual-data.html"><a href="textual-data.html#suppression-delete"><i class="fa fa-check"></i><b>5.2.1</b> Suppression: Delete</a></li>
+<li class="chapter" data-level="5.2.2" data-path="textual-data.html"><a href="textual-data.html#masking"><i class="fa fa-check"></i><b>5.2.2</b> Masking</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="numerical-data.html"><a href="numerical-data.html"><i class="fa fa-check"></i><b>6</b> Numerical data</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="numerical-data.html"><a href="numerical-data.html#suppression"><i class="fa fa-check"></i><b>6.1</b> Suppression</a></li>
 <li class="chapter" data-level="6.2" data-path="numerical-data.html"><a href="numerical-data.html#swapping"><i class="fa fa-check"></i><b>6.2</b> Swapping</a></li>
-<li class="chapter" data-level="6.3" data-path="numerical-data.html"><a href="numerical-data.html#masking"><i class="fa fa-check"></i><b>6.3</b> Masking</a></li>
-<li class="chapter" data-level="6.4" data-path="numerical-data.html"><a href="numerical-data.html#generalisation-1"><i class="fa fa-check"></i><b>6.4</b> Generalisation</a></li>
+<li class="chapter" data-level="6.3" data-path="numerical-data.html"><a href="numerical-data.html#masking-1"><i class="fa fa-check"></i><b>6.3</b> Masking</a></li>
+<li class="chapter" data-level="6.4" data-path="numerical-data.html"><a href="numerical-data.html#generalisation"><i class="fa fa-check"></i><b>6.4</b> Generalisation</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="audio-visual-data.html"><a href="audio-visual-data.html"><i class="fa fa-check"></i><b>7</b> Audio-Visual data</a>
 <ul>
@@ -123,6 +151,7 @@
 <li class="chapter" data-level="8.1" data-path="geospatial-data.html"><a href="geospatial-data.html#spatial-generalisation"><i class="fa fa-check"></i><b>8.1</b> Spatial generalisation</a></li>
 <li class="chapter" data-level="8.2" data-path="geospatial-data.html"><a href="geospatial-data.html#attribute-anonymisation"><i class="fa fa-check"></i><b>8.2</b> Attribute anonymisation</a></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
 <li class="divider"></li>
 <li><a href="./"A Practical Guide to Data Anonymisation</a></li>
 
@@ -146,7 +175,7 @@
 <div id="header">
 <h1 class="title">A Practical Guide to Data Anonymisation</h1>
 <p class="author"><em>Alice Nikuze, Deniece Nazareth, Minsi Li</em></p>
-<p class="date"><em>2024-11-01</em></p>
+<p class="date"><em>2024-11-04</em></p>
 </div>
 <div id="introduction" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>

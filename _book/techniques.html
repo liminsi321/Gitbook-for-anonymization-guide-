@@ -23,7 +23,7 @@
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2024-11-01" />
+<meta name="date" content="2024-11-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -59,9 +59,31 @@
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
-<link rel="stylesheet" href="www/webex.css" type="text/css" />
 </head>
 
 <body>
@@ -94,23 +116,29 @@
 </ul></li>
 <li class="chapter" data-level="4" data-path="techniques.html"><a href="techniques.html"><i class="fa fa-check"></i><b>4</b> Research Data Types and Pseudonymisation and Anonymisation Techniques</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="techniques.html"><a href="techniques.html#is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset"><i class="fa fa-check"></i><b>4.1</b> Is that possible to single out, link, or infer individual from the dataset?</a>
+<li class="chapter" data-level="4.1" data-path="techniques.html"><a href="techniques.html#is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset"><i class="fa fa-check"></i><b>4.1</b> Is that possible to single out, link, or infer individual from the dataset?</a></li>
+<li class="chapter" data-level="4.2" data-path="techniques.html"><a href="techniques.html#any-remaining-information-in-the-dataset-still-sensitive-or-unique"><i class="fa fa-check"></i><b>4.2</b> Any remaining information in the dataset still sensitive, or unique?</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="techniques.html"><a href="techniques.html#sensitivity"><i class="fa fa-check"></i><b>4.1.1</b> 2.Sensitivity</a></li>
-<li class="chapter" data-level="4.1.2" data-path="techniques.html"><a href="techniques.html#additional-information-and-techniques-for-re-identification."><i class="fa fa-check"></i><b>4.1.2</b> 3. Additional information and techniques for re-identification.</a></li>
+<li class="chapter" data-level="4.2.1" data-path="techniques.html"><a href="techniques.html#uniqueness"><i class="fa fa-check"></i><b>4.2.1</b> Uniqueness</a></li>
+<li class="chapter" data-level="4.2.2" data-path="techniques.html"><a href="techniques.html#sensitivity"><i class="fa fa-check"></i><b>4.2.2</b> Sensitivity</a></li>
 </ul></li>
+<li class="chapter" data-level="4.3" data-path="techniques.html"><a href="techniques.html#any-additional-information-and-techniques-for-re-identification."><i class="fa fa-check"></i><b>4.3</b> Any additional information and techniques for re-identification.</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="textual-data.html"><a href="textual-data.html"><i class="fa fa-check"></i><b>5</b> Textual data</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="textual-data.html"><a href="textual-data.html#generalisation"><i class="fa fa-check"></i><b>5.1</b> Generalisation</a></li>
-<li class="chapter" data-level="5.2" data-path="textual-data.html"><a href="textual-data.html#distort"><i class="fa fa-check"></i><b>5.2</b> Distort</a></li>
+<li class="chapter" data-level="5.1" data-path="textual-data.html"><a href="textual-data.html#generalisation-replace-or-aggregate"><i class="fa fa-check"></i><b>5.1</b> Generalisation: Replace or aggregate</a></li>
+<li class="chapter" data-level="5.2" data-path="textual-data.html"><a href="textual-data.html#distort"><i class="fa fa-check"></i><b>5.2</b> Distort</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="textual-data.html"><a href="textual-data.html#suppression-delete"><i class="fa fa-check"></i><b>5.2.1</b> Suppression: Delete</a></li>
+<li class="chapter" data-level="5.2.2" data-path="textual-data.html"><a href="textual-data.html#masking"><i class="fa fa-check"></i><b>5.2.2</b> Masking</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="numerical-data.html"><a href="numerical-data.html"><i class="fa fa-check"></i><b>6</b> Numerical data</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="numerical-data.html"><a href="numerical-data.html#suppression"><i class="fa fa-check"></i><b>6.1</b> Suppression</a></li>
 <li class="chapter" data-level="6.2" data-path="numerical-data.html"><a href="numerical-data.html#swapping"><i class="fa fa-check"></i><b>6.2</b> Swapping</a></li>
-<li class="chapter" data-level="6.3" data-path="numerical-data.html"><a href="numerical-data.html#masking"><i class="fa fa-check"></i><b>6.3</b> Masking</a></li>
-<li class="chapter" data-level="6.4" data-path="numerical-data.html"><a href="numerical-data.html#generalisation-1"><i class="fa fa-check"></i><b>6.4</b> Generalisation</a></li>
+<li class="chapter" data-level="6.3" data-path="numerical-data.html"><a href="numerical-data.html#masking-1"><i class="fa fa-check"></i><b>6.3</b> Masking</a></li>
+<li class="chapter" data-level="6.4" data-path="numerical-data.html"><a href="numerical-data.html#generalisation"><i class="fa fa-check"></i><b>6.4</b> Generalisation</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="audio-visual-data.html"><a href="audio-visual-data.html"><i class="fa fa-check"></i><b>7</b> Audio-Visual data</a>
 <ul>
@@ -123,6 +151,7 @@
 <li class="chapter" data-level="8.1" data-path="geospatial-data.html"><a href="geospatial-data.html#spatial-generalisation"><i class="fa fa-check"></i><b>8.1</b> Spatial generalisation</a></li>
 <li class="chapter" data-level="8.2" data-path="geospatial-data.html"><a href="geospatial-data.html#attribute-anonymisation"><i class="fa fa-check"></i><b>8.2</b> Attribute anonymisation</a></li>
 </ul></li>
+<li class="chapter" data-level="9" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>9</b> References</a></li>
 <li class="divider"></li>
 <li><a href="./"A Practical Guide to Data Anonymisation</a></li>
 
@@ -148,11 +177,11 @@
 <p>Following the concepts and principles of data anonymization, before diving into the technique of anonymization, this section will focus on practical steps to plan and assess data anonymization.</p>
 <p>To see which techniques are most suitable for your data, it is helpful first to see what you want to anonymize. Based on the approach of Personal Data Protection Commission of Singapore, you can follow these steps to identify your data.</p>
 <p>Anonymized data refers to data after removing personal information to avoid the possibility of re-identify one individual from the data. Anonymization is not an absolute value, but a spectrum.</p>
-<p>In the following scenarios, data is not considered as anonymized data:
-:::warning
-• Raw data containing personal data still exist.
-• Key or other information that can be used to re-identify individuals in the dataset still exist.
-:::</p>
+<p>In the following scenarios, data is not considered as anonymized data:</p>
+<div class="warning">
+<p>Raw data containing personal data still exist.</p>
+<p>Key or other information that can be used to re-identify individuals in the dataset still exist.</p>
+</div>
 <p>Anonymizing textual data, such as interview transcripts, is challenging to fully achieve. Certain personal details are closely tied to data utility and, for research purposes, may not be removed. For instance, when investigating stakeholders’ views on policy, data utility of the textual data is related to the personal information of the interviewee, such as professional background, experience. Furthermore, even when researchers remove as much personal information as possible, there remains a risk of re-identification through singling out, inference, or linking with other information, techniques, or external datasets. If such data is shared publicly, individuals familiar with the data subjects may still be able to re-identify them.</p>
 <p>When anonymizing data, it’s essential to balance the protection of data subjects’ privacy with the utility of the data. Data utility refers to the data’s ability to address research questions effectively. For example, in a study on student performance and family socioeconomic status, identifiers like student names, gender, and age should be removed to protect privacy, while information on grades and family economic conditions should be retained, as these are critical for addressing the research objectives.</p>
 <p>To assess the completeness of anonymization, the following questions are relevant:</p>
@@ -167,16 +196,21 @@ Soft biometrics of some vague physical, behavioral or adhered human characterist
 Non-biometric identifiers including text context, speech context, specific social-political and environmental context, dressing style, and hairstyle.
 <a href="https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf" class="uri">https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf</a>
 Chapter 2: How do we ensure anonymisation is effective?</p>
-<p>##2. Any remaining information in the dataset still sensitive, or unique?
-### Uniqueness
-To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers (<a href="https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf" class="uri">https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf</a>).
+</div>
+<div id="any-remaining-information-in-the-dataset-still-sensitive-or-unique" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Any remaining information in the dataset still sensitive, or unique?<a href="techniques.html#any-remaining-information-in-the-dataset-still-sensitive-or-unique" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="uniqueness" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Uniqueness<a href="techniques.html#uniqueness" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers (<a href="https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf" class="uri">https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf</a>).
 However, it is necessary to distinguish between uniqueness in the sample and uniqueness in the population. Risk of identification is higher when the uniqueness in the population. However, some uniqueness in a sample is equivalent to the uniqueness in the population. For example, a patient with rare disease is unique in the sample and in the neighbourhood; a surgeon in a hospital and in the city.</p>
-<div id="sensitivity" class="section level3 hasAnchor" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> 2.Sensitivity<a href="techniques.html#sensitivity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="sensitivity" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Sensitivity<a href="techniques.html#sensitivity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Whether the information can put individuals or certain groups into vulnerable place, such as physical and mental harms, revelation of financial, political, religion, sexual orientation, or embarrassment.</p>
 </div>
-<div id="additional-information-and-techniques-for-re-identification." class="section level3 hasAnchor" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> 3. Additional information and techniques for re-identification.<a href="techniques.html#additional-information-and-techniques-for-re-identification." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="any-additional-information-and-techniques-for-re-identification." class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Any additional information and techniques for re-identification.<a href="techniques.html#any-additional-information-and-techniques-for-re-identification." class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To assess the possibility of “reasonable likely” to re-identify individuals from anonymized data, it is relevant to consider the following questions:
 • Any external information exist to identify individuals, such as other datasets, personal knowledge.
 • Techniques that can be reverse the anonymization or link data.
@@ -184,8 +218,44 @@ However, it is necessary to distinguish between uniqueness in the sample and uni
 • The scope of releasing data: a defined group or public domain
 The cost of re-identification: someone with access to significant specialist expertise, analytical power, or prior knowledge can re-identify individuals, the cost is higher.</p>
 <p>The pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: <strong>textual data</strong>, <strong>numerical data</strong>, <strong>audio and visual data</strong>, and <strong>geospatial data</strong>.</p>
+<table class="gradient-table">
+<thead>
+<tr>
+<th onclick="showContent(&#39;column1&#39;)">
+Direct identifiers
+</th>
+<th onclick="showContent(&#39;column2&#39;)">
+Strong indirect identifiers
+</th>
+<th onclick="showContent(&#39;column3&#39;)">
+Indirect identifiers
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="content" colspan="3">
+Information unique to an individual can directly identify that person.
+</td>
+</tr>
+</tbody>
+</table>
+<script>
+function showContent(column) {
+  let content = '';
+  
+  if (column === 'column1') {
+    content = 'Information unique to an individual can directly identify that person.';
+  } else if (column === 'column2') {
+    content = ' Information that can easily identify an individual.';
+  } else if (column === 'column3') {
+    content = 'Information that, when combined with other data, can identify an individual.';
+  }
+  
+  document.getElementById('content').innerHTML = content;
+}
+</script>
 
-</div>
 </div>
 </div>
 <!DOCTYPE html>

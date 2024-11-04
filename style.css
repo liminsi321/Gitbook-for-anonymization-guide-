@@ -73,14 +73,17 @@ pre code {
 
 /* -----------Sidebar div tips------------- */
 /* from r-pkgs.org*/
-div.fyi, div.warning, div.note,div.bubble {
-  padding: 1em;
-  margin: 1em 0;
-  padding-left: 100px;
-  background-size: 70px;
+div.fyi, div.warning, div.note{
+  border-radius: 20px;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  padding-left: 80px;
+  background-size: 50px;
   background-repeat: no-repeat;
-  background-position: 15px center;
-  min-height: 120px;
+  background-position: 10px center;
+  min-height: 50px;
+  line-height: 1.2; 
+  padding-bottom: 0.2em;
 }
 
 div.fyi {
@@ -91,14 +94,14 @@ div.fyi {
 }
 div.warning {
   background-image: url("../figure/warning.png");
-  background-color: #EDF6F9;
+  background-color: #EDF9F9;
   color: black;
   #border: solid 2px #C00A35;
 
 }
 div.note {
   background-image: url("../figure/note.png");
-  background-color: #EFF7F6;
+  background-color: #EFF7F5;
   color: black;
   #border: solid 2px black;
 }
@@ -117,6 +120,7 @@ div.bubble,div.software, div.tips {
   background-repeat: no-repeat;
   background-position: left top;
   min-height: 100px;
+  line-height: 1.4
 }
 
 div.bubble {
@@ -140,14 +144,14 @@ div.tips {
 
 div.attention {
   border-radius: 20px;        /* Rounded corners */
-  padding: 15px 1em;          /* Padding inside the box */
-  margin: 1em auto;           /* Center the box and add vertical space */
-  padding-left: 100px;        /* Space for the background image */
+  padding: 10px 0.5em;          /* Padding inside the box */
+  margin: 0.5em auto;           /* Center the box and add vertical space */
+  padding-left: 60px;        /* Space for the background image */
   background-size: 50px;      /* Size of the background image */
   background-repeat: no-repeat;
   background-position: left top;
   min-height: 50px;           /* Minimum height of the box */
-  width: 95%;                 /* Set width to 80% of the page */
+  width: 90%;                 /* Set width to 80% of the page */
   background-color: #ECE3F0;  /* Background color */
   background-image: url("../figure/attention.png"); /* Background image */
 }
@@ -277,74 +281,6 @@ div.attention {
 
 
 
-/*---------------------------------------------------------*/
-/* Two-column layout with "vs" divider */
-.two-column-box {
-  display: flex; /* Use flexbox for the layout */
-  justify-content: space-between; /* Space between the columns */
-  border-radius: 20px; /* Rounded corners */
-  padding: 2px; /* Padding inside the box */
-  margin: 10px 0; /* Margin around the box */
-  position: relative; /* Position relative to place the "vs" */
-  min-height: 150px; /* Ensure the box is tall enough for content */
-  width: 90%; /* Ensure the box takes the full available width */
-  background-color: #EDF6F9; /* Background color for the box */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow */
-}
-/* Ensure the box is centered on the page */
-.two-column-box {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.two-column-box .column {
-  flex: 1; /* Equal width for both columns */
-  padding: 45px; /* Space inside each column */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  overflow-wrap: break-word; /* Ensure long text wraps properly */
-  font-size: 1em; /* Adjust the font size for content within the columns */
-  word-wrap: break-word;
-  line-height: 1.5; /* Adjust line height for readability */
-}
-
-
-
-/* Stylized "VS" divider */
-.two-column-box .divider {
-  position: absolute; /* Position it absolutely in the middle */
-  top: 30%; /* Vertical center */
-  left: 44%; /* Horizontal center */
-  width: 80px; /* Width of the ellipse */
-  height: 100px; /* Height of the ellipse */
-  background-color: lightgrey; /* Background is transparent */
-  clip-path: ellipse(50% 50% at 50% 50%); /* Create a tilted ellipse shape */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Shadow effect for the ellipse */
-  transform: rotate(-30deg); /* Tilt the ellipse */
-  letter-spacing: 1.5em; /* Increase letter spacing */
-  display: flex; /* Use flexbox to center text */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-}
-
-.two-column-box .divider::before {
-  content: "V"; /* The "V" letter */
-  position: absolute;
-  top: -30%; /* Raise the "V" much higher */
-  font-size: 5em; /* Larger font size */
-  font-weight: bold;
-  color: #007BFF; /* Light color for a subtle look */
-}
-
-.two-column-box .divider::after {
-  content: "S"; /* The "S" letter */
-  position: relative;
-  bottom: 5%; /* Lower the "S" */
-  right: -10%;
-  font-size: 5em; /* Slightly smaller font size */
-  font-weight: bold;
-  color: #FD62AD; /* Light color for a subtle look */
-}
-
 
 /*-----------------------------------------------------------------------------------*/
 /*symbol outside of the box*/
@@ -399,6 +335,7 @@ div.attention {
 details {
   width: 100% /*620px*/;
   padding: 6px;
+  margin-bottom: 1em; /* Add some space between details elements */
 }
 
 details > summary {
@@ -407,7 +344,7 @@ details > summary {
   font-weight: bold; /* Retain bold font */
   justify-content: center;  /* Center alignment */
   align-items: center;
-  
+  width: 100%; /* Set button width to match details */
   /* Gradient background for a more modern look */
   background-image: linear-gradient(144deg, #D1C4E9, #90CAF9 80%, #B2EBF2);
   
@@ -418,7 +355,6 @@ details > summary {
 
   /* Keep sufficient padding for usability */
   padding: calc(.875rem - 1px) calc(1.5rem - 1px); /* Retaining padding from the first version for better sizing */
-  
   /* Transition effect for hover or interaction feedback */
   transition: all 250ms;  /* Additional styling */
   color: white; /* Ensure the text contrasts with the gradient */
@@ -439,7 +375,21 @@ details > div {
   padding: 12px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px grey;
-}}
+}
+
+details > summary::after {
+  content: " +"; /* Default to "+" */
+  font-weight: bold;
+  margin-left: 10px;
+  color: gray;
+  font-size: 18px;
+}
+
+details[open] > summary::after {
+  color: gray;
+  content: " -"; /* Change to "-" when open */
+  font-size: 18px;
+}
 
 
 
@@ -471,4 +421,25 @@ footer p {
 footer a {
     color: #333;
     text-decoration: none;
+}
+
+/* Style for the table gradient background */
+.gradient-table th {
+  background: linear-gradient(to right, #007BFF, #FD62AD);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.gradient-table tbody td {
+  text-align: left;
+  padding: 15px;
+  font-size: 1em;
+}
+
+/* Ensure content spans entire row */
+.gradient-table tbody td#content {
+  text-align: left;
+  background-color: #f9f9f9; /* or any preferred color */
 }

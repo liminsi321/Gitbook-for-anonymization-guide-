@@ -19,6 +19,12 @@ output:
   bookdown::html_book:       # HTML output
     toc: true
     toc_float: true
+    config:
+      html:
+        code_folding: 
+        
+        
+        
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, 

@@ -2,6 +2,43 @@
 
 The term "Personal data" refers to any information that enables you to identify a living person. According to the GDPR,  a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.
 
+
+```{r, echo=FALSE, results='asis'}
+cat('
+<table class="gradient-table">
+  <thead>
+    <tr>
+      <th onclick="showContent(\'column1\')">Direct identifiers</th>
+      <th onclick="showContent(\'column2\')">Strong indirect identifiers</th>
+      <th onclick="showContent(\'column3\')">Indirect identifiers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="content" colspan="3">Information unique to an individual can directly identify that person.</td>
+    </tr>
+  </tbody>
+</table>
+')
+```
+<script>
+function showContent(column) {
+  let content = '';
+  
+  if (column === 'column1') {
+    content = 'Information unique to an individual can directly identify that person.';
+  } else if (column === 'column2') {
+    content = ' Information that can easily identify an individual.';
+  } else if (column === 'column3') {
+    content = 'Information that, when combined with other data, can identify an individual.';
+  }
+  
+  document.getElementById('content').innerHTML = content;
+}
+</script>
+
+
+
 <div class="three-column-container">
   <div class="three-column">**Direct identifiers**  
     Information unique to an individual can directly identify that person.
@@ -18,7 +55,9 @@ It is worth noting that some identifiers are particularly considered **strong in
 
 For extensive overview of different types of identifiers, see Table 1. 
 
-**Table 1.** Overview of identifiers typically processed in research (Add reference)
+**Table 1.** Overview of identifiers typically processed in research    @Finnish_Social_Science_Data_Archive
+
+(Archive, F. S. S. D. (n.d.). Anonymisation and Personal Data - Finnish Social Science Data Archive (FSD). Finnish Social Science Data Archive (FSD).https://www.fsd.tuni.fi/en/services/data-management-guidelines/anonymisation-and-identifiers/)
 
 ```{r type_identifiers,fig.label="type_identifiers",fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/type_identifiers.png",dpi = 600) 

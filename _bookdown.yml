@@ -13,4 +13,5 @@ rmd_files:
   - 05-numeric.Rmd
   - 06-audio_video.Rmd
   - 07-geospatial.Rmd
+  - 08-reference.Rmd
 

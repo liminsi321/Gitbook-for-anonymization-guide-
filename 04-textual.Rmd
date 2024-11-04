@@ -1,37 +1,40 @@
 # Textual data
 
-*Textual data* refers to any text-based content such as transcripts of interviews, workshops and focus group discussions, open-ended questions in surveys, observational notes, meeting notes, etc. This data type can be de-identified by generalizing the identifying information, replacing or deleting the identifiers such as research participants' names, gender, age, income, places and institutions names, addresses (physical location, email and IP), telephone numbers and any other sensitive information. The following techniques are commonly used to pseudonymise or anonymise textual data:
+Textual data refers to any text-based content such as transcripts of interviews, workshops and focus group discussions, open-ended questions in surveys, observational notes, meeting notes, etc. This data type can be de-identified by generalizing the identifying information, distorting or deleting the identifiers such as research participants' names, gender, age, income, places and institutions names, addresses (physical location, email and IP), telephone numbers and any other sensitive information. The following techniques are commonly used to pseudonymize or anonymize textual data.
 
-## Generalisation
+## Generalisation: Replace or aggregate
 
-Generalisation involves reducing detailed information so that potentially disclosive information is replaced, aggregated or deleted. 
+Generalization involves reducing detailed information or the precision of the information in a way that potentially disclosive information is replaced or aggregated.
 
-**Replace**
-This approach mainly involves replacing or categorizing identifiers with vague descriptors, such as replacing the actual names of individuals with aliases or with other aggregated information.
+This approach mainly involves replacing or aggregating identifiers with vague descriptors, such as replacing the actual names of individuals with aliases or with other aggregated information.
 
-**Delete**
-If the identifying information cannot be replaced or generalized, the entire variable or text may need to be deleted and explicitly marked as such by using [brackets] for example.
+
+```{r textual_generalization,fig.align='center',fig.width=10, fig.height=7, out.width="85%", echo=FALSE}
+  knitr::include_graphics("figure/textual_generalization.png") 
+```
+
+
 
 ## Distort
 
-In certain cases, instead of deleting crucial information needed to understand context and content, it's possible to distort the information by changing other identifiers. 
-For example, if you interviewed someone who participated in a high-level sports competition, and if that information is of importance in research, then you may change other values. You could change the years when the competition took place, the region (place, country) or even the gender of the person, if this is not crucial information.
+In certain cases, instead of generalizing crucial information needed to understand the context and content, it's possible to distort the information by changing other identifiers.  
 
-Table XX below presents the most common identifiers in textual data and the suitable anonymization techniques with practical examples.
+For example, if you have interviewed someone who participated in a high-level sports competition, and if that information is of importance in research, then you may change other values. You could change the years when the competition took place, the region (place, country) or even the gender of the person if this is not crucial information. 
 
-```{r distort,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
-  knitr::include_graphics("figure/distort.png") 
-```
+### Suppression: Delete 
+ If the identifying information cannot be replaced or generalized, the entire variable or text may need to be deleted and explicitly marked as such by using [brackets].  
+
+
 ```{r anony_vis1,fig.align='center',fig.width=12, fig.height=9, out.width="95%",echo=FALSE}
-  knitr::include_graphics("figure/anonymization techniques textual data (3).png") 
+  knitr::include_graphics("figure/anonymization techniques_surpression_300.jpg") 
 ```
 
-**Masking**
-Masking textual data involves replacing letters or symbols (punctuation) in identifying information entirely or partially with a special symbol (such as '*' or 'x'). It is commonly used for email addresses, names of locations, etc. 
+### Masking 
 
-This technique is more suitable for tabular textual data, meaning that data is stored in the form of columns and/or rows.
+Masking textual data involves replacing letters or symbols (punctuation) in identifying information entirely or partially with a special symbol (such as '*' or 'x'). It is commonly used for identifiers such as email addresses, names of locations, etc.  
 
-See the table below for examples.
+This technique is more suitable for structured tabular data, meaning that data is stored in the form of columns and rows.
+
 
 ```{r mask_textual,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/mask.jpg") 

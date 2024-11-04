@@ -2,7 +2,6 @@ bookdown::gitbook:
   highlight: tango
   css:
   - style.css
-  - www/webex.css
   config:
     toc:
       collapse: section
@@ -11,7 +10,8 @@ bookdown::gitbook:
       after: |
         <li><a href="./"A Practical Guide to Data Anonymisation</a></li>
   includes:
-    after_body: footer.html
+    after_body:
+    - footer.html
     download:
     - pdf
     - epub
