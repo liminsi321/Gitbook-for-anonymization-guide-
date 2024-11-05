@@ -69,6 +69,17 @@ pre code {
 }
 
 
+.book-content, .page {
+    width: 100%; /* or a specific consistent width */
+    padding: 1em; /* Keep consistent padding */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+img, table {
+    max-width: 100%;
+    height: auto; /* For images */
+    overflow-x: auto; /* For tables */
+}
+
 
 
 /* -----------Sidebar div tips------------- */
@@ -157,7 +168,38 @@ div.attention {
 }
 
 
+
+
 /*-----------------------------------------------------------------------------------*/
+
+
+.gradient-table td:first-child {
+  background: linear-gradient(to bottom, #007BFF, #FD62AD) !important; /* Gradient from top to bottom */
+  color: white !important;  /* Text color for contrast */
+  padding: 10px !important;
+  font-weight: bold !important;
+}
+.gradient-table th:first-child {
+  background: linear-gradient(to bottom, #007BFF, #FD62AD) !important; /* Gradient for header too */
+  color: white !important;
+  padding: 10px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*three columns box*/
 .three-column-container {
   display: flex;
@@ -191,126 +233,18 @@ div.attention {
   margin-bottom: 30px; /* Space below the title */
 }
 
-
-
-
-
-
-/* Container for the box with title */
-.box-with-title {
-  border: 2px outset #000; /* Border for the text box */
-  border-radius: 20px; /* Rounded corners */
-  border-image: linear-gradient(to right, #007BFF, #FD62AD) 1; /* Blue and pink gradient border */
-  padding: 10px;
-  margin: 5px auto 5px; /* Center the box with some margin at the top */
-  width: 95%; /* Width of the box */
-  background-color: #f9f9f9; /* Background color for the text box */
-  position: relative; /* Relative positioning to allow overlap of the title */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: shadow effect */
-  min-height: 150px;
-}
-
-/* Title styling */
-.box-title {
-  position: absolute; /* Absolute positioning for overlap */
-  top: -47px; /* Position it above the box */
-  left: 20px; /* Align it with the content padding */
-  padding: 5px 15px; /* Padding inside the title box */
-  border-radius: 5px; /* Rounded corners for the title box */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: shadow effect */
-  font-weight: bold;
-  background: linear-gradient(45deg, #007BFF, #FD62AD); /* Gradient background for the title */
-  color: white; /* Text color */
-  padding: 10px 20px; /* Padding inside the title box */
-  border-radius: 10px; /* Rounded corners for the title box */
-  font-weight: bold;
-  z-index: 1; /* Ensure the title appears on top */
-  font-size: 1.5em;
-}
-
-/* Content styling */
-.box-content {
-  font-size: 1em; /* Adjust font size */
-  line-height: 1.5; /* Line height for readability */
-  color: #333; /* Text color */
-}
-
-
-
-
+/* pink box */
 
 
 .pink-box {
   background-color: #ECE3F0; /*#F3B9DF,#F2C5E0 Light pink background */
   border-radius: 20px; /* Rounded corners */
   padding: 15px;
-  margin: 15px 0;
+  padding: 1em;
+  margin: 1em 0
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow */
 }
-@media (max-width: 768px) {
-  .pink-box {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 10px; /* Less rounded on smaller screens */
-  }
-}
-
-/* -----------round box in chapter 2,3,5------------- */
-/* Custom box with rounded corners, gradient border, and light pink background */
-.custom-box {
-  border-radius: 20px;
-  padding: 2em;
-  border: 2.5px solid; /* Border size */
-  border-image: linear-gradient(to right, #007BFF, #FD62AD) 1; /* Blue and pink gradient border */
-  position: relative;
-  margin: 20px 0;
-  align-items: center; /* Align items center vertically */
-}
-
-/* Add the bubble icon at the start */
-
-/* CSS class for the bubble icon */
-.custom-box .bubble {
-  position: absolute; 
-  width: 5px;
-  height: 5px;
-  margin-right: 0.05px; /* Space between the icon and text */
-  vertical-align: left; /* Align icon with text */
-}
-
-
-
-
-/*-----------------------------------------------------------------------------------*/
-/*symbol outside of the box*/
-/* Container for the custom text box */
-.image-outside_box {
-  position: relative; /* Position relative to allow overlapping elements */
-  border: 2px solid #007BFF; /* Border for the text box */
-  border-radius: 20px; /* Rounded corners */
-  padding: 12px;
-  margin: 30px auto 10px; /* Center the box with some margin at the top */
-  width: 80%; /* Width of the box */
-  background-color: #f9f9f9; /* Background color for the text box */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow effect */
-  #z-index: 1; /* Ensure text box stays on top */
-}
-
-/* Small background image that is half outside the box */
-.image-outside_box::before {
-  content: ""; /* Pseudo-element to hold the image */
-  position: absolute;
-  top: -25px; /* Position the image to be half outside the box */
-  left: -20px; /* Adjust this to move the image horizontally */
-  width: 40px; /* Width of the image */
-  height: 40px; /* Height of the image */
-  background-image: url("../figure/attention.png"); /* Path to your image */
-  background-size: cover; /* Make sure the image covers the area */
-  background-repeat: no-repeat;
-  z-index: 2; /* Ensure the image stays behind the text box */
-}
-
 
 
 
@@ -339,7 +273,7 @@ details {
 }
 
 details > summary {
-  font-family: Phantomsans, sans-serif; /* Use the explicit font family */
+  
   font-size: 18px; /* Larger font size for better readability */
   font-weight: bold; /* Retain bold font */
   justify-content: center;  /* Center alignment */

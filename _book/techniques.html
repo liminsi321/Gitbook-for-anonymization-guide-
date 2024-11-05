@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Research Data Types and Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation</title>
-  <meta name="description" content="This is a practical guideline for anonymization of reserach data, created by data steward at University of Twente." />
+  <meta name="description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Research Data Types and Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is a practical guideline for anonymization of reserach data, created by data steward at University of Twente." />
+  <meta property="og:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 4 Research Data Types and Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation" />
   
-  <meta name="twitter:description" content="This is a practical guideline for anonymization of reserach data, created by data steward at University of Twente." />
+  <meta name="twitter:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
 
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2024-11-04" />
+<meta name="date" content="2024-11-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -189,24 +189,22 @@ div.csl-indent {
 <h2><span class="header-section-number">4.1</span> Is that possible to single out, link, or infer individual from the dataset?<a href="techniques.html#is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Single out refers to isolate someone from the dataset.
 Link refers to combine information within and outside of the dataset to identify an individual.
-Inference refers to infer, guess, or predict details about an individual.
+Inference refers to infer, guess, or predict details about an individual <span class="citation">ICO (2021)</span>.
 For multimedia data, three categories should be taken care:
 Biometric identifiers that are distinctive, measurable, generally unique and permanent personal characteristics used to identify individuals. This includes physiological biometrics (face, iris, ear, fingerprint) and behavioral biometrics (voice, gait, gesture, lipmotion, and typing style);
 Soft biometrics of some vague physical, behavioral or adhered human characteristic that is not necessarily permanent or distinctive (height, weight, eye color, silhouette, age, gender, race, moles, tattoos, birthmarks, and scars);
-Non-biometric identifiers including text context, speech context, specific social-political and environmental context, dressing style, and hairstyle.
-<a href="https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf" class="uri">https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf</a>
-Chapter 2: How do we ensure anonymisation is effective?</p>
+Non-biometric identifiers including text context, speech context, specific social-political and environmental context, dressing style, and hairstyle <span class="citation">Garfinkel (2015)</span>.</p>
 </div>
 <div id="any-remaining-information-in-the-dataset-still-sensitive-or-unique" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Any remaining information in the dataset still sensitive, or unique?<a href="techniques.html#any-remaining-information-in-the-dataset-still-sensitive-or-unique" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="uniqueness" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Uniqueness<a href="techniques.html#uniqueness" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers (<a href="https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf" class="uri">https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf</a>).
+<p>To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers <span class="citation">Garfinkel (2015)</span>.
 However, it is necessary to distinguish between uniqueness in the sample and uniqueness in the population. Risk of identification is higher when the uniqueness in the population. However, some uniqueness in a sample is equivalent to the uniqueness in the population. For example, a patient with rare disease is unique in the sample and in the neighbourhood; a surgeon in a hospital and in the city.</p>
 </div>
 <div id="sensitivity" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Sensitivity<a href="techniques.html#sensitivity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Whether the information can put individuals or certain groups into vulnerable place, such as physical and mental harms, revelation of financial, political, religion, sexual orientation, or embarrassment.</p>
+<p>Whether the information can put individuals or certain groups into vulnerable place, such as physical and mental harms, revelation of financial, political, religion, sexual orientation, or embarrassment <span class="citation">ICO (2021)</span>.</p>
 </div>
 </div>
 <div id="any-additional-information-and-techniques-for-re-identification." class="section level2 hasAnchor" number="4.3">
@@ -218,43 +216,6 @@ However, it is necessary to distinguish between uniqueness in the sample and uni
 • The scope of releasing data: a defined group or public domain
 The cost of re-identification: someone with access to significant specialist expertise, analytical power, or prior knowledge can re-identify individuals, the cost is higher.</p>
 <p>The pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: <strong>textual data</strong>, <strong>numerical data</strong>, <strong>audio and visual data</strong>, and <strong>geospatial data</strong>.</p>
-<table class="gradient-table">
-<thead>
-<tr>
-<th onclick="showContent(&#39;column1&#39;)">
-Direct identifiers
-</th>
-<th onclick="showContent(&#39;column2&#39;)">
-Strong indirect identifiers
-</th>
-<th onclick="showContent(&#39;column3&#39;)">
-Indirect identifiers
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td id="content" colspan="3">
-Information unique to an individual can directly identify that person.
-</td>
-</tr>
-</tbody>
-</table>
-<script>
-function showContent(column) {
-  let content = '';
-  
-  if (column === 'column1') {
-    content = 'Information unique to an individual can directly identify that person.';
-  } else if (column === 'column2') {
-    content = ' Information that can easily identify an individual.';
-  } else if (column === 'column3') {
-    content = 'Information that, when combined with other data, can identify an individual.';
-  }
-  
-  document.getElementById('content').innerHTML = content;
-}
-</script>
 
 </div>
 </div>

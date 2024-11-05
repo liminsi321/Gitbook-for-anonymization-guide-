@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 What is personal data? | A Practical Guide to Data Anonymisation</title>
-  <meta name="description" content="This is a practical guideline for anonymization of reserach data, created by data steward at University of Twente." />
+  <meta name="description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 What is personal data? | A Practical Guide to Data Anonymisation" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="This is a practical guideline for anonymization of reserach data, created by data steward at University of Twente." />
+  <meta property="og:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 2 What is personal data? | A Practical Guide to Data Anonymisation" />
   
-  <meta name="twitter:description" content="This is a practical guideline for anonymization of reserach data, created by data steward at University of Twente." />
+  <meta name="twitter:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
 
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2024-11-04" />
+<meta name="date" content="2024-11-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -175,43 +175,27 @@ div.csl-indent {
 <div id="personal_data" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> What is personal data?<a href="personal_data.html#personal_data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The term “Personal data” refers to any information that enables you to identify a living person. According to the GDPR, a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.</p>
-<table class="gradient-table">
+<table>
+<colgroup>
+<col width="33%" />
+<col width="30%" />
+<col width="35%" />
+</colgroup>
 <thead>
-<tr>
-<th onclick="showContent(&#39;column1&#39;)">
-Direct identifiers
-</th>
-<th onclick="showContent(&#39;column2&#39;)">
-Strong indirect identifiers
-</th>
-<th onclick="showContent(&#39;column3&#39;)">
-Indirect identifiers
-</th>
+<tr class="header">
+<th>** Direct identifiers**</th>
+<th>Indirect identifiers</th>
+<th>Strong indirect identifiers</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td id="content" colspan="3">
-Information unique to an individual can directly identify that person.
-</td>
+<tr class="odd">
+<td>information unique to an individual and sufficient on its own to identify that individual.</td>
+<td>information that can reveal someone’s identity when combined with other available information.</td>
+<td>some identifiers can significantly increase the risk of identifying an individual when combined with other information.</td>
 </tr>
 </tbody>
 </table>
-<script>
-function showContent(column) {
-  let content = '';
-  
-  if (column === 'column1') {
-    content = 'Information unique to an individual can directly identify that person.';
-  } else if (column === 'column2') {
-    content = ' Information that can easily identify an individual.';
-  } else if (column === 'column3') {
-    content = 'Information that, when combined with other data, can identify an individual.';
-  }
-  
-  document.getElementById('content').innerHTML = content;
-}
-</script>
 <div class="three-column-container">
 <div class="three-column">
 <strong>Direct identifiers</strong><br />
@@ -228,8 +212,7 @@ Information that, when combined with other data, can identify an individual, suc
 </div>
 <p>It is worth noting that some identifiers are particularly considered <strong>strong indirect identifiers</strong> because they can significantly increase the risk of identifying an individual when combined with other information. Examples of strong identifiers include a date of birth, an IP address etc.</p>
 <p>For extensive overview of different types of identifiers, see Table 1.</p>
-<p><strong>Table 1.</strong> Overview of identifiers typically processed in research <span class="citation">Archive (2023)</span></p>
-<p>(Archive, F. S. S. D. (n.d.). Anonymisation and Personal Data - Finnish Social Science Data Archive (FSD). Finnish Social Science Data Archive (FSD).https://www.fsd.tuni.fi/en/services/data-management-guidelines/anonymisation-and-identifiers/)</p>
+<p><strong>Table 1.</strong> Overview of identifiers typically processed in research <span class="citation">FSD (2023)</span></p>
 <p><img src="figure/type_identifiers.png" width="80%" style="display: block; margin: auto;" /></p>
 
 </div>

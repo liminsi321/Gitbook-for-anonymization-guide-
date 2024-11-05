@@ -22,21 +22,21 @@ To assess the completeness of anonymization, the following questions are relevan
 ## Is that possible to single out, link, or infer individual from the dataset?
 Single out refers to isolate someone from the dataset.
 Link refers to combine information within and outside of the dataset to identify an individual.
-Inference refers to infer, guess, or predict details about an individual.
+Inference refers to infer, guess, or predict details about an individual @Information_Commissioners_Office_2021.
 For multimedia data, three categories should be taken care:
 Biometric identifiers that are distinctive, measurable, generally unique and permanent personal characteristics used to identify individuals. This includes physiological biometrics (face, iris, ear, fingerprint) and behavioral biometrics (voice, gait, gesture, lipmotion, and typing style);
 Soft biometrics of some vague physical, behavioral or adhered human characteristic that is not necessarily permanent or distinctive (height, weight, eye color, silhouette, age, gender, race, moles, tattoos, birthmarks, and scars); 
-Non-biometric identifiers including text context, speech context, specific social-political and environmental context, dressing style, and hairstyle. 
-https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf
-Chapter 2: How do we ensure anonymisation is effective?
+Non-biometric identifiers including text context, speech context, specific social-political and environmental context, dressing style, and hairstyle @Garfinkel_2015. 
+
+
 
 ## Any remaining information in the dataset still sensitive, or unique? 
 ###	Uniqueness 
-To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers (https://nvlpubs.nist.gov/nistpubs/ir/2015/nist.ir.8053.pdf).
+To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers @Garfinkel_2015.
 However, it is necessary to distinguish between uniqueness in the sample and uniqueness in the population. Risk of identification is higher when the uniqueness in the population. However, some uniqueness in a sample is equivalent to the uniqueness in the population. For example, a patient with rare disease is unique in the sample and in the neighbourhood; a surgeon in a hospital and in the city.
 
 ### Sensitivity 
-Whether the information can put individuals or certain groups into vulnerable place, such as physical and mental harms, revelation of financial, political, religion, sexual orientation, or embarrassment.
+Whether the information can put individuals or certain groups into vulnerable place, such as physical and mental harms, revelation of financial, political, religion, sexual orientation, or embarrassment @Information_Commissioners_Office_2021.
 
 ## Any additional information and techniques for re-identification.
 To assess the possibility of “reasonable likely” to re-identify individuals from anonymized data, it is relevant to consider the following questions:
@@ -47,38 +47,3 @@ To assess the possibility of “reasonable likely” to re-identify individuals 
 The cost of re-identification: someone with access to significant specialist expertise, analytical power, or prior knowledge can re-identify individuals, the cost is higher.
 
 The pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: **textual data**, **numerical data**, **audio and visual data**, and **geospatial data**.
-
-
-```{r, echo=FALSE, results='asis'}
-cat('
-<table class="gradient-table">
-  <thead>
-    <tr>
-      <th onclick="showContent(\'column1\')">Direct identifiers</th>
-      <th onclick="showContent(\'column2\')">Strong indirect identifiers</th>
-      <th onclick="showContent(\'column3\')">Indirect identifiers</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td id="content" colspan="3">Information unique to an individual can directly identify that person.</td>
-    </tr>
-  </tbody>
-</table>
-')
-```
-<script>
-function showContent(column) {
-  let content = '';
-  
-  if (column === 'column1') {
-    content = 'Information unique to an individual can directly identify that person.';
-  } else if (column === 'column2') {
-    content = ' Information that can easily identify an individual.';
-  } else if (column === 'column3') {
-    content = 'Information that, when combined with other data, can identify an individual.';
-  }
-  
-  document.getElementById('content').innerHTML = content;
-}
-</script>
