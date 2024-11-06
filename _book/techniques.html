@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Research Data Types and Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation</title>
+  <title>Chapter 4 Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation</title>
   <meta name="description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Research Data Types and Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation" />
+  <meta property="og:title" content="Chapter 4 Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Research Data Types and Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation" />
+  <meta name="twitter:title" content="Chapter 4 Pseudonymisation and Anonymisation Techniques | A Practical Guide to Data Anonymisation" />
   
   <meta name="twitter:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2024-11-05" />
+<meta name="date" content="2024-11-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,8 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -105,16 +107,15 @@ div.csl-indent {
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i><b>1.2</b> Acknowledgements</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="personal_data.html"><a href="personal_data.html"><i class="fa fa-check"></i><b>2</b> What is personal data?</a></li>
-<li class="chapter" data-level="3" data-path="minimization.html"><a href="minimization.html"><i class="fa fa-check"></i><b>3</b> Principle and Concepts of data minimization</a>
+<li class="chapter" data-level="3" data-path="minimization.html"><a href="minimization.html"><i class="fa fa-check"></i><b>3</b> Principles, concepts and practical considerations</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="minimization.html"><a href="minimization.html#data-minimization"><i class="fa fa-check"></i><b>3.1</b> Data minimization</a></li>
-<li class="chapter" data-level="3.2" data-path="minimization.html"><a href="minimization.html#pseudony_anony"><i class="fa fa-check"></i><b>3.2</b> Pseudonymisation versus Anonymisation</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="minimization.html"><a href="minimization.html#pseudonymisation"><i class="fa fa-check"></i><b>3.2.1</b> Pseudonymisation</a></li>
-<li class="chapter" data-level="3.2.2" data-path="minimization.html"><a href="minimization.html#anonymisation"><i class="fa fa-check"></i><b>3.2.2</b> Anonymisation</a></li>
+<li class="chapter" data-level="3.2" data-path="minimization.html"><a href="minimization.html#pseudonymisation-versus-anonymisation"><i class="fa fa-check"></i><b>3.2</b> Pseudonymisation versus Anonymisation</a></li>
+<li class="chapter" data-level="3.3" data-path="minimization.html"><a href="minimization.html#practical-consideration"><i class="fa fa-check"></i><b>3.3</b> Practical Consideration</a></li>
+<li class="chapter" data-level="3.4" data-path="minimization.html"><a href="minimization.html#how-to-assess-the-risks-of-re-identification"><i class="fa fa-check"></i><b>3.4</b> How to assess the risks of re-identification</a></li>
+<li class="chapter" data-level="3.5" data-path="minimization.html"><a href="minimization.html#steps-for-anonymisation"><i class="fa fa-check"></i><b>3.5</b> Steps for anonymisation</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="techniques.html"><a href="techniques.html"><i class="fa fa-check"></i><b>4</b> Research Data Types and Pseudonymisation and Anonymisation Techniques</a>
+<li class="chapter" data-level="4" data-path="techniques.html"><a href="techniques.html"><i class="fa fa-check"></i><b>4</b> Pseudonymisation and Anonymisation Techniques</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="techniques.html"><a href="techniques.html#is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset"><i class="fa fa-check"></i><b>4.1</b> Is that possible to single out, link, or infer individual from the dataset?</a></li>
 <li class="chapter" data-level="4.2" data-path="techniques.html"><a href="techniques.html#any-remaining-information-in-the-dataset-still-sensitive-or-unique"><i class="fa fa-check"></i><b>4.2</b> Any remaining information in the dataset still sensitive, or unique?</a>
@@ -135,10 +136,10 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="6" data-path="numerical-data.html"><a href="numerical-data.html"><i class="fa fa-check"></i><b>6</b> Numerical data</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="numerical-data.html"><a href="numerical-data.html#suppression"><i class="fa fa-check"></i><b>6.1</b> Suppression</a></li>
-<li class="chapter" data-level="6.2" data-path="numerical-data.html"><a href="numerical-data.html#swapping"><i class="fa fa-check"></i><b>6.2</b> Swapping</a></li>
-<li class="chapter" data-level="6.3" data-path="numerical-data.html"><a href="numerical-data.html#masking-1"><i class="fa fa-check"></i><b>6.3</b> Masking</a></li>
-<li class="chapter" data-level="6.4" data-path="numerical-data.html"><a href="numerical-data.html#generalisation"><i class="fa fa-check"></i><b>6.4</b> Generalisation</a></li>
+<li class="chapter" data-level="6.1" data-path="numerical-data.html"><a href="numerical-data.html#generalisation"><i class="fa fa-check"></i><b>6.1</b> Generalisation</a></li>
+<li class="chapter" data-level="6.2" data-path="numerical-data.html"><a href="numerical-data.html#suppression"><i class="fa fa-check"></i><b>6.2</b> Suppression</a></li>
+<li class="chapter" data-level="6.3" data-path="numerical-data.html"><a href="numerical-data.html#swapping"><i class="fa fa-check"></i><b>6.3</b> Swapping</a></li>
+<li class="chapter" data-level="6.4" data-path="numerical-data.html"><a href="numerical-data.html#masking-1"><i class="fa fa-check"></i><b>6.4</b> Masking</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="audio-visual-data.html"><a href="audio-visual-data.html"><i class="fa fa-check"></i><b>7</b> Audio-Visual data</a>
 <ul>
@@ -173,34 +174,29 @@ div.csl-indent {
 
             <section class="normal" id="section-">
 <div id="techniques" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Research Data Types and Pseudonymisation and Anonymisation Techniques<a href="techniques.html#techniques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1><span class="header-section-number">Chapter 4</span> Pseudonymisation and Anonymisation Techniques<a href="techniques.html#techniques" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Following the concepts and principles of data anonymization, before diving into the technique of anonymization, this section will focus on practical steps to plan and assess data anonymization.</p>
 <p>To see which techniques are most suitable for your data, it is helpful first to see what you want to anonymize. Based on the approach of Personal Data Protection Commission of Singapore, you can follow these steps to identify your data.</p>
 <p>Anonymized data refers to data after removing personal information to avoid the possibility of re-identify one individual from the data. Anonymization is not an absolute value, but a spectrum.</p>
-<p>In the following scenarios, data is not considered as anonymized data:</p>
-<div class="warning">
-<p>Raw data containing personal data still exist.</p>
-<p>Key or other information that can be used to re-identify individuals in the dataset still exist.</p>
-</div>
 <p>Anonymizing textual data, such as interview transcripts, is challenging to fully achieve. Certain personal details are closely tied to data utility and, for research purposes, may not be removed. For instance, when investigating stakeholders’ views on policy, data utility of the textual data is related to the personal information of the interviewee, such as professional background, experience. Furthermore, even when researchers remove as much personal information as possible, there remains a risk of re-identification through singling out, inference, or linking with other information, techniques, or external datasets. If such data is shared publicly, individuals familiar with the data subjects may still be able to re-identify them.</p>
 <p>When anonymizing data, it’s essential to balance the protection of data subjects’ privacy with the utility of the data. Data utility refers to the data’s ability to address research questions effectively. For example, in a study on student performance and family socioeconomic status, identifiers like student names, gender, and age should be removed to protect privacy, while information on grades and family economic conditions should be retained, as these are critical for addressing the research objectives.</p>
 <p>To assess the completeness of anonymization, the following questions are relevant:</p>
 <div id="is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Is that possible to single out, link, or infer individual from the dataset?<a href="techniques.html#is-that-possible-to-single-out-link-or-infer-individual-from-the-dataset" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Single out refers to isolate someone from the dataset.
-Link refers to combine information within and outside of the dataset to identify an individual.
-Inference refers to infer, guess, or predict details about an individual <span class="citation">ICO (2021)</span>.
-For multimedia data, three categories should be taken care:
-Biometric identifiers that are distinctive, measurable, generally unique and permanent personal characteristics used to identify individuals. This includes physiological biometrics (face, iris, ear, fingerprint) and behavioral biometrics (voice, gait, gesture, lipmotion, and typing style);
-Soft biometrics of some vague physical, behavioral or adhered human characteristic that is not necessarily permanent or distinctive (height, weight, eye color, silhouette, age, gender, race, moles, tattoos, birthmarks, and scars);
-Non-biometric identifiers including text context, speech context, specific social-political and environmental context, dressing style, and hairstyle <span class="citation">Garfinkel (2015)</span>.</p>
+<p>Single out refers to isolate someone from the dataset.</p>
+<p>Link refers to combine information within and outside of the dataset to identify an individual.</p>
+<p>Inference refers to infer, guess, or predict details about an individual <span class="citation">ICO (2021)</span>.</p>
+<p>For multimedia data, three categories should be taken care:</p>
+<p>Biometric identifiers that are distinctive, measurable, generally unique and permanent personal characteristics used to identify individuals. This includes physiological biometrics (face, iris, ear, fingerprint) and behavioral biometrics (voice, gait, gesture, lipmotion, and typing style);
+Soft biometrics of some vague physical, behavioral or adhered human characteristic that is not necessarily permanent or distinctive (height, weight, eye color, silhouette, age, gender, race, moles, tattoos, birthmarks, and scars);</p>
+<p>Non-biometric identifiers including text context, speech context, specific social-political and environmental context, dressing style, and hairstyle <span class="citation">Garfinkel (2015)</span>.</p>
 </div>
 <div id="any-remaining-information-in-the-dataset-still-sensitive-or-unique" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Any remaining information in the dataset still sensitive, or unique?<a href="techniques.html#any-remaining-information-in-the-dataset-still-sensitive-or-unique" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="uniqueness" class="section level3 hasAnchor" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Uniqueness<a href="techniques.html#uniqueness" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers <span class="citation">Garfinkel (2015)</span>.
-However, it is necessary to distinguish between uniqueness in the sample and uniqueness in the population. Risk of identification is higher when the uniqueness in the population. However, some uniqueness in a sample is equivalent to the uniqueness in the population. For example, a patient with rare disease is unique in the sample and in the neighbourhood; a surgeon in a hospital and in the city.</p>
+<p>To measure the uniqueness of a data point, count the data points within each category formed by distinct combinations of two attributes in the dataset. If there is only one data point in a category, that value is unique, indicating a high risk of re-identification. It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers <span class="citation">Garfinkel (2015)</span>.</p>
+<p>However, it is necessary to distinguish between uniqueness in the sample and uniqueness in the population. Risk of identification is higher when the uniqueness in the population. However, some uniqueness in a sample is equivalent to the uniqueness in the population. For example, a patient with rare disease is unique in the sample and in the neighbourhood; a surgeon in a hospital and in the city.</p>
 </div>
 <div id="sensitivity" class="section level3 hasAnchor" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Sensitivity<a href="techniques.html#sensitivity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -209,11 +205,11 @@ However, it is necessary to distinguish between uniqueness in the sample and uni
 </div>
 <div id="any-additional-information-and-techniques-for-re-identification." class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Any additional information and techniques for re-identification.<a href="techniques.html#any-additional-information-and-techniques-for-re-identification." class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>To assess the possibility of “reasonable likely” to re-identify individuals from anonymized data, it is relevant to consider the following questions:
-• Any external information exist to identify individuals, such as other datasets, personal knowledge.
-• Techniques that can be reverse the anonymization or link data.
-• “Motivated intruders”. Someone who is competent, have appropriate resources, and investigative techniques to re-identify individuals in the dataset. The motivated intruders could be investigative journalists, estranged partners, stalkers, industrial spies, or acquaintances of data subjects.
-• The scope of releasing data: a defined group or public domain
+<p>To assess the possibility of “reasonable likely” to re-identify individuals from anonymized data, it is relevant to consider the following questions:</p>
+<p>• Any external information exist to identify individuals, such as other datasets, personal knowledge.</p>
+<p>• Techniques that can be reverse the anonymization or link data.</p>
+<p>• “Motivated intruders”. Someone who is competent, have appropriate resources, and investigative techniques to re-identify individuals in the dataset. The motivated intruders could be investigative journalists, estranged partners, stalkers, industrial spies, or acquaintances of data subjects.</p>
+<p>• The scope of releasing data: a defined group or public domain
 The cost of re-identification: someone with access to significant specialist expertise, analytical power, or prior knowledge can re-identify individuals, the cost is higher.</p>
 <p>The pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: <strong>textual data</strong>, <strong>numerical data</strong>, <strong>audio and visual data</strong>, and <strong>geospatial data</strong>.</p>
 

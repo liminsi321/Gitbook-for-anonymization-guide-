@@ -10,7 +10,7 @@ Spatial aggregation is on the techniques commonly used to anonymise geospatial d
 The second form is known as point aggregation and involves assigning multiple individual records to one point location. Examples include a population dot map where one dot represents 100 persons.  
 
 
-```{r geo_data,fig.align='center',fig.width=10, fig.height=7, out.width="80%",fig.cap="Spatial aggregation of individual cases using census enumeration units (Paul A. Zandbergen, 2014).", echo=FALSE}
+```{r geo_data,fig.align='center',fig.width=10, fig.height=7, out.width="80%",fig.cap="Spatial aggregation of individual cases using census enumeration units (Zandbergen, 2014).", echo=FALSE}
   knitr::include_graphics("figure/geo_data.png") 
 ```
 
@@ -21,8 +21,6 @@ Spatial displacement is another simplest way of anonymising data with exact spat
 This can preserve the spatial distribution and density of your data while making it difficult to pinpoint the exact location of each point. It involves altering data accuracy to weaken links between the data and the individuals. This would mean that a map feature, for example, a point, is displaced to a new location (d – distance) away from its original location. 
 
 Spatial displacement should be done with utmost care to ensure that the adjustments do not conflict with the spatial realities, for example by putting a house in the middle of the sea!
-
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2600804/
 
 ## Attribute anonymisation
 

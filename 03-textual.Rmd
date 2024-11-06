@@ -9,7 +9,7 @@ Generalization involves reducing detailed information or the precision of the in
 This approach mainly involves replacing or aggregating identifiers with vague descriptors, such as replacing the actual names of individuals with aliases or with other aggregated information.
 
 
-```{r textual_generalization,fig.align='center',fig.width=10, fig.height=7, out.width="85%", echo=FALSE}
+```{r textual_generalization,fig.align='center',fig.width=10, fig.height=7, out.width="90%", echo=FALSE}
   knitr::include_graphics("figure/textual_generalization.png") 
 ```
 
@@ -36,7 +36,7 @@ Masking textual data involves replacing letters or symbols (punctuation) in iden
 This technique is more suitable for structured tabular data, meaning that data is stored in the form of columns and rows.
 
 
-```{r mask_textual,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
+```{r mask_textual,fig.align='center',fig.width=10, fig.height=7, out.width="90%", echo=FALSE}
   knitr::include_graphics("figure/mask.jpg") 
 ```
 

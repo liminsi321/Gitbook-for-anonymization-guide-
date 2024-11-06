@@ -2,36 +2,19 @@
 
 Numerical data is data in the form of numbers and is often displayed in a table with rows and columns. The techniques commonly used to anonymise numerical data include:
 
-## Suppression
-
-Suppression involves deleting the identifying information from the data. Some attributes (variables) or records (observations) can be removed in certain cases to make the identifier is not unique anymore. 
-
-## Swapping
-This technique is also known as shuffling and permutation.
-
-When each data subjects has attributes which are stored in the columns in a spreadsheet, swap the attributes among two random data subjects till exhaust all data subjects in the dataset. In this way, the distribution of attributes would not be changes, while each data subject’s attributes are changed. For example, when collecting each data subject’s email address and IP address, swap each subject’s IP address would reduce the chances of identifying one data subject with their both email address and IP address. 
-
-## Masking
-
-The same way letters in textual data are replaced, numbers can be entirely or partially replaced with a special symbol (such as '*' or 'x').
-
-See the table below for examples.
-
-```{r mask_numeric,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
-  knitr::include_graphics("figure/mask_numeric.png") 
-```
-
 ## Generalisation
 
  Generalisation techniques reduce the granularity of the attributes/records in the data. It can be performed by：
  
-(1) **Categorising personal identifiers.*** For example, age is replaced by an age category or range.
+(1) **Categorising personal identifiers.** For example, age is replaced by an age category or range.
 
 (2) **Top and bottom coding of the upper or lower ranges.** Very high and low values are grouped into categories to minimize identifiability due to outliers. For example, age records above a certain upper and lower limit are classified as groups to avoid recognition of exceptionally older or younger individuals while preserving actual ages for the rest of the population within the wider group researched. A top code of “ X or more” could be applied to avoid identifying older subjects. 
 
 (3) **Collapsing and/or combining variables.** Merging data recorded in two or more variables into a single category. This is particularly useful if the initial data collection creates several categories with very few subjects in each.
 
 (4) **Perturbation can be used where small changes in value are acceptable.** This technique involves rounding, adding noise, or replacing real values with simulation values. It should not be used when data accuracy is critical. The following section demonstrates examples of rounding and adding noise techniques with practical examples.
+
+
 
 **Rounding**
 
@@ -48,5 +31,26 @@ This technique can be used to few values, such as outliers, or to entire dataset
 
 ```{r noise_addition,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/noise_addition.png") 
+```
+
+
+
+## Suppression
+
+Suppression involves deleting the identifying information from the data. Some attributes (variables) or records (observations) can be removed in certain cases to make the identifier is not unique anymore. 
+
+## Swapping
+This technique is also known as shuffling and permutation.
+
+When each data subjects has attributes which are stored in the columns in a spreadsheet, swap the attributes among two random data subjects till exhaust all data subjects in the dataset. In this way, the distribution of attributes would not be changes, while each data subject’s attributes are changed. For example, when collecting each data subject’s email address and IP address, swap each subject’s IP address would reduce the chances of identifying one data subject with their both email address and IP address. 
+
+## Masking
+
+The same way letters in textual data are replaced, numbers can be entirely or partially replaced with a special symbol (such as '*' or 'x').
+
+See the table below for examples.
+
+```{r mask_numeric,fig.align='center',fig.width=10, fig.height=7, out.width="90%", echo=FALSE}
+  knitr::include_graphics("figure/mask_numeric.png") 
 ```
 

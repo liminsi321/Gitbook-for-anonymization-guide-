@@ -86,8 +86,8 @@ img, table {
 /* from r-pkgs.org*/
 div.fyi, div.warning, div.note{
   border-radius: 20px;
-  padding: 0.5em;
-  margin: 0.5em 0;
+  padding: 1em;
+  margin: 1em 0;
   padding-left: 80px;
   background-size: 50px;
   background-repeat: no-repeat;
@@ -173,18 +173,17 @@ div.attention {
 /*-----------------------------------------------------------------------------------*/
 
 
-.gradient-table td:first-child {
-  background: linear-gradient(to bottom, #007BFF, #FD62AD) !important; /* Gradient from top to bottom */
-  color: white !important;  /* Text color for contrast */
-  padding: 10px !important;
-  font-weight: bold !important;
+radient-table td:first-child {
+  background: linear-gradient(to bottom, #007BFF, #FD62AD); /* Gradient from top to bottom */
+  color: white;  /* Text color for contrast */
+  padding: 10px;
+  font-weight: bold;
 }
 .gradient-table th:first-child {
-  background: linear-gradient(to bottom, #007BFF, #FD62AD) !important; /* Gradient for header too */
-  color: white !important;
-  padding: 10px !important;
+  background: linear-gradient(to bottom, #007BFF, #FD62AD); /* Gradient for header too */
+  color: white;
+  padding: 10px;
 }
-
 
 
 
@@ -233,15 +232,15 @@ div.attention {
   margin-bottom: 30px; /* Space below the title */
 }
 
-/* pink box */
+/* -pink box------------------------------------- */
 
 
 .pink-box {
   background-color: #ECE3F0; /*#F3B9DF,#F2C5E0 Light pink background */
   border-radius: 20px; /* Rounded corners */
   padding: 15px;
-  padding: 1em;
-  margin: 1em 0
+  
+  margin: 1em 0;
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow */
 }
@@ -309,20 +308,6 @@ details > div {
   padding: 12px 6px;
   margin: 0;
   box-shadow: 3px 3px 4px grey;
-}
-
-details > summary::after {
-  content: " +"; /* Default to "+" */
-  font-weight: bold;
-  margin-left: 10px;
-  color: gray;
-  font-size: 18px;
-}
-
-details[open] > summary::after {
-  color: gray;
-  content: " -"; /* Change to "-" when open */
-  font-size: 18px;
 }
 
 

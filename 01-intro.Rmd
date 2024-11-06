@@ -2,13 +2,9 @@
 
 The term "Personal data" refers to any information that enables you to identify a living person. According to the GDPR,  a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.
 
-| ** Direct identifiers**           | Indirect identifiers    |Strong indirect identifiers        |
+| Direct identifiers           | Indirect identifiers    |Strong indirect identifiers        |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------------|
 |information unique to an individual and sufficient on its own to identify that individual.| information that can reveal someone's identity when combined with other available information.          |some identifiers can significantly increase the risk of identifying an individual when combined with other information.|{.gradient-table}
-
-
-
-
 
 
 <div class="three-column-container">
