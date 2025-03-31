@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 What is personal data? | A Practical Guide to Psedunymization and Anonymization of Research Data</title>
+  <title>Chapter 7 Geospatial data | A Practical Guide to Psedunymization and Anonymization of Research Data</title>
   <meta name="description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 What is personal data? | A Practical Guide to Psedunymization and Anonymization of Research Data" />
+  <meta property="og:title" content="Chapter 7 Geospatial data | A Practical Guide to Psedunymization and Anonymization of Research Data" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 What is personal data? | A Practical Guide to Psedunymization and Anonymization of Research Data" />
+  <meta name="twitter:title" content="Chapter 7 Geospatial data | A Practical Guide to Psedunymization and Anonymization of Research Data" />
   
   <meta name="twitter:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="180x180" href="figure/logo.jpeg" />
   <link rel="shortcut icon" href="figure/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="minimization.html"/>
+<link rel="prev" href="audio_visual.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -124,40 +124,53 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="personal_data" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> What is personal data?<a href="personal_data.html#personal_data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The term ’’Personal data” refers to any information that enables you to identify a living person. According to the GDPR, a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.</p>
-<div id="categories-of-identifiers" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Categories of identifiers<a href="personal_data.html#categories-of-identifiers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are three categories of identifiers:</p>
-<div class="three-column-container">
-<div class="three-column" style="text-align: center">
-<blockquote>
-<p><strong>Direct identifiers</strong><br><br />
-Any piece of information unique to an individual and sufficient on its own to identify that individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc.</p>
+<div id="geospatial" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Geospatial data<a href="geospatial.html#geospatial" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Geospatial data refers to information linked to specific geographic locations. Geospatial data are often used in research for analysis, visualization, and understanding of relationships and patterns within a geographic context. Geospatial data anonymisation techniques generally fall into two main categories: generalisation and randomisation. This section presents examples of the techniques commonly used for de-identifying geospatial data.</p>
+<div id="generalisation-1" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Generalisation<a href="geospatial.html#generalisation-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The generalization technique involves reducing the spatial or temporal resolution (precision) of the data as well as the granularity of the data attributes. It includes two common techniques:</p>
+<p><strong>Spatial and temporal aggregation</strong></p>
+<p>Spatial aggregation helps mask the exact locations while preserving overall spatial patterns and trends. Spatial aggregation can take two forms:</p>
+<p>• The first form is area aggregation, which involves reducing the level of detail by summarising spatial details into larger spatial units, such as zip codes, cities, census blocks or any other large administration units.</p>
+<p>• The second form is known as point aggregation and involves assigning multiple individual records to one point location. Examples include a population dot map where one dot represents 100 persons. See Figure XX below for an example of point aggregation</p>
+<div class="figure" style="text-align: center">
+<img src="figure/geo_data.png" alt=" Spatial aggregation of individual cases using census enumeration units (Zandbergen, 2014)." width="80%" />
+<p class="caption">
+(#fig:geo_data) Spatial aggregation of individual cases using census enumeration units (Zandbergen, 2014).
+</p>
 </div>
-<div class="three-column">
-<blockquote>
-<p><strong>Strong indirect identifiers</strong><br><br />
-Any information that can reveal someone’s identity when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.</p>
-</blockquote>
+<div style="text-align: center;">
+<p><strong>Figure X</strong>. Demonstration of (Gutmann et al., 2008).</p>
 </div>
-<div class="three-column">
-<blockquote>
-<p><strong>Indirect identifiers</strong><br><br />
-Some identifiers are particularly considered strong indirect identifiers because they can significantly increase the risk of easily identifying an individual when combined with other information. Examples of strong identifiers include a rare event, a rare disease, an unusual job title, a date of birth, an IP address, etc.</p>
-</blockquote>
+<p><strong>Attribute anonymisation</strong></p>
+<p>Attribute anonymization is another generalization technique used to anonymised spatial data, and it involves deleting or modifying any attributes or variables that could identify or link to data subjects, such as the coordinates, exact locations of rare resources, temperatures, cadastral boundaries, ages, income, crimes incidences, etc.</p>
 </div>
-</blockquote>
+<div id="spatial-displacementadjusting-spatial-coordinates" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Spatial displacement/Adjusting Spatial Coordinates<a href="geospatial.html#spatial-displacementadjusting-spatial-coordinates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Spatial displacement is another technique of anonymising spatial data. The technique involves shifting spatial data points (coordinates) to a different location within a certain range or distance by, for example, adding or subtracting a fixed or random number to both the x-axis and the y-axis. Spatial displacement preserves the spatial distribution and density of your data while making it difficult to pinpoint the exact original location of each point. It involves altering data accuracy to weaken links between the data and the individuals. This would mean that a map feature, for example, a point, is displaced to a new location (d – distance) away from its original location.</p>
+<p>For example, the original coordinates of the University of Twente on Google Maps (52.24001648578193, 6.849739376582042) can be shifted to new random coordinates (52.245130, 6.837690) at x-distance, for which the new location of University of Twente is as shown in Figure xxx below.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:UT-map"></span>
+<img src="figure/ut_map.png" alt="Spatial aggregation of individual cases using census enumeration units (Zandbergen, 2014)." width="80%" />
+<p class="caption">
+Figure 7.1: Spatial aggregation of individual cases using census enumeration units (Zandbergen, 2014).
+</p>
 </div>
-<p>For extensive overview of different types of identifiers, see Table 1.</p>
-<p><strong>Table 1.</strong> Examples of identifiers typically processed in research <span class="citation">FSD (2023)</span></p>
-<p><img src="figure/type_identifiers.png" width="80%" style="display: block; margin: auto;" /></p>
-<div id="sensitive-personal-data" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Sensitive personal data<a href="personal_data.html#sensitive-personal-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This is a special category of personal data”. It includes any information about a person’s racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data, health, sex life, or sexual orientation information.</p>
-<p>Sensitive personal information can put individuals or certain groups in vulnerable positions, and their misuse can potentially lead to physical or mental harm, financial loss, political or religious persecution, disclosure of sexual orientation discrimination, or embarrassment. Therefore, handling such data requires extra caution.</p>
+<div style="text-align: center;">
+<p><strong>Figure X</strong>. Aggregation of UT map.</p>
+</div>
+</div>
+<div id="attribute-anonymisation" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Attribute anonymisation<a href="geospatial.html#attribute-anonymisation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Attribute anonymisation involves deleting or modifying any attributes or variables that could identify or link to data subjects, such as names, addresses, phone numbers, or email addresses. This technique can protect the personal or confidential information of data subjects while retaining some non-identifying information for analysis.</p>
+<div class="attention">
+Spatial displacement should be done with utmost care to ensure that the adjustments still can address research questions and also do not conflict with the spatial realities, for example, by putting a hourse in the middle of the sea!
+</div>
+<div>
+Icons made by <a href="https://www.flaticon.com/authors/icon-mania" title="Icon mania"> Icon mania </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com’</a>
+</div>
 
+</div>
 </div>
 <!DOCTYPE html>
 <html lang="en">
@@ -225,8 +238,8 @@ Some identifiers are particularly considered strong indirect identifiers because
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="minimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="audio_visual.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

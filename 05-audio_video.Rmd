@@ -1,16 +1,15 @@
-# Audio-Visual data 
+# Audio-Visual data  {#audio_visual}
 
-Audio-visual data includes various forms of multimedia content, such as videos, movies, and audio recordings, including voices and visual components. In research, these forms of data capture interviews, workshops and any other form of communication with research participants involving their voices and/or images. Anonymizing these types of data involves modifying the audio, video or images, which will be introduced in this section.
-
+Audio-visual data includes various forms of multimedia content, such as videos, movies, and audio recordings, including voices and visual components. In research, these forms of data capture interviews, workshops and any other form of communication with research participants involving their voices and/or images. Anonymizing these types of data involves modifying the audio, video or images. This section outlines some of the techniques used.
 
 <div class="attention">
-Keep in mind that these techniques can be time-consuming or expensive to use.</div>
+Keep in mind that using these techniques can take a lot of time or are expenstive to conduct.</div>
 <div> Icons made by <a href="https://www.flaticon.com/authors/icon-mania" title="Icon mania"> Icon mania </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
 
 
 ## Voice transformation/distortion
 
-This technique involves disguising voices such as altering the pitch in a recording. Keep in mind that transforming or distorting the voice can reduce the usefulness of the data. Therefore, the decision of modifying sounds should be made based on your research objectives.
+This technique involves disguising voices such as altering the pitch in a recording. Keep in mind that transforming or distorting the voice can reduce the usefulness of the data. Therefore, the decision to modify sounds should be made based on your research objectives. 
 
 ## Blurring, pixelation or obscuring
 
@@ -27,21 +26,24 @@ Blurring by pixelating specific regions of a video image or a picture, such as f
 
 ## Mute or bleep out the identifying information
 
-In audio or video recordings, you can also mute or bleep out identifying information to anonymize the audio-visual data. For example, you can mute or bleep out identifiers such as names, places or other information. Please see image XX below where the personal name has been muted in the audio recording.
+In audio or video recordings, you can also mute, remove or bleep out identifying information to anonymize the audio-visual data. For example, you can mute, remove or bleep out identifiers such as names, places or other information. Please see image XX below, where the personal name has been muted in the audio recording.
 
 ```{r mute,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/mute.png") 
 ```
-<div class="software">
-**Software for audio-visual data**
-
-  •	For audio data, audio editing software such as Audacity can be used to transform or distort the voice or bleep out personal information.
-
-  •	Different video editing software such as Adobe Premiere can be used to blur or pixelate video recordings or transform, distort or bleep out information in the audio recording.
-
-  •	For images, image editor tools such as Photoshop and Paint can be used to blur, pixelate or obscure faces or personal information in pictures and images.
-
+<div style="text-align: center;">
+  **Figure X**. Demonstration of removing a part of an audio recording.
 </div>
 
 
 
+<div class="software">
+**Software for audio-visual data**
+
+  •	For **audio data**: audio editing software such as **Audacity** can be used to transform or distort the voice or bleep out personal information.
+
+  •	For **video data**: video editing software such as **Adobe Premiere** can be used to blur or pixelate video recordings or transform, distort or bleep out information in the audio recording.
+
+  • For **images**: image editor tools such as **Adobe Photoshop** and **Paint** can be used to blur, pixelate or obscure faces or personal information in pictures and images.
+
+</div>

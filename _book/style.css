@@ -162,7 +162,7 @@ div.attention {
   background-repeat: no-repeat;
   background-position: left top;
   min-height: 50px;           /* Minimum height of the box */
-  width: 90%;                 /* Set width to 80% of the page */
+  width: 95%;                 /* Set width to 80% of the page */
   background-color: #ECE3F0;  /* Background color */
   background-image: url("../figure/attention.png"); /* Background image */
 }
@@ -218,6 +218,7 @@ radient-table td:first-child {
   box-sizing: border-box;
   margin: 5px; /* Adjust spacing between columns */
   text-align: centerright; /* Center-align text in the column */
+  color: black; 
 }
 
 /* Ensuring columns are equal width */

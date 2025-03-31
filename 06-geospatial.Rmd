@@ -1,27 +1,56 @@
-# Geospatial data
+# Geospatial data {#geospatial}
 
-Geospatial data refers to data that is associated with specific geographic locations.  Spatial data are used in research for analysis, visualization, and understanding of relationships and patterns within a geographic context. This section presents some of the techniques used to de-identify spatial data. The existing anonymisation techniques fall into two categories of *generalization* and *randomization*.
+Geospatial data refers to information linked to specific geographic locations. Geospatial data are often used in research for analysis, visualization, and understanding of relationships and patterns within a geographic context. Geospatial data anonymisation techniques generally fall into two main categories: generalisation and randomisation. This section presents examples of the techniques commonly used for de-identifying geospatial data.
 
-## Spatial generalisation
+## Generalisation
 
-**Spatial aggregation**
+The generalization technique involves reducing the spatial or temporal resolution (precision) of the data as well as the granularity of the data attributes. It includes two common techniques:
 
-Spatial aggregation is on the techniques commonly used to anonymise geospatial data. The method helps to mask the exact locations of individuals while still preserving the overall spatial patterns and trends. Spatiall aggregation can take two forms.  The first form, which is area aggregation, involves reducing the level of detail by summarising the spatial details into larger spatial units, such as census blocks, zip codes, cities or any other administrative units. 
-The second form is known as point aggregation and involves assigning multiple individual records to one point location. Examples include a population dot map where one dot represents 100 persons.  
+**Spatial and temporal aggregation**
+
+Spatial aggregation helps mask the exact locations while preserving overall spatial patterns and trends. Spatial aggregation can take two forms:
+
+•	  The first form is area aggregation, which involves reducing the level of detail by summarising spatial details into larger spatial units, such as zip codes, cities, census blocks or any other large administration units. 
+
+•	The second form is known as point aggregation and involves assigning multiple individual records to one point location. Examples include a population dot map where one dot represents 100 persons. See Figure XX below for an example of point aggregation
 
 
-```{r geo_data,fig.align='center',fig.width=10, fig.height=7, out.width="80%",fig.cap="Spatial aggregation of individual cases using census enumeration units (Zandbergen, 2014).", echo=FALSE}
+
+```{r geo_data,fig.align='center',fig.width=10, fig.height=7, out.width="80%",fig.cap=" Spatial aggregation of individual cases using census enumeration units (Zandbergen, 2014).", echo=FALSE}
   knitr::include_graphics("figure/geo_data.png") 
 ```
+<div style="text-align: center;">
+  **Figure X**. Demonstration of  (Gutmann et al., 2008).
+</div>
 
-**Spatial displacement/Adjusting Spatial Coordinates**
+**Attribute anonymisation**
 
-Spatial displacement is another simplest way of anonymising data with exact spatial coordinates by displacing the coordinates in some way.  The technique involves shifting spatial data points to different locations within a certain range or distance by for example, adding or subtracting a fixed or random number to both the x-axis and the y-axis. 
+Attribute anonymization is another generalization technique used to anonymised spatial data, and it involves deleting or modifying any attributes or variables that could identify or link to data subjects, such as the coordinates, exact locations of rare resources, temperatures, cadastral boundaries, ages, income, crimes incidences, etc.
 
-This can preserve the spatial distribution and density of your data while making it difficult to pinpoint the exact location of each point. It involves altering data accuracy to weaken links between the data and the individuals. This would mean that a map feature, for example, a point, is displaced to a new location (d – distance) away from its original location. 
 
-Spatial displacement should be done with utmost care to ensure that the adjustments do not conflict with the spatial realities, for example by putting a house in the middle of the sea!
+
+## Spatial displacement/Adjusting Spatial Coordinates  
+
+Spatial displacement is another technique of anonymising spatial data. The technique involves shifting spatial data points (coordinates) to a different location within a certain range or distance by, for example, adding or subtracting a fixed or random number to both the x-axis and the y-axis. Spatial displacement preserves the spatial distribution and density of your data while making it difficult to pinpoint the exact original location of each point. It involves altering data accuracy to weaken links between the data and the individuals. This would mean that a map feature, for example, a point, is displaced to a new location (d – distance) away from its original location.
+
+For example, the original coordinates of the University of Twente on Google Maps (52.24001648578193, 6.849739376582042) can be shifted to new random coordinates (52.245130, 6.837690) at x-distance, for which the new location of University of Twente is as shown in Figure xxx below. 
+
+```{r UT-map,fig.align='center',fig.width=10, fig.height=7, out.width="80%",fig.cap="Spatial aggregation of individual cases using census enumeration units (Zandbergen, 2014).", echo=FALSE}
+  knitr::include_graphics("figure/ut_map.png") 
+```
+<div style="text-align: center;">
+  **Figure X**. Aggregation of UT map.
+</div>
+
+
 
 ## Attribute anonymisation
 
 Attribute anonymisation involves deleting or modifying any attributes or variables that could identify or link to data subjects, such as names, addresses, phone numbers, or email addresses. This technique can protect the personal or confidential information of data subjects while retaining some non-identifying information for analysis. 
+
+
+<div class="attention">
+Spatial displacement should be done with utmost care to ensure that the adjustments still can address research questions and also do not conflict with the spatial realities, for example, by putting a hourse in the middle of the sea! </div>
+<div> Icons made by <a href="https://www.flaticon.com/authors/icon-mania" title="Icon mania"> Icon mania </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+
+

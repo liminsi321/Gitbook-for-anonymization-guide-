@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 What is personal data? | A Practical Guide to Psedunymization and Anonymization of Research Data</title>
+  <title>Chapter 4 Pseudonymization and Anonymization Techniques | A Practical Guide to Psedunymization and Anonymization of Research Data</title>
   <meta name="description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 What is personal data? | A Practical Guide to Psedunymization and Anonymization of Research Data" />
+  <meta property="og:title" content="Chapter 4 Pseudonymization and Anonymization Techniques | A Practical Guide to Psedunymization and Anonymization of Research Data" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 What is personal data? | A Practical Guide to Psedunymization and Anonymization of Research Data" />
+  <meta name="twitter:title" content="Chapter 4 Pseudonymization and Anonymization Techniques | A Practical Guide to Psedunymization and Anonymization of Research Data" />
   
   <meta name="twitter:description" content="This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece Nazareth, Minsi Liat University of Twente." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <link rel="apple-touch-icon-precomposed" sizes="180x180" href="figure/logo.jpeg" />
   <link rel="shortcut icon" href="figure/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="minimization.html"/>
+<link rel="prev" href="minimization.html"/>
+<link rel="next" href="numeric.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -124,40 +124,37 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="personal_data" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Chapter 2</span> What is personal data?<a href="personal_data.html#personal_data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The term ’’Personal data” refers to any information that enables you to identify a living person. According to the GDPR, a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.</p>
-<div id="categories-of-identifiers" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Categories of identifiers<a href="personal_data.html#categories-of-identifiers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are three categories of identifiers:</p>
-<div class="three-column-container">
-<div class="three-column" style="text-align: center">
-<blockquote>
-<p><strong>Direct identifiers</strong><br><br />
-Any piece of information unique to an individual and sufficient on its own to identify that individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc.</p>
+<div id="textual" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Pseudonymization and Anonymization Techniques<a href="textual.html#textual" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: <strong>textual data</strong>,<strong>numerical data</strong>, <strong>audio and visual data</strong>, and <strong>geospatial data</strong>.</p>
+<div id="textual-data" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Textual data<a href="textual.html#textual-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Textual data refers to any text-based content such as transcripts of interviews, workshops and focus group discussions, open-ended questions in surveys, observational notes, meeting notes, etc. This data type can be de-identified by generalizing the identifying information, distorting or deleting the identifiers such as research participants’ names, gender, age, income, places and institutions names, addresses (physical location, email and IP), telephone numbers and any other sensitive information. The following techniques are commonly used to pseudonymize or anonymize textual data.</p>
+<div id="generalisation-replace-or-aggregate" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Generalisation: Replace or aggregate<a href="textual.html#generalisation-replace-or-aggregate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Generalization involves reducing detailed information or the precision of the information in a way that potentially disclosive information is replaced or aggregated.</p>
+<p>This approach mainly involves replacing or aggregating identifiers with vague descriptors, such as replacing the actual names of individuals with aliases or with other aggregated information.</p>
+<p><img src="figure/textual_generalization.png" width="98%" style="display: block; margin: auto;" /></p>
 </div>
-<div class="three-column">
-<blockquote>
-<p><strong>Strong indirect identifiers</strong><br><br />
-Any information that can reveal someone’s identity when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.</p>
-</blockquote>
+<div id="distort" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Distort<a href="textual.html#distort" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In certain cases, instead of generalizing crucial information needed to understand the context and content, it’s possible to distort the information by changing other identifiers.</p>
+<p>For example, if you have interviewed someone who participated in a high-level sports competition, and if that information is of importance in research, then you may change other values. You could change the years when the competition took place, the region (place, country) or even the gender of the person if this is not crucial information.</p>
 </div>
-<div class="three-column">
-<blockquote>
-<p><strong>Indirect identifiers</strong><br><br />
-Some identifiers are particularly considered strong indirect identifiers because they can significantly increase the risk of easily identifying an individual when combined with other information. Examples of strong identifiers include a rare event, a rare disease, an unusual job title, a date of birth, an IP address, etc.</p>
-</blockquote>
+<div id="suppression-delete" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Suppression: Delete<a href="textual.html#suppression-delete" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If the identifying information cannot be replaced or generalized, the entire variable or text may need to be deleted and explicitly marked as such by using [brackets].</p>
+<p><img src="figure/anonymization%20techniques_surpression_300.jpg" width="95%" style="display: block; margin: auto;" /></p>
 </div>
-</blockquote>
-</div>
-<p>For extensive overview of different types of identifiers, see Table 1.</p>
-<p><strong>Table 1.</strong> Examples of identifiers typically processed in research <span class="citation">FSD (2023)</span></p>
-<p><img src="figure/type_identifiers.png" width="80%" style="display: block; margin: auto;" /></p>
-<div id="sensitive-personal-data" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Sensitive personal data<a href="personal_data.html#sensitive-personal-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This is a special category of personal data”. It includes any information about a person’s racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data, health, sex life, or sexual orientation information.</p>
-<p>Sensitive personal information can put individuals or certain groups in vulnerable positions, and their misuse can potentially lead to physical or mental harm, financial loss, political or religious persecution, disclosure of sexual orientation discrimination, or embarrassment. Therefore, handling such data requires extra caution.</p>
+<div id="masking" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Masking<a href="textual.html#masking" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Masking textual data involves replacing letters or symbols (punctuation) in identifying information entirely or partially with a special symbol (such as ’*’ or ‘x’). It is commonly used for identifiers such as email addresses, names of locations, etc.</p>
+<p>This technique is more suitable for structured tabular data, meaning that data is stored in the form of columns and rows.</p>
+<p><img src="figure/textual_mask.png" width="90%" style="display: block; margin: auto;" /></p>
+<p>For more inspiration on how to anonymize textual data, please consult this illustrative example provided by <a href="https://dmeg.cessda.eu/Data-Management-Expert-Guide/5.-Protect/Anonymisation">CESSDA</a>, which demonstrates the process of anonymizing an <strong>interview transcript</strong>.</p>
 
+</div>
+</div>
 </div>
 <!DOCTYPE html>
 <html lang="en">
@@ -225,8 +222,8 @@ Some identifiers are particularly considered strong indirect identifiers because
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="minimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="minimization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="numeric.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

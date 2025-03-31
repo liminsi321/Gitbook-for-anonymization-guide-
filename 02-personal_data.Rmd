@@ -77,7 +77,7 @@ Data anonymisation is an iterative process.  The figure below presents the impor
 
 
 The setps for anonymization can be found in the table below @UK_Data_Service,@PDPC. 
-```{r anonymization_steps,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
+```{r anonymization_steps,fig.align='center',fig.width=10, fig.height=7, out.width="99%", echo=FALSE}
   knitr::include_graphics("figure/anonymization_steps.png") 
 ``` 
 Figure x. Steps to de-identify your data. (Note: Adapted from UK Data Service and PDPC Singapore)

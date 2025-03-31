@@ -74,7 +74,8 @@ The rest of the guide is structured as follows:
 
 Although extensive techniques and examples are given, please note that this guide does not cover every issue related to pseudonymization or anonymisation. Furthermore, the de-identification of research data is often complex and requires a case-by-case solution. Therefore, please always consult your privacy contact person for more information.  
 
-**This guide has been written by:**  
+**This guide has been written by:** 
+
 Alice Nikuze, University of Twente 
 
 Deniece Nazareth, University of Twente 

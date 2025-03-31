@@ -1,4 +1,4 @@
-# Numerical data
+# Numerical data {#numeric}
 
 Numerical data consists of numbers and is commonly  organized in a table with rows and columns. Rows represent observations or attributes of each data subject, while columns display values for various variables—attributes of interest to researchers.
 
@@ -36,7 +36,7 @@ This technique adds or subtracts the original values with a random number. Large
 This technique can be used for a few values, such as outliers, or for the entire dataset. When handling data with continuous values, the distribution of continuous data should be preserved to maintain more information in the datasets. Examples can be found in the table below.
 
 
-```{r noise_addition,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
+```{r noise_addition,fig.align='center',fig.width=10, fig.height=7, out.width="90%", echo=FALSE}
   knitr::include_graphics("figure/noise_addition.png") 
 ```
 

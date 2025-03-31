@@ -1,4 +1,4 @@
-# Pseudonymization and Anonymization Techniques 
+# Pseudonymization and Anonymization Techniques  {#textual}
 
 Pseudonymisation and anonymisation techniques vary depending on the types and nature of the data. This guide will discuss the techniques for the following types of research data: **textual data**,**numerical data**, **audio and visual data**, and **geospatial data**.
 
