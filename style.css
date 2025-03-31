@@ -311,6 +311,21 @@ details > div {
 }
 
 
+details > summary::after {
+  content: " +"; /* Default to "+" */
+  font-weight: bold;
+  margin-left: 10px;
+  color: gray;
+  font-size: 18px;
+}
+
+details[open] > summary::after {
+  color: gray;
+  content: " -"; /* Change to "-" when open */
+  font-size: 18px;
+}
+
+
 
 /* -----------footer--------------------*/
 footer {
