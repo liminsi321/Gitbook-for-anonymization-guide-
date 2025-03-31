@@ -24,7 +24,8 @@ This approach mainly involves replacing or aggregating identifiers with vague de
 
 ### Distort
 
-In certain cases, instead of generalizing crucial information needed to understand the context and content, it's possible to distort the information by changing other identifiers.  
+In certain cases, instead of generalizing crucial information needed to understand the context and content, it's possible to distort the information by changing other identifiers. 
+
 For example, if you have interviewed someone who participated in a high-level sports competition, and if that information is of importance in research, then you may change other values. You could change the years when the competition took place, the region (place, country) or even the gender of the person if this is not crucial information. 
 
 
