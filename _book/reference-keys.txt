@@ -1,4 +1,3 @@
-tab:unnamed-chunk-2
 introduction
 personal_data
 categories-of-identifiers
@@ -6,9 +5,8 @@ sensitive-personal-data
 minimization
 data-minimization
 pseudonymisation-versus-anonymisation
+data-anonymisation-process
 practical-consideration
-how-to-assess-the-risks-of-re-identification
-steps-for-anonymisation
 textual-data
 generalisation-replace-or-aggregate
 distort

@@ -52,8 +52,6 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -107,7 +105,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.1" data-path="personal_data.html"><a href="personal_data.html#categories-of-identifiers"><i class="fa fa-check"></i><b>2.1</b> Categories of identifiers</a></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="./"A Practical Guide to Data Anonymisation</a></li>
+<li><a href="./"A Practical Guide to Pseudonymization and Anonymization of Research Data</a></li>
 
 </ul>
 
@@ -130,27 +128,27 @@ div.csl-indent {
 <h1><span class="header-section-number">Chapter 3</span> Principles, concepts and practical considerations<a href="minimization.html#minimization" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="data-minimization" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Data minimization<a href="minimization.html#data-minimization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Data minimization</em> is a key principle of data privacy and involves limiting data collection and retention to only what is <strong>relevant</strong>, <strong>necessary</strong>, and <strong>adequate</strong> to accomplish a given purpose. Collecting only the minimum amount of personal data necessary for your research reduces the threat of data breaches and privacy violations, thereby reducing potential consequences for the research participants.</p>
-<p>In line with this principle, a researcher should only collect and retain the personal data that is required for a research study in mind.</p>
-<p>Personal data minimization in research can be achieved through:</p>
+<p><em>Data minimization</em> is a fundamental principle of data privacy, as emphasized under the GDPR. It requires limiting data collection and retention to only what is <strong>relevant</strong>, <strong>necessary</strong>, and <strong>adequate</strong> to accomplish a given purpose.</p>
+<p>Collecting only the minimum amount of personal data necessary for your research reduces the risks associated with excessive data collection. More personal data implies bigger risks of data breaches and their misuse, thereby increasing potential consequences for the research participants.</p>
+<p>In line with this principle, a researcher should only collect and retain the personal data that is required for the intended research study. Personal data minimization in research can be achieved by:</p>
 <ul>
 <li>
 <details>
 <summary>
-<b><strong>Planning carefully what kind of personal data is necessary for the research purpose.</strong></b>
+<b><strong>Carefully planning what personal data is necessary for your research purpose. </strong></b>
 </summary>
 <div>
-It is advised to carefully plan this early during the research design phase. For instance, you should not ask for the age of a research participant (data subject) if the age effect is not investigated in the research.<br>
+Plan what specific personal data is truly needed early in the research design phase. For example, avoid collecting participants’ ages if your study does not examine age-related effects.<br>
 </div>
 </details>
 </li>
 <li>
 <details>
 <summary>
-<b><strong>Collecting aggregated information if detailed information is not necessary.</strong> </b>
+<b><strong>Collecting aggregated information when detailed information is not required. </strong> </b>
 </summary>
 <div>
-For example, if the age range is sufficient for the analysis, you should not collect the actual age of the participant.<br>
+If broader categories (e.g., age ranges) suffice for your analysis, there’s no need to collect exact ages.<br>
 </div>
 </details>
 </li>
@@ -160,7 +158,7 @@ For example, if the age range is sufficient for the analysis, you should not col
 <b><strong>Limiting open-ended questions in surveys.</strong></b>
 </summary>
 <div>
-Answers to open-ended survey questions provided by respondents occasionally contain personal data about the respondents themselves or other people. Having many open-ended questions in your survey requires more anonymization effort after collecting the data.
+Open-ended responses occasionally include personal data about the respondents themselves or others. Reducing the number of open-ended questions can minimize the risks of collecting unnecessary personal data.
 </div>
 </details>
 </li>
@@ -170,27 +168,17 @@ Answers to open-ended survey questions provided by respondents occasionally cont
 <b> <strong>Instructing research participants sufficiently to avoid unnecessary personal data.</strong> </b>
 </summary>
 <div>
-In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people’s names or addresses) before conducting the interview is well worth the effort.
+Inform participants ahead of the survey and interview to refrain from sharing unnecessary personal information, such as names or addresses of others. Adding clear instructions and reminding the participants not to mention personal data (e.g., other people’s names or addresses) is well worth the effort and can prevent unintentional personal data collection.
 </div>
 </details>
 </li>
 <li>
 <details>
 <summary>
-<b> <strong>Instructing research participants sufficiently to avoid providing unnecessary personal data.</strong> </b>
+<b> <strong>Adjusting the settings of the data collection tool (e.g., survey tools) to minimize personal data collection. </strong> </b>
 </summary>
 <div>
-In open-ended questions in surveys and during interviews, the participant might mention unnecessary personal information about him/herself or a third person. Adding extra instructions in the survey and reminding the participants not to mention personal data (e.g., other people’s names or addresses) before conducting the interview is well worth the effort.
-</div>
-</details>
-</li>
-<li>
-<details>
-<summary>
-<b> <strong>Adjusting the settings of the data collection tool (e.g., survey tools) to avoid collecting unnecessary personal data.</strong> </b>
-</summary>
-<div>
-Some survey tools are per default set up to collect personal data such as the location and/or IP address of the user. Always check the settings of the tool you use for data collection.
+Review and configure tools like survey platforms to prevent the default collection of unnecessary personal data, such as location or IP addresses. Always check and adjust settings to align with the data minimization principle. When data collection is finalized, please migrate personal data from the data collection tools to safe data storage as soon as possible.
 </div>
 </details>
 </li>
@@ -198,188 +186,150 @@ Some survey tools are per default set up to collect personal data such as the lo
 </div>
 <div id="pseudonymisation-versus-anonymisation" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Pseudonymisation versus Anonymisation<a href="minimization.html#pseudonymisation-versus-anonymisation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When personal data are necessary and have been collected for research, research participants’ identities should be protected. Two techniques are used to ensure that research participants remain anonymous and untraceable during and after research- <strong>pseudonymisation</strong> and <strong>anonymization</strong>.</p>
+<p>When personal data are necessary and have been collected for research, research participants’ identities should be protected. Two techniques- <strong>pseudonymisation</strong> and <strong>anonymization</strong> are used to ensure that research participants remain anonymous and untraceable during and after research.</p>
 <p><strong>Pseudonymisation</strong></p>
 <p><em>Pseudonymisation</em> is a de-identification process after which personal data can no longer be attributed to a specific data subject without the use of additional information. This process is also referred to as coding. It involves creating <u> <strong>two separate files</strong></u>, one linking the personal data to the pseudonyms (made-up values/tokens) and another file which contains only the pseudonyms and the supplied research information. The former file is known as <strong>a key file</strong> or <strong>code list</strong> and must be kept separately from the latter file.</p>
-<p>The key file should be subjected to extra security measures (such as secured storage, password protection and encryption) to ensure that the identities of research participants are protected.</p>
+<p>The key file should be securely stored and protected with measures such as password protection and encryption to prevent the re-identification of research participants.</p>
 <p><img src="figure/pseudo-key.png" width="80%" style="display: block; margin: auto;" />
 <strong>Anonymisation</strong></p>
 <p><em>Anonymisation</em> is another de-identification process which involves permanently deleting direct and/or indirect identifiers from the data, such that there is no way to link back to individuals (research participants) and the research information they have supplied. In this case, there is <u>no key file</u> that would permit re-identification as this process is irreversible.</p>
+<p><img src="figure/anonymization_example.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Figure XX. Anonymization of names</p>
+<p>Pseudonymization differs from anonymization as it is a reversible process due to the key file and re-identification is possible. Anonymization is irreversible as all identifiers are removed and there is no key file (see Figure XX) thus re-identification is not possible.</p>
 <div class="bubble">
-<p><em>Pseudonymization</em> is employed to protect the identities of research participants by substituting direct identifiers with <em>pseudonyms</em>. This process is <strong>reversible</strong> and can still allow <strong>re-identification</strong>.</p>
-<p>In contrast, <em>anonymisation</em> involves <strong>deleting the identifiers</strong>, rendering <strong>re-identification impossible</strong>, even by researchers themselves. The process is <strong>irreversible</strong>.</p>
+<p>Pseudonymization differs from anonymization as it is a reversible process due to the key file and re-identification is possible. Anonymization is irreversible as all identifiers are removed and there is no key file (see Figure XX) thus re-identification is not possible.</p>
 </div>
+<p><img src="figure/comparison_pseu_anony.png" width="80%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="practical-consideration" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Practical Consideration<a href="minimization.html#practical-consideration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>
-<details>
-<summary>
-<b><strong>Fully anonymized data is not subject to GDPR.</strong></b>
-</summary>
-<div>
-Unlike pseudonymized data, fully anonymized data is not subject to GDPR regulations. However, it is important to note that fully anonymized data can be difficult to achieve. <br>
-</div>
-</details>
-</li>
-<li>
-<details>
-<summary>
-<b><strong>Anonymization is not an absolute value, but a spectrum.</strong> </b>
-</summary>
-<div>
-<p>in the following scenarios, data is not considered as anonymized data:</p>
-<p>Raw data containing personal data is still present.</p>
-Key or other information that can be used to re-identify individuals in the dataset still exist. <br>
-</div>
-</details>
-</li>
-<li>
-<details>
-<summary>
-<b><strong>Documenting the anonymization process.</strong></b>
-</summary>
-<div>
-s a best practice, the process of anonymization should be thoroughly documented for future reference and research transparency. Such documentation tracks all changes, including removals, replacements, aggregations, or generalizations. It should be stored securely and separately from the data files, as it may contain information that could enable re-identification.
-</div>
-</details>
-</li>
-<li>
-<details>
-<summary>
-<b> <strong>Anonymization can negatively impact data utility.</strong> </b>
-</summary>
-<div>
-anonymization can render data unusable for future analysis or reuse. Data utility refers to the data’s ability to address research questions effectively (e.g., if identifying factors essential to the analysis are removed, the data may not support certain types of research). Certain personal details are closely tied to the capacity of addressing research purposes and may not be removed. Therefore, it is crucial to clearly document whether and how anonymization has been performed.
-</div>
-</details>
-</li>
-<li>
-<details>
-<summary>
-<b> <strong>Balancing anonymization and data utility.</strong> </b>
-</summary>
-<div>
-When anonymizing data, it’s essential to balance the protection of data subjects’ privacy with the utility of the data. For example, in a study on student performance and family socioeconomic status, identifiers like student names, gender, and age may be removed to protect privacy, while information on grades and family economic conditions should be retained, as these are critical for addressing the research question.
-</div>
-</details>
-</li>
-<li>
-<details>
-<summary>
-<b> <strong>Pseudonymization is sometimes preferred over anonymization.</strong> </b>
-</summary>
-<div>
-Full anonymization may not always be desirable because it reduces the data utility, such as removing context of data. This could be the case in some research. For instance, longitudinal studies benefit from tracking personal data of the same participants over time; thus, pseudonymization is preferred over anonymization.
-</div>
-</details>
-</li>
-<li>
-<details>
-<summary>
-<b><strong>Assessing re-identification risks.</strong></b>
-</summary>
-<div>
-Anonymized data is data from which personal information has been removed to prevent identifying individuals. However, there is are always a risks of re-identification through singling out, inference, or linking with other data or techniques. Therefore, it is recommended to assess re-identification risks carefully before sharing data. Based on this assessment, researchers can also determine the appropriate scope of data recipients.<br>
-</div>
-</details>
-</li>
-</ul>
-</div>
-<div id="how-to-assess-the-risks-of-re-identification" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> How to assess the risks of re-identification<a href="minimization.html#how-to-assess-the-risks-of-re-identification" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Re-identification risk assessment is the process of evaluating the likelihood that anonymized data could still reveal individual identities through <strong>singling out</strong>, <strong>linking</strong>, and <strong>inference</strong> <span class="citation">ICO (2021)</span>.</p>
-<ul>
-<li><p><strong>Singling Out</strong>: Can an individual be isolated from the dataset?</p>
-<ul>
-<li><strong>Unique Data Points</strong>: To assess re-identification risk, check if any data points are unique in combination with other attributes. If a category created by any two attributes (e.g., age and occupation) has only one data point, that data point is unique and poses a re-identification risk. Aim to have at least three data points in each unique category to reduce this risk.</li>
-</ul></li>
-<li><p><strong>Linking</strong>: Can information within the dataset be combined with external data to identify an individual?</p></li>
-<li><p><strong>Inference</strong>: Can details about an individual be inferred, guessed, or predicted based on patterns in the dataset or previous knowledge?</p></li>
-<li><p><strong>Sample vs. Population Uniqueness</strong>: uniqueness in a dataset sample can still mean uniqueness in the broader population and that an increase re-identification risk. For example, a rare disease patient or a specialized surgeon might be unique both in the dataset and in real life, making them identifiable.</p></li>
-<li><p><strong>External Databases</strong>: Consider if other datasets or personal knowledge could identify individuals already exist.</p>
-<ul>
-<li><p><strong>Existing re-identification technology and skills</strong>: Assess if techniques and skills exist that could reverse anonymization or link data back to individuals.</p></li>
-<li><p><strong>Sharing Scope</strong>: Publicly shared data poses a higher re-identification risk than data shared with a limited group.</p></li>
-</ul></li>
-</ul>
-</div>
-<div id="steps-for-anonymisation" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> Steps for anonymisation<a href="minimization.html#steps-for-anonymisation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="data-anonymisation-process" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Data anonymisation process<a href="minimization.html#data-anonymisation-process" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Data anonymisation is an iterative process. The figure below presents the important steps, considerations and actions necessary to ensure an effective and informed data anonymisation process.</p>
 <p>The setps for anonymization can be found in the table below <span class="citation">UK_Data_Service (2024)</span>,<span class="citation">PDPC (2022)</span>.
-<img src="figure/anonymization_steps.png" width="80%" style="display: block; margin: auto;" /></p>
-<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:unnamed-chunk-2">Table 3.1: </span><span id="tab:unnamed-chunk-2">Table 3.2: </span>Steps for anonymisation
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Steps for anonymization  
-</th>
-<th style="text-align:left;">
- How to 
-</th>
-<th style="text-align:left;">
-Questions to consider 
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-<ol style="list-style-type: decimal">
-<li>Know your data
-</td>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-You can start with identifying potential identifiers in the data, for example direct and indirect identifiers. For an overview of identifiers, please see chapter 2.
-</td>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-What kind of data do you want to anonymize or pseudonymize, such as textual, numerical, audio, video data? Which identifiers exist, direct, strong indirect, or indirect identifiers?
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-2.De-identify your data by applying anonymization or pseudonymization techniques
-</td>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-You can use different techniques to anonymize or pseudonymize the identifiers in your data. For an overview of different techniques for various research types, please see chapter 4.
-</td>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-When applying anonymization techniques, please be aware that it can have an impact on the data utility as you are removing or modifying data values. Data utility related to attributes that researchers are interested in.
-How can you retain the data utility but still modify the data to prevent identification?
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-3.Compute risk
-</td>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-Review the data and confirm no personal data or risk of re-identificatin remain.
-</td>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-Any remaining information in the dataset still sensitive, or unique? To measure uniqueness of a data point, identify the number of data points in each subcategory of the dataset. If there is only one data point in a category, that value is nique, indicating a high risk of re-identification.
-It is ideal to strive for at least 3 data points in one distinct combination of any two remaining (in)direct identifiers.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-<ol start="4" style="list-style-type: decimal">
-<li>Manage risk
-</td>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-Documentation of the de-identification to ensure transparency
-</td>
-<td style="text-align:left;font-weight: bold;color: lightblack !important;background-color: linear-gradient(to right, #ff7f50, #ff6347, #ff4500) !important;">
-Who are the recipients of the data? Are they a specific group or the general public? The broader the range of data recipients, the more stringent the anonymization measures should be.  Can any external datasets be linked to yours to potentially re-identify data subjects? For instance, isolated incidences can be linked to the dataset to single out or infer to data subject. For instance, the first person in the moon, or a rare disease in a neighbourhood.
-Any techniques can enable identification?
-</td>
-</tr>
-</tbody>
-</table></li>
-</ol></li>
-</ol>
+<img src="figure/anonymization_steps.png" width="80%" style="display: block; margin: auto;" />
+Figure x. Steps to de-identify your data. (Note: Adapted from UK Data Service and PDPC Singapore)</p>
+<p><strong>1. Get to know your data</strong></p>
+<p>Identify any direct and/or indirect identifiers in your dataset. See Chapter 1 for a detailed overview of identifiers.</p>
+<p><strong><em>How to:</em></strong></p>
+<p>Knowing your data involves answering questions such as: what type of data do you want to anonymize or pseudonymize (e.g., textual, numerical, audio, video)? What identifiers are present, such as direct, strong, indirect, or weak indirect identifiers?</p>
+<p><strong>2.De-identify your data</strong></p>
+<p>Select and apply anonymization or pseudonymization techniques to the data. See Chapter 3 for an overview of the techniques. Be consistent when applying the selected techniques throughout the dataset.</p>
+<p><strong><em>How to:</em></strong></p>
+<p>Ask yourself how you could de-identify the data while retaining its usefulness. This will involve considering the data type, format, sensitivity, uniqueness, intended use and reuse of the data. Finally, the de-identification process should be documented to ensure transparency.</p>
+<p><strong>3. Assess re-identification risks</strong></p>
+<p>Identify any direct and/or indirect identifiers in your dataset. See Chapter 1 for a detailed overview of identifiers.</p>
+<p><strong><em>How to:</em></strong></p>
+<p>Three techniques commonly used to assess re-identification risks are:</p>
+<p>• Singling Out: can an individual be isolated from the dataset?
+• Linking: can information within the dataset be combined with external data to identify an individual?
+• Inference: can details about an individual be inferred, guessed, or predicted based on patterns in the dataset or previous knowledge</p>
+<p>Therefore, assessing re-identification can involve reviewing the data to confirm that no personal data or significant re-identification risks remain by:</p>
+<ul>
+<li>
+<details>
+<summary>
+<b><strong>Checking unique data records</strong></b>
+</summary>
+<div>
+Are there any remaining sensitive or unique data points in the dataset? Check if any data points are unique in combination with other attributes. If a category created by any two attributes (e.g., age and occupation) has only one data point, that data point is unique and poses a re-identification risk. Aim to have at least three data points in each unique category to reduce this risk.<br>
+</div>
+</details>
+</li>
+<li>
+<details>
+<summary>
+<b><strong>Assessing sample vs population unique data records:</strong> </b>
+</summary>
+<div>
+Uniqueness in a dataset sample can still mean uniqueness in the broader population and an increased re-identification risk. For example, a rare disease patient or a specialized surgeon might be unique both in the dataset and in real life, making them identifiable.<br>
+</div>
+</details>
+</li>
+<li>
+<details>
+<summary>
+<b><strong>Investigating the existence of:</strong></b>
+</summary>
+<div>
+<p>o <strong>External databases or any other information</strong>: assess whether other datasets or any knowledge that could be used to re-identify your data exist.</p>
+o <strong>Re-identification technology and skills</strong>: assess if (new) techniques and skills that could reverse anonymization or link data back to individuals exist.
+</div>
+</details>
+</li>
+</ul>
+<p><strong>4. Manage re-identification risk. </strong></p>
+<p>Full anonymization is difficult, if not impossible, to achieve. Once data is made available, it can potentially be linked to external datasets, making it possible to re-identify individuals. Additionally, various (new)new techniques could emerge and enable re-identification. Therefore, when making data available, extra care should be taken to minimize re-identification risks.</p>
+<p><strong><em>How to:</em></strong></p>
+<p>• Specify access levels and conditions for who will access the data (e.g., a specific group or the general public). The broader the recipient range, the stricter the anonymization measures should be.</p>
+<p>• Apply additional safeguard measures such as encryption, password protection, etc.</p>
+<p>• Ensure that, where necessary, legal agreements are arranged (e.g. data transfer or sharing agreements).</p>
+</div>
+<div id="practical-consideration" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Practical Consideration<a href="minimization.html#practical-consideration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>
+<details>
+<summary>
+<b><strong>Anonymization is not an absolute value, but a spectrum.</strong></b>
+</summary>
+<div>
+<p>In the following scenarios, data cannot be considered anonymized:</p>
+<p>o If the dataset still contains identifiable data.</p>
+o If the key files or any other information that could be used to re-identify individuals remain available (shared alongside the dataset orelsewhere), the data cannot be deemed anonymised. The data is instead considered <strong>pseudonymized</strong>.
+<br>
+</div>
+</details>
+</li>
+<li>
+<details>
+<summary>
+<b><strong>Balancing anonymization and data usefulness.</strong> </b>
+</summary>
+<div>
+Anonymization can reduce data utility, potentially limiting its use and reuse in future studies. The more the data is anonymised (by removing or altering personal identifiers), the less useful it may become for research. Therefore, sometimes personal details may need to be preserved, at least during the research, to maintain the data’s usefulness. For example, in a study examining the relationship between students’ performance and family socioeconomic status, key information such as grades and family income must be retained to answer the research question while personal details like names, gender, and age might be removed to protect privacy. <br>
+</div>
+</details>
+</li>
+<li>
+<details>
+<summary>
+<b><strong>Pseudonymization may be preferred over anonymization.</strong></b>
+</summary>
+<div>
+Anonymization may not always be desirable, during and after research. For example, in longitudinal studies, tracking the same participants over time is crucial. In such cases, <strong>pseudonymization</strong> is preferred over anonymization, as it allows researchers to link data across multiple different time periods. Similarly, for qualitive studies, pseudonymization may be preferred over anonymization to retain the context and richness of the data.
+</div>
+</details>
+</li>
+<li>
+<details>
+<summary>
+<b> <strong>Sharing anonymised data.</strong> </b>
+</summary>
+<div>
+There is always a risk of data re-identification through singling out, inference, or linking with other data or techniques. Therefore, it is recommended to carefully assess these risks before sharing data. If the risk of re-identification is high, the scope of data sharing should be limited, and conversely, if the risk is low, the scope of sharing can be broader.
+</div>
+</details>
+</li>
+<li>
+<details>
+<summary>
+<b> <strong>Documenting the anonymization process.</strong> </b>
+</summary>
+<div>
+Anonymization process should be thoroughly documented for future reference, mainly for transparency but mostly to ensure data usability. Such documentation tracks all changes, including removals, replacements, aggregations, or generalizations. The anonymisation documentation should be stored securely and separately from the data files, as it may contain information that could enable re-identification.
+</div>
+</details>
+</li>
+<li>
+<details>
+<summary>
+<b> <strong>Fully anonymized data is not subject to GDPR</strong> </b>
+</summary>
+<div>
+Unlike pseudonymized data, fully anonymized data is not subject to GDPR regulations. However, it is worth noting that <strong>full anonymization is challenging to achieve</strong>.
+</div>
+</details>
+</li>
+</ul>
 
 </div>
 </div>

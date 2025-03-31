@@ -8,7 +8,7 @@ bookdown::gitbook:
       before: |
         <li class="toc-logo"><a href="./"><img src="figure/logo.jpeg"></a></li>
       after: |
-        <li><a href="./"A Practical Guide to Data Anonymisation</a></li>
+        <li><a href="./"A Practical Guide to Pseudonymization and Anonymization of Research Data</a></li>
   includes:
     after_body:
     - footer.html
