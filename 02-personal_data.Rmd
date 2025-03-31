@@ -42,6 +42,7 @@ The key file should be securely stored and protected with measures such as passw
 ```{r pseudo-key,fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/pseudo-key.png") 
 ```
+
 **Anonymisation**
 
 *Anonymisation* is another de-identification process which involves permanently deleting direct and/or indirect identifiers from the data, such that there is no way to link back to individuals (research participants) and the research information they have supplied. In this case, there is <u>no key file</u> that would permit re-identification as this process is irreversible. 
