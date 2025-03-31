@@ -1,32 +1,42 @@
 # What is personal data? {#personal_data}
 
-The term "Personal data" refers to any information that enables you to identify a living person. According to the GDPR,  a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person.
+The term ‘’Personal data” refers to any information that enables you to identify a living person. According to the GDPR, a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person. 
 
-| Direct identifiers           | Indirect identifiers    |Strong indirect identifiers        |
+## Categories of identifiers
+
+There are three categories of identifiers: 
+
+
+| >**Direct identifiers**           | >**Indirect identifiers**    |>**Strong indirect identifiers**        |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------------------------|
-|information unique to an individual and sufficient on its own to identify that individual.| information that can reveal someone's identity when combined with other available information.          |some identifiers can significantly increase the risk of identifying an individual when combined with other information.|{.gradient-table}
+|Any piece of information unique to an individual and sufficient on its own to identify that individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc. | Any information that can reveal someone's identity when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.          | Some identifiers are particularly considered strong indirect identifiers because they can significantly increase the risk of easily identifying an individual when combined with other information. Examples of strong identifiers include a rare event, a rare disease, an unusual job title, a date of birth, an IP address, etc. |{.gradient-table}
 
 
 <div class="three-column-container">
-  <div class="three-column">**Direct identifiers**  
-    Information unique to an individual can directly identify that person.
+  <div style="text-align: center" class="three-column"> >**Direct identifiers**<br>   
+    Any piece of information unique to an individual and sufficient on its own to identify that individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc.
   </div>
-  <div class="three-column">**Strong indirect identifiers**  
-    Information that can easily identify an individual, such as a rare event, uncommon disease, unique job title, or IP address.
+  <div class="three-column"> >**Strong indirect identifiers**<br>  
+    Any information that can reveal someone's identity when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.  
   </div>
-  <div class="three-column">**Indirect identifiers**  
-    Information that, when combined with other data, can identify an individual, such as address, age, gender, occupation, location, health records, or ethnic group.
+  <div class="three-column"> >**Indirect identifiers** <br>  
+    Some identifiers are particularly considered strong indirect identifiers because they can significantly increase the risk of easily identifying an individual when combined with other information. Examples of strong identifiers include a rare event, a rare disease, an unusual job title, a date of birth, an IP address, etc. 
   </div>
 </div>
 
-It is worth noting that some identifiers are particularly considered **strong indirect identifiers** because they can significantly increase the risk of identifying an individual when combined with other information. Examples of strong identifiers include a date of birth,  an IP address etc.
 
 For extensive overview of different types of identifiers, see Table 1. 
 
-**Table 1.** Overview of identifiers typically processed in research    @Finnish_Social_Science_Data_Archive
+**Table 1.** Examples of identifiers typically processed in research  @Finnish_Social_Science_Data_Archive
 
 
 ```{r type_identifiers,fig.label="type_identifiers",fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/type_identifiers.png",dpi = 600) 
 ```
 
+
+## Sensitive personal data
+
+This is a special category of personal data”. It includes any information about a person’s racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data, health, sex life, or sexual orientation information.
+
+Sensitive personal information can put individuals or certain groups in vulnerable positions, and their misuse can potentially lead to physical or mental harm, financial loss, political or religious persecution, disclosure of sexual orientation discrimination, or embarrassment. Therefore, handling such data requires extra caution.

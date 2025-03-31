@@ -1,8 +1,8 @@
 tab:unnamed-chunk-2
 introduction
-how-to-cite-and-license
-acknowledgements
 personal_data
+categories-of-identifiers
+sensitive-personal-data
 minimization
 data-minimization
 pseudonymisation-versus-anonymisation
