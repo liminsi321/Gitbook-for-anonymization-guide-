@@ -23,7 +23,7 @@
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2025-03-31" />
+<meta name="date" content="2025-04-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -210,7 +210,7 @@ Figure x. Steps to de-identify your data. (Note: Adapted from UK Data Service an
 <p><strong>1. Get to know your data</strong></p>
 <p>Identify any direct and/or indirect identifiers in your dataset. See Chapter 1 for a detailed overview of identifiers.</p>
 <p><strong><em>How to:</em></strong></p>
-<p>Knowing your data involves answering questions such as: what type of data do you want to anonymize or pseudonymize (e.g., textual, numerical, audio, video)? What identifiers are present, such as direct, strong, indirect, or weak indirect identifiers?</p>
+<p>-Knowing your data involves answering questions such as: what type of data do you want to anonymize or pseudonymize (e.g., textual, numerical, audio, video)? What identifiers are present, such as direct, strong, indirect, or weak indirect identifiers?</p>
 <p><strong>2.De-identify your data</strong></p>
 <p>Select and apply anonymization or pseudonymization techniques to the data. See Chapter 3 for an overview of the techniques. Be consistent when applying the selected techniques throughout the dataset.</p>
 <p><strong><em>How to:</em></strong></p>
@@ -256,6 +256,53 @@ o <strong>Re-identification technology and skills</strong>: assess if (new) tech
 </details>
 </li>
 </ul>
+<div class="card-container"><div class="card active" id="card-1"><div class="card-header">Checking unique data records</div><div class="card-content">Are there any remaining sensitive or unique data points in the dataset? Check if any data points are unique in combination with other attributes. If a category created by any two attributes (e.g., age and occupation) has only one data point, that data point is unique and poses a re-identification risk. Aim to have at least three data points in each unique category to reduce this risk.</div></div>
+<div class="card" id="card-2"><div class="card-header">Assessing sample vs population unique data records</div><div class="card-content">Uniqueness in a dataset sample can still mean uniqueness in the broader population and an increased re-identification risk. For example, a rare disease patient or a specialized surgeon might be unique both in the dataset and in real life, making them identifiable.</div></div>
+<div class="card" id="card-3"><div class="card-header">Investigating the existence of</div><div class="card-content"><ul>
+    <li>External databases or any other information: assess whether other datasets or any knowledge that could be used to re-identify your data exist.</li>
+    <li>e-identification technology and skills: assess if (new) techniques and skills that could reverse anonymization or link data back to individuals exist.</li>
+  </ul></div></div><div class="card-nav"><span class="active" onclick="window.switchCard(1)">1</span>
+<span onclick="window.switchCard(2)">2</span>
+<span onclick="window.switchCard(3)">3</span></div></div> 
+    <script>
+    window.switchCard = function(index) {
+      try {
+        // Hide all cards
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+          card.classList.remove("active");
+        });
+        
+        // Show selected card
+        const activeCard = document.getElementById("card-" + index);
+        if (activeCard) {
+          activeCard.classList.add("active");
+          
+          // Update navigation dots
+          const dots = document.querySelectorAll(".card-nav span");
+          dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index - 1);
+          });
+          
+          // Adjust container height
+          const container = document.querySelector(".card-container");
+          if (container) {
+            container.style.minHeight = (activeCard.offsetHeight + 100) + "px";
+          }
+        }
+      } catch (e) {
+        console.error("Error switching cards:", e);
+      }
+    }
+    
+    // Initialize after DOM loads
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        window.switchCard(1);
+      }, 100);
+    });
+    </script>
+  
 <p><strong>4. Manage re-identification risk. </strong></p>
 <p>Full anonymization is difficult, if not impossible, to achieve. Once data is made available, it can potentially be linked to external datasets, making it possible to re-identify individuals. Additionally, various (new)new techniques could emerge and enable re-identification. Therefore, when making data available, extra care should be taken to minimize re-identification risks.</p>
 <p><strong><em>How to:</em></strong></p>
@@ -330,6 +377,12 @@ Unlike pseudonymized data, fully anonymized data is not subject to GDPR regulati
 </details>
 </li>
 </ul>
+<blockquote>
+<p><strong>Tip:</strong> Always clean your dataset before running a model.</p>
+</blockquote>
+<p>R table
+<a href="https://bookdown.org/yihui/rmarkdown-cookbook/kable.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/kable.html</a>
+<a href="https://rstudio.github.io/distill/tables.html" class="uri">https://rstudio.github.io/distill/tables.html</a></p>
 
 </div>
 </div>
@@ -449,7 +502,8 @@ gitbook.start({
 },
 "toc": {
 "collapse": "section"
-}
+},
+"plugins": "mermaid"
 });
 });
 </script>

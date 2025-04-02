@@ -85,11 +85,11 @@ Figure x. Steps to de-identify your data. (Note: Adapted from UK Data Service an
 
 **1. Get to know your data**
 
-Identify any direct and/or indirect identifiers in your dataset. See Chapter 1 for a detailed overview of identifiers. 
+  Identify any direct and/or indirect identifiers in your dataset. See Chapter 1 for a detailed overview of identifiers. 
 
-***How to:*** 
+  ***How to:*** 
 
-Knowing your data involves answering questions such as: what type of data do you want to anonymize or pseudonymize (e.g., textual, numerical, audio, video)? What identifiers are present, such as direct, strong, indirect, or weak indirect identifiers?
+  -Knowing your data involves answering questions such as: what type of data do you want to anonymize or pseudonymize (e.g., textual, numerical, audio, video)? What identifiers are present, such as direct, strong, indirect, or weak indirect identifiers?
 
 **2.De-identify your data**
 
@@ -127,6 +127,134 @@ Therefore, assessing re-identification can involve reviewing the data to confirm
   o	**Re-identification technology and skills**: assess if (new) techniques and skills that could reverse anonymization or link data back to individuals exist.
   </div></details></li>
 </ul>
+
+
+
+```{r setup-cards, include=FALSE}
+#adding the card to the book 
+library(htmltools)
+
+create_named_cards <- function(card_data) {
+  # Generate HTML
+  cards_html <- paste0(
+    '<div class="card-container">',
+    paste(
+      sapply(seq_along(card_data), function(i) {
+        paste0(
+          '<div class="card', ifelse(i == 1, ' active', ''), 
+          '" id="card-', i, '">',
+          '<div class="card-header">', names(card_data)[i], '</div>',
+          '<div class="card-content">', 
+          card_data[[i]], 
+          '</div>',
+          '</div>'
+        )
+      }),
+      collapse = "\n"
+    ),
+    '<div class="card-nav">',
+    paste(
+      sapply(seq_along(card_data), function(i) {
+        paste0(
+          '<span', ifelse(i == 1, ' class="active"', ''), 
+          ' onclick="window.switchCard(', i, ')">', i, '</span>'
+        )
+      }),
+      collapse = "\n"
+    ),
+    '</div>',
+    '</div>'
+  )
+  
+  # JavaScript with error handling
+  js <- HTML('
+    <script>
+    window.switchCard = function(index) {
+      try {
+        // Hide all cards
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+          card.classList.remove("active");
+        });
+        
+        // Show selected card
+        const activeCard = document.getElementById("card-" + index);
+        if (activeCard) {
+          activeCard.classList.add("active");
+          
+          // Update navigation dots
+          const dots = document.querySelectorAll(".card-nav span");
+          dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index - 1);
+          });
+          
+          // Adjust container height
+          const container = document.querySelector(".card-container");
+          if (container) {
+            container.style.minHeight = (activeCard.offsetHeight + 100) + "px";
+          }
+        }
+      } catch (e) {
+        console.error("Error switching cards:", e);
+      }
+    }
+    
+    // Initialize after DOM loads
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        window.switchCard(1);
+      }, 100);
+    });
+    </script>
+  ')
+  
+  HTML(paste(cards_html, js))
+}
+```
+
+
+```{r display-cards, echo=FALSE, results='asis'}
+card_data <- list(
+  "Checking unique data records" = "Are there any remaining sensitive or unique data points in the dataset? Check if any data points are unique in combination with other attributes. If a category created by any two attributes (e.g., age and occupation) has only one data point, that data point is unique and poses a re-identification risk. Aim to have at least three data points in each unique category to reduce this risk.",
+  
+  "Assessing sample vs population unique data records" = "Uniqueness in a dataset sample can still mean uniqueness in the broader population and an increased re-identification risk. For example, a rare disease patient or a specialized surgeon might be unique both in the dataset and in real life, making them identifiable.",
+  
+  "Investigating the existence of" = "<ul>
+    <li>External databases or any other information: assess whether other datasets or any knowledge that could be used to re-identify your data exist.</li>
+    <li>e-identification technology and skills: assess if (new) techniques and skills that could reverse anonymization or link data back to individuals exist.</li>
+  </ul>"
+)
+
+create_named_cards(card_data)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 **4.	Manage re-identification risk. **
@@ -168,3 +296,9 @@ o	If the key files or any other information that could be used to re-identify in
   <div>Unlike pseudonymized data, fully anonymized data is not subject to GDPR regulations. However, it is worth noting that **full anonymization is challenging to achieve**. </div></details></li>
   
 </ul>
+
+> **Tip:** Always clean your dataset before running a model.
+
+R table
+https://bookdown.org/yihui/rmarkdown-cookbook/kable.html
+https://rstudio.github.io/distill/tables.html

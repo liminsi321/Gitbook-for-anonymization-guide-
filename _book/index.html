@@ -23,7 +23,7 @@
 <meta name="author" content="Alice Nikuze, Deniece Nazareth, Minsi Li" />
 
 
-<meta name="date" content="2025-03-31" />
+<meta name="date" content="2025-04-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -127,7 +127,7 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">A Practical Guide to Psedunymization and Anonymization of Research Data</h1>
 <p class="author"><em>Alice Nikuze, Deniece Nazareth, Minsi Li</em></p>
-<p class="date"><em>2025-03-31</em></p>
+<p class="date"><em>2025-04-02</em></p>
 </div>
 <div id="introduction" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -135,17 +135,74 @@ div.csl-indent {
 <p>This guide provides practical guidance on two methods of data de-identification, pseudonymizing and anonymizing data. It includes hands-on examples of various techniques for pseudonymising and anonymising various types of research data.</p>
 <p>The rest of the guide is structured as follows:</p>
 <div class="pink-box">
-<p>• <strong>Chapter 2</strong> defines personal data and explains different types of identifiers.</p>
-<p>• <strong>Chapter 3</strong> introduces fundamental principles and concepts of data de-identification. The chapter concludes with practical considerations and best practices.</p>
-<p>• <strong>Chapter 4</strong> delves into the techniques of pseudonymization and anonymisation for textual, numerical, audio-visual and spatial research data. Additionally, practical examples are included.</p>
+<p><strong>Chapter 2</strong> defines personal data and explains different types of identifiers.</p>
+<p><strong>Chapter 3</strong> introduces fundamental principles and concepts of data de-identification. The chapter concludes with practical considerations and best practices.</p>
+<p><strong>Chapter 4</strong> delves into the techniques of pseudonymization and anonymisation for textual, numerical, audio-visual and spatial research data. Additionally, practical examples are included.</p>
 </div>
-<p>Although extensive techniques and examples are given, please note that this guide does not cover every issue related to pseudonymization or anonymisation. Furthermore, the de-identification of research data is often complex and requires a case-by-case solution. Therefore, please always consult your privacy contact person for more information.</p>
+<p>
+Although extensive techniques and examples are given, please note that this guide does not cover every issue related to pseudonymization or anonymisation. Furthermore, the de-identification of research data is often complex and requires a case-by-case solution. Therefore, please always consult your privacy contact person for more information.
+</p>
 <p><strong>This guide has been written by:</strong></p>
 <p>Alice Nikuze, University of Twente</p>
 <p>Deniece Nazareth, University of Twente</p>
 <p>Minsi Li, University of Twente</p>
 <p>The authors would like to extend our sincere gratitude to our former colleague, Dr Qian Zhang, for her immense dedication and contribution during the conceptualization phase of this guide. We also wish to express our sincere appreciation to Nestor De la Paz Ruiz for his contribution, whose efforts were instrumental in transforming this guide into a Gitbook.</p>
 <p><strong>This work is licensed under a Creative Commons Attribution DOI: xxxxxxxxx</strong></p>
+<p><select onchange="filterContent(this.value)">
+<option value="all">Show All</option>
+<option value="news">News</option>
+<option value="updates">Updates</option>
+</select></p>
+<table class="beautiful-table">
+<thead>
+<tr>
+<th style="text-align:left;">
+Name
+</th>
+<th style="text-align:right;">
+Age
+</th>
+<th style="text-align:left;">
+Country
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Alice
+</td>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+USA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Bob
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+Canada
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Eve
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:left;">
+Germany
+</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 <!DOCTYPE html>
@@ -264,7 +321,8 @@ gitbook.start({
 },
 "toc": {
 "collapse": "section"
-}
+},
+"plugins": "mermaid"
 });
 });
 </script>

@@ -19,6 +19,23 @@ There are three categories of identifiers:
 </div>
 
 
+
+```{r, echo=FALSE, results="asis"}
+
+data <- data.frame(
+  Name = c("Direct identifiers", "Strong indirect identifiers", "Indirect identifiers"),
+  Definition = c(
+    "Any piece of information unique to an individual and sufficient on its own to identify that individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc.", 
+                 "Any information that can reveal someone’s identity when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.", 
+      "Some identifiers are particularly considered strong indirect identifiers because they can significantly increase the risk of easily identifying an individual when combined with other information. Examples of strong identifiers include a rare event, a rare disease, an unusual job title, a date of birth, an IP address, etc."))
+
+kable(data, format = "html", table.attr = "class='beautiful-table'")
+```
+
+
+
+
+
 For extensive overview of different types of identifiers, see Table 1. 
 
 **Table 1.** Examples of identifiers typically processed in research  @Finnish_Social_Science_Data_Archive

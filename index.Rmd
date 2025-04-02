@@ -13,8 +13,14 @@ favicon: figure/favicon.ico
 apple-touch-icon: "figure/logo.jpeg"
 apple-touch-icon-size: 180
 output:
+  bookdown::gitbook:
+    css: "style.css"
+    config:
+        plugins:
+                - mermaid
+    
   bookdown::pdf_book:  default      # PDF output
-    #latex_engine: xelatex    # You can use pdflatex or lualatex as well
+  #latex_engine: xelatex    # You can use pdflatex or lualatex as well
   bookdown::html_book:       # HTML output
     toc: true
     toc_float: true
@@ -52,6 +58,7 @@ library('rmarkdown')
 library('flextable')
 library('kableExtra')
 library('readxl')
+library(htmltools)
 #install.packages("tinytex")
 #tinytex::install_tinytex(force = TRUE)
 ```
@@ -63,16 +70,18 @@ This guide provides practical guidance on two methods of data de-identification,
 The rest of the guide is structured as follows: 
 
 
-<div class="pink-box">
-•	**Chapter 2** defines personal data and explains different types of identifiers.
+::: {.pink-box}
+**Chapter 2** defines personal data and explains different types of identifiers.
 
-•	**Chapter 3** introduces fundamental principles and concepts of data de-identification. The chapter concludes with practical considerations and best practices.  
+**Chapter 3** introduces fundamental principles and concepts of data de-identification. The chapter concludes with practical considerations and best practices.  
 
-•	**Chapter 4** delves into the techniques of pseudonymization and anonymisation for textual, numerical, audio-visual and spatial research data. Additionally, practical examples are included.
+**Chapter 4** delves into the techniques of pseudonymization and anonymisation for textual, numerical, audio-visual and spatial research data. Additionally, practical examples are included.
+:::
 
-</div>
 
-Although extensive techniques and examples are given, please note that this guide does not cover every issue related to pseudonymization or anonymisation. Furthermore, the de-identification of research data is often complex and requires a case-by-case solution. Therefore, please always consult your privacy contact person for more information.  
+<p> Although extensive techniques and examples are given, please note that this guide does not cover every issue related to pseudonymization or anonymisation. Furthermore, the de-identification of research data is often complex and requires a case-by-case solution. Therefore, please always consult your privacy contact person for more information. </p>
+
+
 
 **This guide has been written by:** 
 
@@ -85,3 +94,31 @@ Minsi Li, University of Twente
 The authors would like to extend our sincere gratitude to our former colleague, Dr Qian Zhang, for her immense dedication and contribution during the conceptualization phase of this guide. We also wish to express our sincere appreciation to Nestor De la Paz Ruiz for his contribution, whose efforts were instrumental in transforming this guide into a Gitbook. 
 
 **This work is licensed under a Creative Commons Attribution DOI: xxxxxxxxx** 
+
+
+
+<select onchange="filterContent(this.value)">
+    <option value="all">Show All</option>
+    <option value="news">News</option>
+    <option value="updates">Updates</option>
+</select>
+
+
+
+```{r, echo=FALSE, results="asis"}
+library(knitr)
+library(kableExtra)
+
+data <- data.frame(
+  Name = c("Alice", "Bob", "Eve"),
+  Age = c(25, 30, 22),
+  Country = c("USA", "Canada", "Germany")
+)
+
+kable(data, format = "html", table.attr = "class='beautiful-table'")
+```
+
+
+
+
+

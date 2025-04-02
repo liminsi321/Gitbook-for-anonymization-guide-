@@ -10,7 +10,7 @@ The generalization technique involves reducing the spatial or temporal resolutio
 
 Spatial aggregation helps mask the exact locations while preserving overall spatial patterns and trends. Spatial aggregation can take two forms:
 
-•	  The first form is area aggregation, which involves reducing the level of detail by summarising spatial details into larger spatial units, such as zip codes, cities, census blocks or any other large administration units. 
+•	The first form is area aggregation, which involves reducing the level of detail by summarising spatial details into larger spatial units, such as zip codes, cities, census blocks or any other large administration units. 
 
 •	The second form is known as point aggregation and involves assigning multiple individual records to one point location. Examples include a population dot map where one dot represents 100 persons. See Figure XX below for an example of point aggregation
 
@@ -35,11 +35,12 @@ Spatial displacement is another technique of anonymising spatial data. The techn
 
 For example, the original coordinates of the University of Twente on Google Maps (52.24001648578193, 6.849739376582042) can be shifted to new random coordinates (52.245130, 6.837690) at x-distance, for which the new location of University of Twente is as shown in Figure xxx below. 
 
+
 ```{r UT-map,fig.align='center',fig.width=10, fig.height=7, out.width="80%",fig.cap="Spatial aggregation of individual cases using census enumeration units (Zandbergen, 2014).", echo=FALSE}
   knitr::include_graphics("figure/ut_map.png") 
 ```
 <div style="text-align: center;">
-  **Figure X**. Aggregation of UT map.
+  <strong>Figure X</strong>. Aggregation of UT map.
 </div>
 
 
