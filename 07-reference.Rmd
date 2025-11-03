@@ -1,1 +1,19 @@
-# References
+# Resources
+
+The development of this guide was informed and inspired by a broad range of resources on data anonymisation, pseudonymisation, privacy, and research ethics. The references listed below constitute the key sources that significantly informed the conceptualisation, structure, and content of this guide: 
+
+BMS Datalab University of Twente. Guidelines Personal Information. https://www.utwente.nl/en/bms/datalab/research-data-and-gdpr/guidelinespersonal/ 
+
+General Data Protection Regulation (2016). Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) (Text with EEA relevance). https://eur-lex.europa.eu/eli/reg/2016/679/oj 
+
+Finnish Social Science Data Archive (FSD). Anonymisation and Personal Data. https://www.fsd.tuni.fi/en/services/data-management-guidelines/anonymisation-and-identifiers/ 
+
+Personal Data Protection Commission (PDPC) (2024). Guide to Basic Anonymisation. https://www.pdpc.gov.sg/-/media/files/pdpc/pdf-files/advisory-guidelines/guide-to-basic-anonymisation-(updated-24-july-2024).pdf 
+
+Research Data Management Support, Huijser, D., Moopen, N., Flores-Dourojeanni, J., Beltrán, M., Bruijn, K. de ., Bruin, J. de ., Capel, D., Dijkstra, F., Einarson, S., Folkers, J., Franzke, A., Graaf, J. de ., Hout, S. van . den ., Huigen, F., Janssen, R. D. T., Jovic, K., Kessels, L., Kleerebezem, S., … Weijdema, F. (2025). Data Privacy Handbook (v2025.05.06) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.15350653 
+
+UK Data Service. (2025). Research data management. https://ukdataservice.ac.uk/learning-hub/research-data-management/#anonymisation 
+
+Zandbergen, P. A. (2014). Ensuring confidentiality of geocoded health data: Assessing geographic masking strategies for individual‐level data. Advances in Medicine, 2014, 567049. https://doi.org/10.1155/2014/567049 
+
+

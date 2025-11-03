@@ -1,0 +1,31 @@
+# Attribution 
+
+This “Research Data Pseudonymisation and Anonymisation: A Practical Guide” was created
+by (in alphabetical order):
+
+Minsi Li, University of Twente
+
+m.li-2@utwente.nl
+
+0000-0002-9719-239X
+
+Deniece S. Nazareth, University of Twente
+
+d.s.nazareth@utwente.nl
+
+0000-0003-0555-4101
+
+Alice Nikuze, University of Twente
+
+a.nikuze@utwente.nl
+
+0000-0002-1849-9968
+
+We are grateful to our former colleague, Qian Zhang, for her invaluable contribution to the
+conceptualisation of this guide. Her ideas and vision laid the foundation for its contents. 
+
+We would also like to thank Victor van Wanningen and Maryam Zavichi Tork (University of Twente) for their valuable feedback on the draft version of this guide. We would like to express our appreciation for the language editing support provided by our colleague at the Language Centre of the University of Twente.
+
+This work can be cited as: Li, M., Nazareth, D.S., & Nikuze, A. (2025). Research Data
+Pseudonymisation and Anonymisation: A Practical Guide (1.0). University of Twente.
+https://doi.org/10.5281/zenodo.17492062

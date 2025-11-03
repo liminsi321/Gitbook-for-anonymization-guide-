@@ -8,7 +8,7 @@ bibliography: [book.bib, packages.bib]
 url: "https://github.com/UniversityOfTwente/anonymization-guide/tree/main/_book"
 github_repo: "UniversityOfTwente/anonymization-guide"
 description: |
-  This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece  Nazareth, Minsi Liat University of Twente.  
+  This is a practical guideline for anonymization of reserach data, created by Alice Nikuze, Deniece  Nazareth, Minsi Li at University of Twente.  
 favicon: figure/favicon.ico
 apple-touch-icon: "figure/logo.jpeg"
 apple-touch-icon-size: 180
@@ -42,7 +42,8 @@ Sys.setlocale("LC_TIME", "English")
 
 
 
-# Introduction
+# Preface
+
 ```{r, results='asis',echo=FALSE}
 # Load required packages
 #install.packages("renv")
@@ -63,24 +64,35 @@ library(htmltools)
 #tinytex::install_tinytex(force = TRUE)
 ```
 
-In today's data-driven world, privacy concerns have become paramount. With the increasing collection of personal data in research, researchers bear the responsibility of ensuring the protection of the privacy rights of the individuals participating in their studies. More specifically, the General Data Protection Regulation (GDPR) in Europe requires researchers affiliated with any institution within the European Economic Area (EEA) to protect the privacy of research participants if they handle personal data in their research. In this context, the more personal data are collected, the greater the need for methods for data de-identification.  
+This guide provides practical guidance on two methods of data de-identification: data
+pseudonymisation and anonymisation. Data de-identification refers to the process of
+removing or minimising information that can be used to track back to a research
+participant within a dataset. This guide includes hands-on examples of various
+techniques for pseudonymising and anonymising different types of research data.
+The guide is structured as follows:
 
-This guide provides practical guidance on two methods of data de-identification, pseudonymizing and anonymizing data. It includes hands-on examples of various techniques for pseudonymising and anonymising various types of research data.  
+Chapter 1 defines personal data and explains different types of identifiers.
 
-The rest of the guide is structured as follows: 
+Chapter 2 introduces fundamental principles and concepts of data de-identification. It
+concludes with practical considerations and best practices.
 
+Chapter 3 delves into the techniques of pseudonymisation and anonymisation for
+textual, numerical, audio-visual, and geospatial research data. Additionally, practical
+examples are included.
+
+Chapters 4, 5 and 6 present the resources, glossary, and attribution.
+
+Although extensive techniques and examples are presented, please note that this guide
+does not cover every issue related to pseudonymisation or anonymisation and does not
+exhaust all types of research data. Furthermore, the de-identification of research data is
+often complex and requires a case-by-case approach. Therefore, please always consult
+your data steward or privacy contact person for more information.
 
 ::: {.pink-box}
-**Chapter 2** defines personal data and explains different types of identifiers.
-
-**Chapter 3** introduces fundamental principles and concepts of data de-identification. The chapter concludes with practical considerations and best practices.  
-
-**Chapter 4** delves into the techniques of pseudonymization and anonymisation for textual, numerical, audio-visual and spatial research data. Additionally, practical examples are included.
+**Disclaimer:** The authors cannot be held responsible for any unintended negative
+consequences resulting from the incompleteness of this guide, or from the misuse or
+misinterpretation of its content or discrepancies with any other institutions’ guidance.
 :::
-
-
-<p> Although extensive techniques and examples are given, please note that this guide does not cover every issue related to pseudonymization or anonymisation. Furthermore, the de-identification of research data is often complex and requires a case-by-case solution. Therefore, please always consult your privacy contact person for more information. </p>
-
 
 
 **This guide has been written by:** 
@@ -93,7 +105,7 @@ Minsi Li, University of Twente
 
 The authors would like to extend our sincere gratitude to our former colleague, Dr Qian Zhang, for her immense dedication and contribution during the conceptualization phase of this guide. We also wish to express our sincere appreciation to Nestor De la Paz Ruiz for his contribution, whose efforts were instrumental in transforming this guide into a Gitbook. 
 
-**This work is licensed under a Creative Commons Attribution DOI: xxxxxxxxx** 
+**This work is licensed under a Creative Commons Attribution DOI: https://doi.org/10.5281/zenodo.17492062** 
 
 
 
@@ -102,23 +114,3 @@ The authors would like to extend our sincere gratitude to our former colleague, 
     <option value="news">News</option>
     <option value="updates">Updates</option>
 </select>
-
-
-
-```{r, echo=FALSE, results="asis"}
-library(knitr)
-library(kableExtra)
-
-data <- data.frame(
-  Name = c("Alice", "Bob", "Eve"),
-  Age = c(25, 30, 22),
-  Country = c("USA", "Canada", "Germany")
-)
-
-kable(data, format = "html", table.attr = "class='beautiful-table'")
-```
-
-
-
-
-

@@ -2,7 +2,7 @@ book_filename: APracticalGuidetoDataAnonymisation
 delete_merged_file: yes
 language:
   ui:
-    chapter_name: 'Chapter '
+    chapter_name: ''
 rmd_files:
   html:
   - index.Rmd
@@ -13,4 +13,6 @@ rmd_files:
   - 05-audio_video.Rmd
   - 06-geospatial.Rmd
   - 07-reference.Rmd
+  - 08-glossary.Rmd
+  - 09-attribution.Rmd
 

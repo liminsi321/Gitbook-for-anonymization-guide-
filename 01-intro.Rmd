@@ -1,53 +1,44 @@
-# What is personal data? {#personal_data}
+# Introduction{intro}
 
-The term ‘’Personal data” refers to any information that enables you to identify a living person. According to the GDPR, a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other information specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that living person. 
+In today's data-driven world, privacy concerns have become paramount. With the increasing collection of personal data in research, researchers bear the responsibility to protect the privacy of the data subjects. More specifically, the General Data Protection Regulation (GDPR) requires researchers affiliated with any institutions within the European Economic Area (EEA) to protect the privacy of research participants when their personal data is processed in research. In this context, researchers should employ all necessary data protection measures, including de-identification techniques, to minimise the risk of tracking back to a data subject.  
 
-## Categories of identifiers
+## personal data in research
+
+The term **personal data** refers to any information that enables people who have access to the data (including you as a researcher) to identify a living person. According to the GDPR, a living person can be identified, directly or indirectly, by means of an identifier such as a name, a citizen identification number, location data, or by other details specific to the person’s physical, physiological, genetic, mental, economic, cultural, or social identity. 
+
+### Categories of identifiers
 
 There are three categories of identifiers: 
 
-<div class="three-column-container">
-  <div style="text-align: center" class="three-column"> >**Direct identifiers**<br>   
-    Any piece of information unique to an individual and sufficient on its own to identify that individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc.
-  </div>
-  <div class="three-column"> >**Strong indirect identifiers**<br>  
-    Any information that can reveal someone's identity when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.  
-  </div>
-  <div class="three-column"> >**Indirect identifiers**<br>  
-    Some identifiers are particularly considered strong indirect identifiers because they can significantly increase the risk of easily identifying an individual when combined with other information. Examples of strong identifiers include a rare event, a rare disease, an unusual job title, a date of birth, an IP address, etc. 
-  </div>
-</div>
 
-
-
-```{r, echo=FALSE, results="asis"}
+```{r, identifier_table, echo=FALSE, results="asis"}
 
 data <- data.frame(
   Name = c("Direct identifiers", "Strong indirect identifiers", "Indirect identifiers"),
   Definition = c(
     "Any piece of information unique to an individual and sufficient on its own to identify that individual, such as a name, a phone number, a picture, security numbers, audio/sound, video, photographs, etc.", 
-                 "Any information that can reveal someone’s identity when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.", 
-      "Some identifiers are particularly considered strong indirect identifiers because they can significantly increase the risk of easily identifying an individual when combined with other information. Examples of strong identifiers include a rare event, a rare disease, an unusual job title, a date of birth, an IP address, etc."))
+                 "Any information that can reveal someone's identity when combined with other available information. Examples include an address, age, gender, occupation, location, health-related records, ethnic group, etc.", 
+      "It is worth noting that some identifiers are particularly considered strong indirect identifiers because they can significantly increase the risk of easily identifying an individual when combined with other information. Examples of strong identifiers include a rare event, a rare disease, an unusual job title, a date of birth, an IP address, etc."))
 
 kable(data, format = "html", table.attr = "class='beautiful-table'")
 ```
 
 
+See Figure 1 for examples of identifiers in the three main categories.  
 
 
-
-For extensive overview of different types of identifiers, see Table 1. 
-
-**Table 1.** Examples of identifiers typically processed in research  @Finnish_Social_Science_Data_Archive
-
+**Figure 1.** Examples of identifiers typically processed in research  
 
 ```{r type_identifiers,fig.label="type_identifiers",fig.align='center',fig.width=10, fig.height=7, out.width="80%", echo=FALSE}
   knitr::include_graphics("figure/type_identifiers.png",dpi = 600) 
 ```
 
+There are other types of identifiers that can significantly increase the risks of re-identification. Notable examples are: 
 
-## Sensitive personal data
+- **Biometric identifiers:** which include unique and often permanent traits, such as physiological and behavioural characteristics, including facial features, fingerprints, DNA, voice, and gait. Biometric identifiers also include less distinctive traits that may change over time, such as visible marks (e.g., tattoos or scars).
 
-This is a special category of personal data”. It includes any information about a person’s racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data, health, sex life, or sexual orientation information.
+- **Contextual elements:** like speaking or writing styles, clothing style and hair style, and specific social or environmental settings can, in some cases, also increase the risks of identification. 
 
-Sensitive personal information can put individuals or certain groups in vulnerable positions, and their misuse can potentially lead to physical or mental harm, financial loss, political or religious persecution, disclosure of sexual orientation discrimination, or embarrassment. Therefore, handling such data requires extra caution.
+### Special categories of personal data 
+ 
+There are special categories of personal data, also known as sensitive personal data. Sensitive personal data includes any information about a person’s racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data, health, sex life, or sexual orientation. This personal data can put individuals or particular groups in vulnerable positions, and their misuse can potentially lead to physical or mental harm, financial loss, political or religious persecution, disclosure of sexual orientation, discrimination, or embarrassment. Therefore, handling such data requires extra caution. 

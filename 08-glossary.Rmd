@@ -1,0 +1,54 @@
+# Glossary
+
+**Anonymisation:** a de-identification process which involves permanently deleting direct and/or indirect identifiers from the data, such that there is no way to link back to individuals (research participants). 
+
+**Biometric identifiers:** unique and often permanent traits of an individual, which could enable the identification of the individual. Biometric identifiers include physiological and behavioural characteristics, such as facial features, fingerprints, DNA, voice, and gait. They also include less distinctive traits that may change over time, such as visible marks (e.g., tattoos or scars). 
+
+**De-identification:** the process of minimising personal information in the dataset to reduce the risk of tracking back to a living human. It is an umbrella term used to refer to either anonymisation or pseudonymisation. 
+
+**Data minimisation:** a fundamental principle of data privacy and protection which requires limiting personal data collection and retention to only what is relevant, necessary, and adequate to accomplish a given research purpose. 
+
+**Data type:** refers to the structure of data; it can include textual, numerical, audio-visual, geospatial data and more. 
+
+**Data usefulness:** the extent to which the data can effectively answer a variety of research questions, both within and beyond the original study scope. Usefulness can be retained even after the data have been de-identified, provided that there are sufficient details and context information.  
+
+**De-identification documentation:** records about the process of anonymisation and/or pseudonymisation, including details of all modifications from the original data to de-identified data. 
+
+**Direct identifiers:** any piece of information unique to an individual and sufficient on its own to identify the individual.  
+
+**Distortion:** altering personal information in data. 
+
+**Encryption:** the process of securing personal data by converting it into a coded format, making it accessible only to those with the encryption key. 
+
+**General Data Protection Regulation (GDPR):** A regulation by the European Union (EU) that governs the processing of personal data, meaning how personal data of individuals are, for example, collected, used, protected etc. The GDPR is applicable in the European Economic Area (EEA). The GDPR is also referred to as the European privacy law. 
+
+**Generalisation:** reducing detailed information or the precision of the information in a way that potentially disclosive information (identifiers) is replaced or aggregated.  
+
+**Indirect identifiers:** any information that can reveal an individual's identity if combined with additional available information. 
+
+**Key file:** a file that contains links between participants’ identifying information and pseudonyms (substitute values).  
+
+**Masking:** replacing characters, digits, or symbols (punctuation) with special symbols in identifying information entirely or partially with a special symbol (such as '*' or 'x').  
+
+**Muting or bleeping out:** mute, remove or bleep out identifying information to anonymise audio-visual data. 
+
+**Open-ended questions:** questions that solicit a more detailed, thoughtful, and descriptive response as opposed to closed questions. 
+
+**Personal data:** any information that can be used to directly or indirectly identify a living individual. 
+
+**Perturbation:** to alter small changes in value and the association between research participants and their attributes.  
+
+**Pseudonymisation:** pseudonymisation is a de-identification process which involves creating pseudonyms. Pseudonymised data can no longer be linked to a specific individual without additional information (key file).  
+
+**Re-identification risk assessment:** evaluating the likelihood that the de-identified data could still reveal individual identities. 
+
+**Research participants:** individuals who take part in research projects and provide their responses or data for the study.  
+
+**Rounding:** adjusting a number to the nearest multiple of the base number in the dataset, effectively grouping the data point into the closest category defined by that base. 
+Special categories of personal data: also known as sensitive personal data. Any information about a person’s racial or ethnic origin, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data, health, sex life, or sexual orientation. 
+
+**Strong indirect identifiers:** identifiers that can significantly increase the risk of easily identifying an individual when combined with other information. 
+
+**Suppression or deletion:** deleting identifying information from the data, leaving the space empty or explicitly marking as such by using brackets [……]. 
+
+**Swapping:** also known as shuffling or permutation. The technique of altering the association between the participants and their attributes by exchanging the attributes’ values between participants. 

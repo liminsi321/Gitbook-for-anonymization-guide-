@@ -500,3 +500,116 @@ footer a {
 .card-content ul {
   padding-left: 1.5rem;
 }
+
+
+
+
+/*------------------------------*/
+/*---------------number list--------------------*?
+/* Container for each list item */
+.custom-list-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* reduced from 30px */
+}
+
+/* Top row - number and title on same line */
+.list-header-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px; /* reduced from 15px */
+  margin-bottom: 5px; /* reduced from 10px */
+}
+
+/* Number box - rectangular with slight rounded corners and colored background */
+.list-number {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px; /* slightly smaller */
+  font-weight: bold;
+  color: white;
+  border-radius: 6px; /* slightly smoother corners */
+  flex-shrink: 0;
+}
+
+/* Different colors for each number box */
+.list-number-1 { background-color: #9B59B6; } /* Purple */
+.list-number-2 { background-color: #E91E63; } /* Pink */
+.list-number-3 { background-color: #FF9800; } /* Orange */
+.list-number-4 { background-color: #F44336; } /* Red */
+
+/* List title - bold, on same line as number */
+.list-title {
+  font-weight: bold;
+  font-size: 17px;
+  color: #333;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+}
+
+/* Content container - for explanation and how-to section */
+.list-content-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 62px; /* slight adjustment for spacing */
+}
+
+/* List explanation - not bold, smaller space below */
+.list-explanation {
+  font-weight: normal;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 3px; /* reduced from 12px */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* How-to section - rounded box with colored background, closer to explanation */
+.how-to-section {
+  border-radius: 8px;
+  padding: 6px; /* reduced from 15px */
+  margin-top: 2px; /* reduced from 10px */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Different background colors matching the number colors (lighter versions) */
+.how-to-1 { background-color: rgba(155, 89, 182, 0.15); } /* Light purple */
+.how-to-2 { background-color: rgba(233, 30, 99, 0.15); } /* Light pink */
+.how-to-3 { background-color: rgba(255, 152, 0, 0.15); } /* Light orange */
+.how-to-4 { background-color: rgba(244, 67, 54, 0.15); } /* Light red */
+
+/* "How to:" label - bold */
+.how-to-label {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 3px; /* reduced from 8px */
+  color: #333;
+}
+
+/* How-to content - not bold, supports multi-line */
+.how-to-content {
+  font-weight: normal;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Support for paragraphs within how-to content */
+.how-to-content p {
+  margin-bottom: 4px; /* reduced from 10px */
+}
+
+.how-to-content p:last-child {
+  margin-bottom: 0;
+}
